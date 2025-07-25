@@ -1,0 +1,40 @@
+{
+  "datasets": {
+    "association_by_datatype_indirect": {
+      "name": "association_by_datatype_indirect",
+      "columns": {
+        "diseaseId": {
+          "name": "diseaseId",
+          "data_type": "Text",
+          "description": "Identifier for the disease in the association.",
+          "example": "EFO_0010285"
+        },
+        "targetId": {
+          "name": "targetId",
+          "data_type": "Text",
+          "description": "Identifier for the target in the association.",
+          "example": "ENSG00000000003"
+        },
+        "datatypeId": {
+          "name": "datatypeId",
+          "data_type": "Text",
+          "description": "Identifier for the data type used to calculate the association score.",
+          "example": "literature"
+        },
+        "score": {
+          "name": "score",
+          "data_type": "Float",
+          "description": "Association score calculated independently for each data type, considering ontology propagation of evidence",
+          "example": 0.07050308555634772
+        },
+        "evidenceCount": {
+          "name": "evidenceCount",
+          "data_type": "Float",
+          "description": "Number of evidence items supporting the association.",
+          "example": 4
+        }
+      },
+      "description": "Open Targets dataset: association_by_datatype_indirect"
+    }
+  }
+}

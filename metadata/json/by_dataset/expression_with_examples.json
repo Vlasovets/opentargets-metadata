@@ -1,0 +1,3148 @@
+{
+  "datasets": {
+    "expression": {
+      "name": "expression",
+      "columns": {
+        "id": {
+          "name": "id",
+          "data_type": "Text",
+          "description": "Ensembl human gene identifier for the expressed gene [bioregistry:ensembl]",
+          "example": "ENSG00000000003"
+        },
+        "tissues": {
+          "name": "tissues",
+          "data_type": "Array[Struct]",
+          "description": "Array of structs containing expression data relevant to a particular gene",
+          "example": [
+            {
+              "efo_code": "UBERON_0006618",
+              "label": "atrium auricular region",
+              "organs": [
+                "heart"
+              ],
+              "anatomical_systems": [
+                "circulatory system"
+              ],
+              "rna": {
+                "value": 603.5,
+                "zscore": 0,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0001621",
+              "label": "coronary artery",
+              "organs": [
+                "heart",
+                "vasculature"
+              ],
+              "anatomical_systems": [
+                "circulatory system"
+              ],
+              "rna": {
+                "value": 678.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0000939",
+              "label": "cytotoxic CD56-dim natural killer cell",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "immune system",
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 21.0,
+                "zscore": -1,
+                "level": 1,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0001255",
+              "label": "urinary bladder",
+              "organs": [
+                "bladder organ"
+              ],
+              "anatomical_systems": [
+                "renal system"
+              ],
+              "rna": {
+                "value": 1525.0,
+                "zscore": 1,
+                "level": 4,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": true,
+                "level": 3,
+                "cell_type": [
+                  {
+                    "name": "urothelial cells",
+                    "reliability": true,
+                    "level": 3
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "CL_0002102",
+              "label": "CD38-negative naive B cell",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "immune system",
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 42.5,
+                "zscore": -1,
+                "level": 2,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0001132",
+              "label": "parathyroid gland",
+              "organs": [
+                "endocrine gland"
+              ],
+              "anatomical_systems": [
+                "endocrine system"
+              ],
+              "rna": {
+                "value": 0.0,
+                "zscore": -1,
+                "level": -1,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 2,
+                "cell_type": [
+                  {
+                    "name": "glandular cells",
+                    "reliability": true,
+                    "level": 2
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "NOT_AN_UBERON_1",
+              "label": "CD3-positive, CD4-positive, CD8-positive, double positive thymocyte",
+              "organs": [
+                "endocrine gland",
+                "immune organ"
+              ],
+              "anatomical_systems": [
+                "endocrine system",
+                "hematopoietic system",
+                "hemolymphoid system",
+                "immune system"
+              ],
+              "rna": {
+                "value": 87.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0001052",
+              "label": "rectum",
+              "organs": [
+                "intestine",
+                "rectum"
+              ],
+              "anatomical_systems": [
+                "digestive system"
+              ],
+              "rna": {
+                "value": 3034.5,
+                "zscore": 2,
+                "level": 4,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": true,
+                "level": 2,
+                "cell_type": [
+                  {
+                    "name": "glandular cells",
+                    "reliability": true,
+                    "level": 2
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0016525",
+              "label": "frontal lobe",
+              "organs": [
+                "brain"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 232.5,
+                "zscore": -1,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0000624",
+              "label": "CD4-positive, alpha-beta T cell",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "immune system",
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 135.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0000451",
+              "label": "prefrontal cortex",
+              "organs": [
+                "brain"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 269.0,
+                "zscore": -1,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0000837",
+              "label": "hematopoietic multipotent progenitor cell",
+              "organs": [
+                "blood"
+              ],
+              "anatomical_systems": [
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 39.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0000990",
+              "label": "conventional dendritic cell",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "immune system",
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 30.0,
+                "zscore": -1,
+                "level": 1,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0003454",
+              "label": "small intestine Peyer's patch",
+              "organs": [
+                "intestine",
+                "mucosa"
+              ],
+              "anatomical_systems": [
+                "digestive system",
+                "hemolymphoid system",
+                "immune system",
+                "lymphoid system"
+              ],
+              "rna": {
+                "value": 873.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0002367",
+              "label": "prostate gland",
+              "organs": [
+                "reproductive structure"
+              ],
+              "anatomical_systems": [
+                "reproductive system"
+              ],
+              "rna": {
+                "value": 867.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": true,
+                "level": 2,
+                "cell_type": [
+                  {
+                    "name": "glandular cells",
+                    "reliability": true,
+                    "level": 2
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0012249",
+              "label": "ectocervix",
+              "organs": [
+                "reproductive organ",
+                "reproductive structure"
+              ],
+              "anatomical_systems": [
+                "reproductive system"
+              ],
+              "rna": {
+                "value": 2327.0,
+                "zscore": 1,
+                "level": 4,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0000955",
+              "label": "brain",
+              "organs": [
+                "brain"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 533.5,
+                "zscore": 0,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0002618",
+              "label": "endothelial cell of umbilical vein (proliferating)",
+              "organs": [
+                "blood"
+              ],
+              "anatomical_systems": [
+                "circulatory system"
+              ],
+              "rna": {
+                "value": 1463.0,
+                "zscore": 1,
+                "level": 4,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0002371",
+              "label": "bone marrow",
+              "organs": [
+                "skeletal element"
+              ],
+              "anatomical_systems": [
+                "hemolymphoid system",
+                "musculoskeletal system",
+                "hematopoietic system",
+                "immune system"
+              ],
+              "rna": {
+                "value": 190.5,
+                "zscore": -1,
+                "level": 2,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 0,
+                "cell_type": [
+                  {
+                    "name": "hematopoietic cells",
+                    "reliability": true,
+                    "level": 0
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0002469",
+              "label": "esophagus mucosa",
+              "organs": [
+                "mucosa",
+                "esophagus"
+              ],
+              "anatomical_systems": [
+                "digestive system"
+              ],
+              "rna": {
+                "value": 3045.0,
+                "zscore": 2,
+                "level": 4,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0002114",
+              "label": "duodenum",
+              "organs": [
+                "intestine"
+              ],
+              "anatomical_systems": [
+                "digestive system"
+              ],
+              "rna": {
+                "value": 1599.0,
+                "zscore": 1,
+                "level": 4,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 1,
+                "cell_type": [
+                  {
+                    "name": "glandular cells",
+                    "reliability": true,
+                    "level": 1
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0002349",
+              "label": "heart muscle",
+              "organs": [
+                "heart"
+              ],
+              "anatomical_systems": [
+                "circulatory system"
+              ],
+              "rna": {
+                "value": 0.0,
+                "zscore": -1,
+                "level": -1,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 0,
+                "cell_type": [
+                  {
+                    "name": "cardiomyocytes",
+                    "reliability": true,
+                    "level": 0
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0002185",
+              "label": "bronchus",
+              "organs": [
+                "tracheobronchial tree"
+              ],
+              "anatomical_systems": [
+                "respiratory system"
+              ],
+              "rna": {
+                "value": 0.0,
+                "zscore": -1,
+                "level": -1,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 3,
+                "cell_type": [
+                  {
+                    "name": "respiratory epithelial cells",
+                    "reliability": true,
+                    "level": 3
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "CL_0000057",
+              "label": "transformed skin fibroblast",
+              "organs": [
+                "connective tissue"
+              ],
+              "anatomical_systems": [
+                "connective tissue"
+              ],
+              "rna": {
+                "value": 3160.5,
+                "zscore": 2,
+                "level": 4,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0002110",
+              "label": "gall bladder",
+              "organs": [
+                "bladder organ"
+              ],
+              "anatomical_systems": [
+                "digestive system"
+              ],
+              "rna": {
+                "value": 1296.0,
+                "zscore": 1,
+                "level": 4,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": true,
+                "level": 2,
+                "cell_type": [
+                  {
+                    "name": "glandular cells",
+                    "reliability": true,
+                    "level": 2
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "CL_0002026",
+              "label": "CD34-negative, CD41-positive, CD42-positive megakaryocyte cell",
+              "organs": [
+                "blood",
+                "immune organ",
+                "skeletal element"
+              ],
+              "anatomical_systems": [
+                "hematopoietic system",
+                "hemolymphoid system",
+                "immune system",
+                "musculoskeletal system"
+              ],
+              "rna": {
+                "value": 607.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0002048",
+              "label": "lung",
+              "organs": [
+                "lung"
+              ],
+              "anatomical_systems": [
+                "respiratory system"
+              ],
+              "rna": {
+                "value": 541.5,
+                "zscore": 0,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": true,
+                "level": 1,
+                "cell_type": [
+                  {
+                    "name": "macrophages",
+                    "reliability": true,
+                    "level": 0
+                  },
+                  {
+                    "name": "alveolar cells",
+                    "reliability": true,
+                    "level": 1
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0001264",
+              "label": "pancreas",
+              "organs": [
+                "pancreas"
+              ],
+              "anatomical_systems": [
+                "endocrine system"
+              ],
+              "rna": {
+                "value": 1309.0,
+                "zscore": 1,
+                "level": 4,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 2,
+                "cell_type": [
+                  {
+                    "name": "pancreatic endocrine cells",
+                    "reliability": true,
+                    "level": 1
+                  },
+                  {
+                    "name": "exocrine glandular cells",
+                    "reliability": true,
+                    "level": 2
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0000473",
+              "label": "testis",
+              "organs": [
+                "reproductive organ",
+                "reproductive structure"
+              ],
+              "anatomical_systems": [
+                "reproductive system"
+              ],
+              "rna": {
+                "value": 1231.0,
+                "zscore": 1,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": true,
+                "level": 1,
+                "cell_type": [
+                  {
+                    "name": "Leydig cells",
+                    "reliability": true,
+                    "level": 1
+                  },
+                  {
+                    "name": "cells in seminiferous ducts",
+                    "reliability": true,
+                    "level": 1
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0000014",
+              "label": "zone of skin",
+              "organs": [
+                "skin of body"
+              ],
+              "anatomical_systems": [
+                "integumental system"
+              ],
+              "rna": {
+                "value": 639.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 3,
+                "cell_type": [
+                  {
+                    "name": "melanocytes",
+                    "reliability": true,
+                    "level": 0
+                  },
+                  {
+                    "name": "epidermal cells",
+                    "reliability": true,
+                    "level": 2
+                  },
+                  {
+                    "name": "fibroblasts",
+                    "reliability": true,
+                    "level": 0
+                  },
+                  {
+                    "name": "keratinocytes",
+                    "reliability": true,
+                    "level": 3
+                  },
+                  {
+                    "name": "Langerhans",
+                    "reliability": true,
+                    "level": 0
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0001876",
+              "label": "amygdala",
+              "organs": [
+                "brain"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 527.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0001155",
+              "label": "colon",
+              "organs": [
+                "intestine",
+                "colon"
+              ],
+              "anatomical_systems": [
+                "digestive system"
+              ],
+              "rna": {
+                "value": 3567.0,
+                "zscore": 2,
+                "level": 4,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 2,
+                "cell_type": [
+                  {
+                    "name": "glandular cells",
+                    "reliability": true,
+                    "level": 2
+                  },
+                  {
+                    "name": "peripheral nerve/ganglion",
+                    "reliability": true,
+                    "level": 0
+                  },
+                  {
+                    "name": "endothelial cells",
+                    "reliability": true,
+                    "level": 0
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0001728",
+              "label": "nasopharynx",
+              "organs": [
+                "pharynx"
+              ],
+              "anatomical_systems": [
+                "respiratory system",
+                "digestive system"
+              ],
+              "rna": {
+                "value": 0.0,
+                "zscore": -1,
+                "level": -1,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 3,
+                "cell_type": [
+                  {
+                    "name": "respiratory epithelial cells",
+                    "reliability": true,
+                    "level": 3
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "CL_0000787",
+              "label": "memory B cell",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "immune system",
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 18.0,
+                "zscore": -1,
+                "level": 1,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0004264",
+              "label": "lower leg skin",
+              "organs": [
+                "skin of body"
+              ],
+              "anatomical_systems": [
+                "integumental system"
+              ],
+              "rna": {
+                "value": 675.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0001157",
+              "label": "transverse colon",
+              "organs": [
+                "intestine",
+                "colon"
+              ],
+              "anatomical_systems": [
+                "digestive system"
+              ],
+              "rna": {
+                "value": 2198.0,
+                "zscore": 1,
+                "level": 4,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0000905",
+              "label": "effector memory CD4-positive, alpha-beta T cell",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "immune system",
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 54.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0001871",
+              "label": "temporal lobe",
+              "organs": [
+                "brain"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 285.0,
+                "zscore": -1,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0000863",
+              "label": "inflammatory macrophage",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "immune system",
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 14.0,
+                "zscore": -1,
+                "level": 1,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0002369",
+              "label": "adrenal gland",
+              "organs": [
+                "endocrine gland"
+              ],
+              "anatomical_systems": [
+                "endocrine system"
+              ],
+              "rna": {
+                "value": 1727.0,
+                "zscore": 1,
+                "level": 4,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 0,
+                "cell_type": [
+                  {
+                    "name": "glandular cells",
+                    "reliability": true,
+                    "level": 0
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "CL_0002057",
+              "label": "CD14-positive, CD16-negative classical monocyte",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "immune system",
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 40.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0002038",
+              "label": "substantia nigra",
+              "organs": [
+                "brain"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 448.5,
+                "zscore": 0,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0001987",
+              "label": "placenta",
+              "organs": [
+                "reproductive structure"
+              ],
+              "anatomical_systems": [
+                "reproductive system"
+              ],
+              "rna": {
+                "value": 1653.0,
+                "zscore": 1,
+                "level": 4,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": true,
+                "level": 3,
+                "cell_type": [
+                  {
+                    "name": "decidual cells",
+                    "reliability": true,
+                    "level": 1
+                  },
+                  {
+                    "name": "trophoblastic cells",
+                    "reliability": true,
+                    "level": 3
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "CL_0000765",
+              "label": "erythroblast",
+              "organs": [
+                "blood"
+              ],
+              "anatomical_systems": [
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 824.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0000907",
+              "label": "central memory CD8-positive, alpha-beta T cell",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "immune system",
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 39.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0000810",
+              "label": "CD4-positive, alpha-beta thymocyte",
+              "organs": [
+                "endocrine gland",
+                "immune organ"
+              ],
+              "anatomical_systems": [
+                "endocrine system",
+                "hematopoietic system",
+                "hemolymphoid system",
+                "immune system"
+              ],
+              "rna": {
+                "value": 107.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0000995",
+              "label": "uterus",
+              "organs": [
+                "reproductive organ",
+                "reproductive structure"
+              ],
+              "anatomical_systems": [
+                "reproductive system"
+              ],
+              "rna": {
+                "value": 1853.5,
+                "zscore": 1,
+                "level": 4,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0001873",
+              "label": "caudate nucleus",
+              "organs": [
+                "brain"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 433.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0001295",
+              "label": "endometrium",
+              "organs": [
+                "mucosa",
+                "reproductive organ",
+                "reproductive structure"
+              ],
+              "anatomical_systems": [
+                "reproductive system"
+              ],
+              "rna": {
+                "value": 2114.0,
+                "zscore": 1,
+                "level": 4,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 3,
+                "cell_type": [
+                  {
+                    "name": "cells in endometrial stroma",
+                    "reliability": true,
+                    "level": 0
+                  },
+                  {
+                    "name": "glandular cells",
+                    "reliability": true,
+                    "level": 3
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0000945",
+              "label": "stomach",
+              "organs": [
+                "stomach"
+              ],
+              "anatomical_systems": [
+                "digestive system"
+              ],
+              "rna": {
+                "value": 998.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 2,
+                "cell_type": [
+                  {
+                    "name": "glandular cells",
+                    "reliability": true,
+                    "level": 2
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0001874",
+              "label": "putamen",
+              "organs": [
+                "brain"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 350.0,
+                "zscore": -1,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0000947",
+              "label": "aorta",
+              "organs": [
+                "vasculature"
+              ],
+              "anatomical_systems": [
+                "circulatory system"
+              ],
+              "rna": {
+                "value": 833.5,
+                "zscore": 0,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "NOT_AN_UBERON_4",
+              "label": "mature neutrophil",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "hemolymphoid system",
+                "immune system",
+                "lymphoid system"
+              ],
+              "rna": {
+                "value": 76.5,
+                "zscore": -1,
+                "level": 2,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0002037",
+              "label": "cerebellum",
+              "organs": [
+                "brain"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 146.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": true,
+                "level": 0,
+                "cell_type": [
+                  {
+                    "name": "cells in granular layer",
+                    "reliability": true,
+                    "level": 0
+                  },
+                  {
+                    "name": "Purkinje cells",
+                    "reliability": true,
+                    "level": 0
+                  },
+                  {
+                    "name": "cells in molecular layer",
+                    "reliability": true,
+                    "level": 0
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0000998",
+              "label": "seminal vesicle",
+              "organs": [
+                "reproductive organ",
+                "reproductive structure"
+              ],
+              "anatomical_systems": [
+                "reproductive system"
+              ],
+              "rna": {
+                "value": 0.0,
+                "zscore": -1,
+                "level": -1,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 3,
+                "cell_type": [
+                  {
+                    "name": "glandular cells",
+                    "reliability": true,
+                    "level": 3
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "CL_0000051",
+              "label": "common lymphoid progenitor",
+              "organs": [
+                "blood"
+              ],
+              "anatomical_systems": [
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 77.5,
+                "zscore": -1,
+                "level": 2,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0002372",
+              "label": "tonsil",
+              "organs": [
+                "pharynx"
+              ],
+              "anatomical_systems": [
+                "respiratory system",
+                "digestive system",
+                "hemolymphoid system",
+                "immune system",
+                "lymphoid system"
+              ],
+              "rna": {
+                "value": 881.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 3,
+                "cell_type": [
+                  {
+                    "name": "germinal center cells",
+                    "reliability": true,
+                    "level": 0
+                  },
+                  {
+                    "name": "non-germinal center cells",
+                    "reliability": true,
+                    "level": 0
+                  },
+                  {
+                    "name": "squamous epithelial cells",
+                    "reliability": true,
+                    "level": 3
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0002107",
+              "label": "liver",
+              "organs": [
+                "liver",
+                "exocrine gland",
+                "endocrine gland"
+              ],
+              "anatomical_systems": [
+                "endocrine system",
+                "digestive system",
+                "exocrine system"
+              ],
+              "rna": {
+                "value": 4949.5,
+                "zscore": 2,
+                "level": 4,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": true,
+                "level": 2,
+                "cell_type": [
+                  {
+                    "name": "cholangiocytes",
+                    "reliability": true,
+                    "level": 2
+                  },
+                  {
+                    "name": "hepatocytes",
+                    "reliability": true,
+                    "level": 0
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0002113",
+              "label": "kidney",
+              "organs": [
+                "kidney"
+              ],
+              "anatomical_systems": [
+                "renal system"
+              ],
+              "rna": {
+                "value": 2492.5,
+                "zscore": 1,
+                "level": 4,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 2,
+                "cell_type": [
+                  {
+                    "name": "cells in glomeruli",
+                    "reliability": true,
+                    "level": 0
+                  },
+                  {
+                    "name": "cells in tubules",
+                    "reliability": true,
+                    "level": 2
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0002046",
+              "label": "thyroid gland",
+              "organs": [
+                "endocrine gland"
+              ],
+              "anatomical_systems": [
+                "endocrine system"
+              ],
+              "rna": {
+                "value": 862.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 2,
+                "cell_type": [
+                  {
+                    "name": "glandular cells",
+                    "reliability": true,
+                    "level": 2
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0001225",
+              "label": "cortex of kidney",
+              "organs": [
+                "kidney"
+              ],
+              "anatomical_systems": [
+                "renal system"
+              ],
+              "rna": {
+                "value": 1056.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0000582",
+              "label": "neutrophilic metamyelocyte",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "immune system",
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 53.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0007650",
+              "label": "esophagogastric junction",
+              "organs": [
+                "esophagogastric junction"
+              ],
+              "anatomical_systems": [
+                "anatomical junction"
+              ],
+              "rna": {
+                "value": 699.5,
+                "zscore": 0,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0000050",
+              "label": "megakaryocyte-erythroid progenitor cell",
+              "organs": [
+                "blood"
+              ],
+              "anatomical_systems": [
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 15.0,
+                "zscore": -1,
+                "level": 1,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "NOT_AN_UBERON_2",
+              "label": "central memory CD4-positive, alpha-beta T cell",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "hemolymphoid system",
+                "immune system",
+                "lymphoid system"
+              ],
+              "rna": {
+                "value": 67.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0001882",
+              "label": "nucleus accumbens",
+              "organs": [
+                "brain"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 406.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0000458",
+              "label": "endocervix",
+              "organs": [
+                "reproductive structure"
+              ],
+              "anatomical_systems": [
+                "reproductive system"
+              ],
+              "rna": {
+                "value": 1463.0,
+                "zscore": 1,
+                "level": 4,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0000037",
+              "label": "hematopoietic stem cell",
+              "organs": [
+                "blood"
+              ],
+              "anatomical_systems": [
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 148.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0000890",
+              "label": "alternatively activated macrophage",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "immune system",
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 35.0,
+                "zscore": -1,
+                "level": 1,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0002084",
+              "label": "heart left ventricle",
+              "organs": [
+                "heart"
+              ],
+              "anatomical_systems": [
+                "circulatory system"
+              ],
+              "rna": {
+                "value": 654.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0013540",
+              "label": "Brodmann (1909) area 9",
+              "organs": [
+                "brain"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 293.0,
+                "zscore": -1,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0005383",
+              "label": "caudate-putamen",
+              "organs": [
+                "brain"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 0.0,
+                "zscore": -1,
+                "level": -1,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 0,
+                "cell_type": [
+                  {
+                    "name": "neuronal cells",
+                    "reliability": true,
+                    "level": 0
+                  },
+                  {
+                    "name": "glial cells",
+                    "reliability": true,
+                    "level": 0
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "NOT_AN_UBERON_5",
+              "label": "plasma cell",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "hemolymphoid system",
+                "immune system",
+                "lymphoid system"
+              ],
+              "rna": {
+                "value": 13.5,
+                "zscore": -1,
+                "level": 1,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0000542",
+              "label": "EBV-transformed lymphocyte",
+              "organs": [
+                "immune organ"
+              ],
+              "anatomical_systems": [
+                "hemolymphoid system",
+                "immune system",
+                "lymphoid system"
+              ],
+              "rna": {
+                "value": 97.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0004648",
+              "label": "esophagus muscularis mucosa",
+              "organs": [
+                "mucosa",
+                "musculature",
+                "esophagus"
+              ],
+              "anatomical_systems": [
+                "digestive system",
+                "musculoskeletal system"
+              ],
+              "rna": {
+                "value": 629.5,
+                "zscore": 0,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0002618",
+              "label": "endothelial cell of umbilical vein (resting)",
+              "organs": [
+                "blood"
+              ],
+              "anatomical_systems": [
+                "circulatory system"
+              ],
+              "rna": {
+                "value": 2022.5,
+                "zscore": 1,
+                "level": 4,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0005448",
+              "label": "greater omentum",
+              "organs": [
+                "peritoneum"
+              ],
+              "anatomical_systems": [
+                "anatomical wall"
+              ],
+              "rna": {
+                "value": 1938.0,
+                "zscore": 1,
+                "level": 4,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0000310",
+              "label": "breast",
+              "organs": [
+                "breast"
+              ],
+              "anatomical_systems": [
+                "external soft tissue zone"
+              ],
+              "rna": {
+                "value": 1771.0,
+                "zscore": 1,
+                "level": 4,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": true,
+                "level": 3,
+                "cell_type": [
+                  {
+                    "name": "adipocytes",
+                    "reliability": true,
+                    "level": 0
+                  },
+                  {
+                    "name": "glandular cells",
+                    "reliability": true,
+                    "level": 3
+                  },
+                  {
+                    "name": "myoepithelial cells",
+                    "reliability": true,
+                    "level": 0
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0000178",
+              "label": "blood",
+              "organs": [
+                "blood"
+              ],
+              "anatomical_systems": [
+                "circulatory system",
+                "hemolymphoid system",
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 157.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0001154",
+              "label": "vermiform appendix",
+              "organs": [
+                "intestine",
+                "colon"
+              ],
+              "anatomical_systems": [
+                "digestive system"
+              ],
+              "rna": {
+                "value": 397.5,
+                "zscore": -1,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": true,
+                "level": 2,
+                "cell_type": [
+                  {
+                    "name": "lymphoid tissue",
+                    "reliability": true,
+                    "level": 0
+                  },
+                  {
+                    "name": "glandular cells",
+                    "reliability": true,
+                    "level": 2
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0001159",
+              "label": "sigmoid colon",
+              "organs": [
+                "intestine",
+                "colon"
+              ],
+              "anatomical_systems": [
+                "digestive system"
+              ],
+              "rna": {
+                "value": 859.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0006469",
+              "label": "C1 segment of cervical spinal cord",
+              "organs": [
+                "spinal cord"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 429.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0001954",
+              "label": "hippocampus proper",
+              "organs": [
+                "brain"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 365.0,
+                "zscore": -1,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0000996",
+              "label": "vagina",
+              "organs": [
+                "reproductive organ",
+                "reproductive structure"
+              ],
+              "anatomical_systems": [
+                "reproductive system"
+              ],
+              "rna": {
+                "value": 1340.0,
+                "zscore": 1,
+                "level": 4,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": true,
+                "level": 3,
+                "cell_type": [
+                  {
+                    "name": "squamous epithelial cells",
+                    "reliability": true,
+                    "level": 3
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0002421",
+              "label": "hippocampus",
+              "organs": [
+                "brain"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 0.0,
+                "zscore": -1,
+                "level": -1,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 0,
+                "cell_type": [
+                  {
+                    "name": "glial cells",
+                    "reliability": true,
+                    "level": 0
+                  },
+                  {
+                    "name": "neuronal cells",
+                    "reliability": true,
+                    "level": 0
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0000956",
+              "label": "cerebral cortex",
+              "organs": [
+                "brain"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 269.0,
+                "zscore": -1,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 2,
+                "cell_type": [
+                  {
+                    "name": "endothelial cells",
+                    "reliability": true,
+                    "level": 0
+                  },
+                  {
+                    "name": "glial cells",
+                    "reliability": true,
+                    "level": 0
+                  },
+                  {
+                    "name": "neuronal cells",
+                    "reliability": true,
+                    "level": 2
+                  },
+                  {
+                    "name": "neuropil",
+                    "reliability": true,
+                    "level": 0
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0001323",
+              "label": "tibial nerve",
+              "organs": [
+                "nerve"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 1286.0,
+                "zscore": 1,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0000041",
+              "label": "mature eosinophil",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "immune system",
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 4.0,
+                "zscore": -1,
+                "level": -1,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0036149",
+              "label": "suprapubic skin",
+              "organs": [
+                "skin of body"
+              ],
+              "anatomical_systems": [
+                "integumental system"
+              ],
+              "rna": {
+                "value": 661.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0000811",
+              "label": "CD8-positive, alpha-beta thymocyte",
+              "organs": [
+                "endocrine gland",
+                "immune organ"
+              ],
+              "anatomical_systems": [
+                "endocrine system",
+                "hematopoietic system",
+                "hemolymphoid system",
+                "immune system"
+              ],
+              "rna": {
+                "value": 155.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0000007",
+              "label": "pituitary gland",
+              "organs": [
+                "brain",
+                "endocrine gland"
+              ],
+              "anatomical_systems": [
+                "endocrine system",
+                "nervous system"
+              ],
+              "rna": {
+                "value": 1757.0,
+                "zscore": 1,
+                "level": 4,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0001830",
+              "label": "minor salivary gland",
+              "organs": [
+                "mucosa",
+                "exocrine gland",
+                "oral gland"
+              ],
+              "anatomical_systems": [
+                "digestive system",
+                "exocrine system"
+              ],
+              "rna": {
+                "value": 1623.0,
+                "zscore": 1,
+                "level": 4,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0000948",
+              "label": "heart",
+              "organs": [
+                "heart"
+              ],
+              "anatomical_systems": [
+                "circulatory system"
+              ],
+              "rna": {
+                "value": 790.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0000049",
+              "label": "common myeloid progenitor",
+              "organs": [
+                "blood"
+              ],
+              "anatomical_systems": [
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 35.0,
+                "zscore": -1,
+                "level": 1,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0006101",
+              "label": "Brodmann (1909) area 24",
+              "organs": [
+                "brain"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 389.0,
+                "zscore": -1,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0000972",
+              "label": "class switched memory B cell",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "immune system",
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 37.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0000557",
+              "label": "granulocyte monocyte progenitor cell",
+              "organs": [
+                "blood",
+                "immune organ",
+                "skeletal element"
+              ],
+              "anatomical_systems": [
+                "hematopoietic system",
+                "hemolymphoid system",
+                "immune system",
+                "musculoskeletal system"
+              ],
+              "rna": {
+                "value": 9.0,
+                "zscore": -1,
+                "level": 1,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0000235",
+              "label": "macrophage",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "immune system",
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 31.0,
+                "zscore": -1,
+                "level": 1,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0001898",
+              "label": "hypothalamus",
+              "organs": [
+                "brain"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 457.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0001135",
+              "label": "smooth muscle tissue",
+              "organs": [
+                "musculature"
+              ],
+              "anatomical_systems": [
+                "musculoskeletal system"
+              ],
+              "rna": {
+                "value": 1468.0,
+                "zscore": 1,
+                "level": 4,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 0,
+                "cell_type": [
+                  {
+                    "name": "smooth muscle cells",
+                    "reliability": true,
+                    "level": 0
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "CL_0000815",
+              "label": "regulatory T cell",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "immune system",
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 30.0,
+                "zscore": -1,
+                "level": 1,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0001013",
+              "label": "adipose tissue",
+              "organs": [
+                "connective tissue"
+              ],
+              "anatomical_systems": [
+                "integumental system"
+              ],
+              "rna": {
+                "value": 3650.0,
+                "zscore": 2,
+                "level": 4,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": true,
+                "level": 0,
+                "cell_type": [
+                  {
+                    "name": "adipocytes",
+                    "reliability": true,
+                    "level": 0
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0003889",
+              "label": "fallopian tube",
+              "organs": [
+                "reproductive structure"
+              ],
+              "anatomical_systems": [
+                "reproductive system"
+              ],
+              "rna": {
+                "value": 2055.0,
+                "zscore": 1,
+                "level": 4,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 3,
+                "cell_type": [
+                  {
+                    "name": "glandular cells",
+                    "reliability": true,
+                    "level": 3
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0001301",
+              "label": "epididymis",
+              "organs": [
+                "reproductive structure"
+              ],
+              "anatomical_systems": [
+                "reproductive system"
+              ],
+              "rna": {
+                "value": 0.0,
+                "zscore": -1,
+                "level": -1,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 2,
+                "cell_type": [
+                  {
+                    "name": "glandular cells",
+                    "reliability": true,
+                    "level": 2
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "NOT_AN_UBERON_3",
+              "label": "effector memory CD8-positive, alpha-beta T cell",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "hemolymphoid system",
+                "immune system",
+                "lymphoid system"
+              ],
+              "rna": {
+                "value": 43.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "CL_0011114",
+              "label": "segmented neutrophil of bone marrow",
+              "organs": [
+                "skeletal element",
+                "immune organ"
+              ],
+              "anatomical_systems": [
+                "hematopoietic system",
+                "hemolymphoid system",
+                "immune system",
+                "musculoskeletal system"
+              ],
+              "rna": {
+                "value": 74.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0002108",
+              "label": "small intestine",
+              "organs": [
+                "intestine"
+              ],
+              "anatomical_systems": [
+                "digestive system"
+              ],
+              "rna": {
+                "value": 896.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": true,
+                "level": 2,
+                "cell_type": [
+                  {
+                    "name": "glandular cells",
+                    "reliability": true,
+                    "level": 2
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0000992",
+              "label": "ovary",
+              "organs": [
+                "reproductive organ"
+              ],
+              "anatomical_systems": [
+                "reproductive system"
+              ],
+              "rna": {
+                "value": 5141.5,
+                "zscore": 2,
+                "level": 4,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": true,
+                "level": 0,
+                "cell_type": [
+                  {
+                    "name": "ovarian stroma cells",
+                    "reliability": true,
+                    "level": 0
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0001043",
+              "label": "esophagus",
+              "organs": [
+                "esophagus"
+              ],
+              "anatomical_systems": [
+                "digestive system"
+              ],
+              "rna": {
+                "value": 2948.0,
+                "zscore": 1,
+                "level": 4,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": true,
+                "level": 3,
+                "cell_type": [
+                  {
+                    "name": "squamous epithelial cells",
+                    "reliability": true,
+                    "level": 3
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0007610",
+              "label": "tibial artery",
+              "organs": [
+                "vasculature"
+              ],
+              "anatomical_systems": [
+                "circulatory system"
+              ],
+              "rna": {
+                "value": 994.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0000029",
+              "label": "lymph node",
+              "organs": [
+                "immune organ"
+              ],
+              "anatomical_systems": [
+                "hemolymphoid system",
+                "immune system",
+                "lymphoid system"
+              ],
+              "rna": {
+                "value": 381.0,
+                "zscore": -1,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 0,
+                "cell_type": [
+                  {
+                    "name": "germinal center cells",
+                    "reliability": true,
+                    "level": 0
+                  },
+                  {
+                    "name": "non-germinal center cells",
+                    "reliability": true,
+                    "level": 0
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0002106",
+              "label": "spleen",
+              "organs": [
+                "spleen",
+                "immune organ"
+              ],
+              "anatomical_systems": [
+                "digestive system",
+                "hemolymphoid system",
+                "hematopoietic system",
+                "immune system"
+              ],
+              "rna": {
+                "value": 476.0,
+                "zscore": 0,
+                "level": 3,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 0,
+                "cell_type": [
+                  {
+                    "name": "cells in white pulp",
+                    "reliability": true,
+                    "level": 0
+                  },
+                  {
+                    "name": "cells in red pulp",
+                    "reliability": true,
+                    "level": 0
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "CL_0000738",
+              "label": "leukocyte",
+              "organs": [
+                "immune organ"
+              ],
+              "anatomical_systems": [
+                "hematopoietic system",
+                "immune system"
+              ],
+              "rna": {
+                "value": 189.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0001044",
+              "label": "saliva-secreting gland",
+              "organs": [
+                "exocrine gland",
+                "oral gland"
+              ],
+              "anatomical_systems": [
+                "digestive system",
+                "exocrine system"
+              ],
+              "rna": {
+                "value": 6506.0,
+                "zscore": 3,
+                "level": 4,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 2,
+                "cell_type": [
+                  {
+                    "name": "glandular cells",
+                    "reliability": true,
+                    "level": 2
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "CL_0000625",
+              "label": "CD8-positive, alpha-beta T cell",
+              "organs": [
+                "immune organ",
+                "blood"
+              ],
+              "anatomical_systems": [
+                "immune system",
+                "hematopoietic system"
+              ],
+              "rna": {
+                "value": 102.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "abdomen",
+              "label": "abdomen",
+              "organs": [],
+              "anatomical_systems": [],
+              "rna": {
+                "value": 0.0,
+                "zscore": -1,
+                "level": -1,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 0,
+                "cell_type": [
+                  {
+                    "name": "fibroblasts",
+                    "reliability": true,
+                    "level": 0
+                  },
+                  {
+                    "name": "peripheral nerve",
+                    "reliability": true,
+                    "level": 0
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0001134",
+              "label": "skeletal muscle tissue",
+              "organs": [
+                "musculature"
+              ],
+              "anatomical_systems": [
+                "musculoskeletal system"
+              ],
+              "rna": {
+                "value": 1454.5,
+                "zscore": 1,
+                "level": 4,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 0,
+                "cell_type": [
+                  {
+                    "name": "myocytes",
+                    "reliability": true,
+                    "level": 0
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0002190",
+              "label": "subcutaneous adipose tissue",
+              "organs": [
+                "connective tissue"
+              ],
+              "anatomical_systems": [
+                "integumental system"
+              ],
+              "rna": {
+                "value": 2159.5,
+                "zscore": 1,
+                "level": 4,
+                "unit": "TPM"
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            },
+            {
+              "efo_code": "UBERON_0003729",
+              "label": "oral mucosa",
+              "organs": [
+                "mucosa"
+              ],
+              "anatomical_systems": [
+                "digestive system"
+              ],
+              "rna": {
+                "value": 0.0,
+                "zscore": -1,
+                "level": -1,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": true,
+                "level": 2,
+                "cell_type": [
+                  {
+                    "name": "squamous epithelial cells",
+                    "reliability": true,
+                    "level": 2
+                  }
+                ]
+              }
+            },
+            {
+              "efo_code": "UBERON_0002245",
+              "label": "cerebellar hemisphere",
+              "organs": [
+                "brain"
+              ],
+              "anatomical_systems": [
+                "nervous system"
+              ],
+              "rna": {
+                "value": 125.0,
+                "zscore": -1,
+                "level": 2,
+                "unit": ""
+              },
+              "protein": {
+                "reliability": false,
+                "level": -1,
+                "cell_type": []
+              }
+            }
+          ]
+        },
+        "efo_code": {
+          "name": "efo_code",
+          "data_type": "Text",
+          "description": "Ontology ID of the biosample the expression data is from [bioregistry:uberon]",
+          "example": "UBERON_0006618"
+        },
+        "label": {
+          "name": "label",
+          "data_type": "Text",
+          "description": "Name of the biosample the expression data is from",
+          "example": "atrium auricular region"
+        },
+        "organs": {
+          "name": "organs",
+          "data_type": "Array[Text]",
+          "description": "List of organs that the biosample can be found in",
+          "example": [
+            "heart"
+          ]
+        },
+        "anatomical_systems": {
+          "name": "anatomical_systems",
+          "data_type": "Array[Text]",
+          "description": "List of anatomical systems that the biosample can be found in",
+          "example": [
+            "circulatory system"
+          ]
+        },
+        "rna": {
+          "name": "rna",
+          "data_type": "Struct",
+          "description": "Struct containing relevant RNA expression values for a particular biosample and gene combination",
+          "example": {
+            "value": 603.5,
+            "zscore": 0,
+            "level": 3,
+            "unit": "TPM"
+          }
+        },
+        "value": {
+          "name": "value",
+          "data_type": "Float",
+          "description": "Expression value"
+        },
+        "zscore": {
+          "name": "zscore",
+          "data_type": "Integer",
+          "description": "Expression zscore"
+        },
+        "level": {
+          "name": "level",
+          "data_type": "Integer",
+          "description": "PLACEHOLDER for level description"
+        },
+        "unit": {
+          "name": "unit",
+          "data_type": "Text",
+          "description": "Unit for the RNA expression"
+        },
+        "protein": {
+          "name": "protein",
+          "data_type": "Struct",
+          "description": "Struct containing relevant protein expression values for a particular biosample and gene combination",
+          "example": {
+            "reliability": false,
+            "level": -1,
+            "cell_type": []
+          }
+        },
+        "reliability": {
+          "name": "reliability",
+          "data_type": "Boolean",
+          "description": "PLACEHOLDER for reliability description"
+        },
+        "cell_type": {
+          "name": "cell_type",
+          "data_type": "Array[Struct]",
+          "description": "List of cell types were protein levels were measured"
+        },
+        "name": {
+          "name": "name",
+          "data_type": "Text",
+          "description": "Cell type name"
+        }
+      },
+      "description": "Open Targets dataset: expression"
+    }
+  }
+}

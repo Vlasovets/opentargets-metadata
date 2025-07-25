@@ -1,0 +1,34 @@
+{
+  "datasets": {
+    "association_overall_direct": {
+      "name": "association_overall_direct",
+      "columns": {
+        "diseaseId": {
+          "name": "diseaseId",
+          "data_type": "Text",
+          "description": "Identifier for the disease in the association.",
+          "example": "EFO_1001341"
+        },
+        "targetId": {
+          "name": "targetId",
+          "data_type": "Text",
+          "description": "Identifier for the target in the association.",
+          "example": "ENSG00000002549"
+        },
+        "score": {
+          "name": "score",
+          "data_type": "Float",
+          "description": "Association score calculated across all data sources without ontology propagation of evidence",
+          "example": 0.015522353896757478
+        },
+        "evidenceCount": {
+          "name": "evidenceCount",
+          "data_type": "Float",
+          "description": "Number of evidence items supporting the association.",
+          "example": 1
+        }
+      },
+      "description": "Open Targets dataset: association_overall_direct"
+    }
+  }
+}

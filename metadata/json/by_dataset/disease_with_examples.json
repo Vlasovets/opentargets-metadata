@@ -1,0 +1,190 @@
+{
+  "datasets": {
+    "disease": {
+      "name": "disease",
+      "columns": {
+        "id": {
+          "name": "id",
+          "data_type": "Text",
+          "description": "Open Targets disease identifier",
+          "example": "DOID_0050890"
+        },
+        "code": {
+          "name": "code",
+          "data_type": "Text",
+          "description": "Disease reference URL",
+          "example": "http://purl.obolibrary.org/obo/DOID_0050890"
+        },
+        "name": {
+          "name": "name",
+          "data_type": "Text",
+          "description": "Lable of the term in the ontology",
+          "example": "synucleinopathy"
+        },
+        "description": {
+          "name": "description",
+          "data_type": "Text",
+          "description": "Description of the disease",
+          "example": "A neurodegenerative disease that is characterized by the abnormal accumulation of aggregates of alpha-synuclein protein in neurons, nerve fibres or glial cells. [url:http://en.wikipedia.org/wiki/Synucleinopathies ]"
+        },
+        "dbXRefs": {
+          "name": "dbXRefs",
+          "data_type": "Array[Text]",
+          "description": "Cross-references in other disease ontologies",
+          "example": [
+            "MESH:D000080874",
+            "MONDO:0000510",
+            "UMLS:C5191670",
+            "MEDGEN:1682194"
+          ]
+        },
+        "parents": {
+          "name": "parents",
+          "data_type": "Array[Text]",
+          "description": "List of parent disease terms",
+          "example": [
+            "MONDO_0019052",
+            "MONDO_0021179",
+            "MONDO_0024237"
+          ]
+        },
+        "synonyms": {
+          "name": "synonyms",
+          "data_type": "Struct",
+          "description": "List of synonymous disease labels",
+          "example": {
+            "hasExactSynonym": [
+              "alpha Synucleinopathies",
+              "synucleinopathy"
+            ],
+            "hasRelatedSynonym": [
+              "alpha synucleinopathies",
+              "synucleinopathies"
+            ],
+            "hasNarrowSynonym": [],
+            "hasBroadSynonym": []
+          }
+        },
+        "hasExactSynonym": {
+          "name": "hasExactSynonym",
+          "data_type": "Array[Text]",
+          "description": "List of exact synonyms"
+        },
+        "hasRelatedSynonym": {
+          "name": "hasRelatedSynonym",
+          "data_type": "Array[Text]",
+          "description": "List of related synonyms"
+        },
+        "hasNarrowSynonym": {
+          "name": "hasNarrowSynonym",
+          "data_type": "Array[Text]",
+          "description": "List of closely related sysnonyms"
+        },
+        "hasBroadSynonym": {
+          "name": "hasBroadSynonym",
+          "data_type": "Array[Text]",
+          "description": "List of broadly related sysnonyms"
+        },
+        "obsoleteTerms": {
+          "name": "obsoleteTerms",
+          "data_type": "Array[Text]",
+          "description": "List of obsoleted terms",
+          "example": []
+        },
+        "obsoleteXRefs": {
+          "name": "obsoleteXRefs",
+          "data_type": "Array[Text]",
+          "description": "List of obsoleted cross references",
+          "example": []
+        },
+        "children": {
+          "name": "children",
+          "data_type": "Array[Text]",
+          "description": "List of children disease terms",
+          "example": [
+            "EFO_0006792",
+            "EFO_1001050"
+          ]
+        },
+        "ancestors": {
+          "name": "ancestors",
+          "data_type": "Array[Text]",
+          "description": "List of all ancestral disease terms",
+          "example": [
+            "MONDO_0024237",
+            "EFO_0005772",
+            "EFO_0000618",
+            "MONDO_0019052",
+            "EFO_0000589",
+            "EFO_0009386",
+            "MONDO_0021179",
+            "EFO_0000508",
+            "OTAR_0000020",
+            "MONDO_0100545",
+            "OTAR_0000018"
+          ]
+        },
+        "therapeuticAreas": {
+          "name": "therapeuticAreas",
+          "data_type": "Array[Text]",
+          "description": "List of major therapeutic areas the disease belongs to",
+          "example": [
+            "EFO_0000618",
+            "OTAR_0000018",
+            "OTAR_0000020"
+          ]
+        },
+        "descendants": {
+          "name": "descendants",
+          "data_type": "Array[Text]",
+          "description": "List of all descendant terms",
+          "example": [
+            "MONDO_0000211",
+            "MONDO_0016418",
+            "MONDO_0014889",
+            "EFO_0006792",
+            "MONDO_0003122",
+            "MONDO_0012205",
+            "EFO_1001050",
+            "MONDO_0014835",
+            "MONDO_0010080"
+          ]
+        },
+        "ontology": {
+          "name": "ontology",
+          "data_type": "Struct",
+          "description": "Description of the disease's place in the ontology tree",
+          "example": {
+            "isTherapeuticArea": false,
+            "leaf": false,
+            "sources": {
+              "url": "http://purl.obolibrary.org/obo/DOID_0050890",
+              "name": "DOID_0050890"
+            }
+          }
+        },
+        "isTherapeuticArea": {
+          "name": "isTherapeuticArea",
+          "data_type": "Boolean",
+          "description": "Boolean column indicating if a disease is root of the ontology tree, a therapeutic area"
+        },
+        "leaf": {
+          "name": "leaf",
+          "data_type": "Boolean",
+          "description": "Boolean column indicating if a disease is a leaf entity in the ontology tree"
+        },
+        "sources": {
+          "name": "sources",
+          "data_type": "Struct",
+          "description": "Source of the"
+        },
+        "url": {
+          "name": "url",
+          "data_type": "Text",
+          "description": "Disease URL from source"
+        }
+      },
+      "description": "Open Targets dataset: disease"
+    }
+  }
+}

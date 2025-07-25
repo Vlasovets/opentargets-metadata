@@ -1,0 +1,144 @@
+{
+  "datasets": {
+    "known_drug": {
+      "name": "known_drug",
+      "columns": {
+        "drugId": {
+          "name": "drugId",
+          "data_type": "Text",
+          "description": "Open Targets molecule identifier",
+          "example": "CHEMBL265502"
+        },
+        "targetId": {
+          "name": "targetId",
+          "data_type": "Text",
+          "description": "Open Targets target identifier",
+          "example": "ENSG00000113578"
+        },
+        "diseaseId": {
+          "name": "diseaseId",
+          "data_type": "Text",
+          "description": "Open Targets disease identifier",
+          "example": "DOID_10113"
+        },
+        "phase": {
+          "name": "phase",
+          "data_type": "Float",
+          "description": "Clinical development stage of the drug",
+          "example": 3.0
+        },
+        "status": {
+          "name": "status",
+          "data_type": "Text",
+          "description": "Clinical trial status for the drug/indication pair",
+          "example": "Completed"
+        },
+        "urls": {
+          "name": "urls",
+          "data_type": "Array[Struct]",
+          "description": "List of web addresses that support the drug/indication pair",
+          "example": [
+            {
+              "niceName": "ATC",
+              "url": "https://www.whocc.no/atc_ddd_index/?code=P01CX02"
+            }
+          ]
+        },
+        "niceName": {
+          "name": "niceName",
+          "data_type": "Text",
+          "description": "List of human readable names for the reference source",
+          "example": "ATC"
+        },
+        "url": {
+          "name": "url",
+          "data_type": "Text",
+          "description": "List of web addresses that support the drug/indication pair",
+          "example": "https://www.whocc.no/atc_ddd_index/?code=P01CX02"
+        },
+        "ancestors": {
+          "name": "ancestors",
+          "data_type": "Array[Text]",
+          "description": "List of parent disease terms of the condition being treated",
+          "example": [
+            "MONDO_0002428",
+            "EFO_0001067",
+            "EFO_0005741"
+          ]
+        },
+        "label": {
+          "name": "label",
+          "data_type": "Text",
+          "description": "Disease label for the condition being treated",
+          "example": "trypanosomiasis"
+        },
+        "approvedSymbol": {
+          "name": "approvedSymbol",
+          "data_type": "Text",
+          "description": "Approved gene symbol of the target modulated by the drug",
+          "example": "FGF1"
+        },
+        "approvedName": {
+          "name": "approvedName",
+          "data_type": "Text",
+          "description": "Approved full name of the gene or gene product modulated by the drug",
+          "example": "fibroblast growth factor 1"
+        },
+        "targetClass": {
+          "name": "targetClass",
+          "data_type": "Array[Text]",
+          "description": "Classification category of the drug's biological target (e.g. Enzyme)",
+          "example": [
+            "Secreted protein"
+          ]
+        },
+        "prefName": {
+          "name": "prefName",
+          "data_type": "Text",
+          "description": "Commonly used name for the drug",
+          "example": "SURAMIN"
+        },
+        "tradeNames": {
+          "name": "tradeNames",
+          "data_type": "Array[Text]",
+          "description": "List of brand names for the drug",
+          "example": []
+        },
+        "synonyms": {
+          "name": "synonyms",
+          "data_type": "Array[Text]",
+          "description": "List of alternative names to refer to the drug",
+          "example": [
+            "FARMA-939",
+            "Farma",
+            "Fourneau",
+            "Metaret",
+            "NSC-34936",
+            "Naganol",
+            "Suramin",
+            "Suramine"
+          ]
+        },
+        "drugType": {
+          "name": "drugType",
+          "data_type": "Text",
+          "description": "Classification of the modality of the drug (e.g. Small molecule)",
+          "example": "Small molecule"
+        },
+        "mechanismOfAction": {
+          "name": "mechanismOfAction",
+          "data_type": "Text",
+          "description": "Drug pharmacological action",
+          "example": "Acidic fibroblast growth factor inhibitor"
+        },
+        "targetName": {
+          "name": "targetName",
+          "data_type": "Text",
+          "description": "Full name of the gene or gene product modulated by the drug, as referred by ChEMBL",
+          "example": "Acidic fibroblast growth factor"
+        }
+      },
+      "description": "Open Targets dataset: known_drug"
+    }
+  }
+}

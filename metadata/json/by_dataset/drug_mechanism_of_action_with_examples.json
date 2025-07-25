@@ -1,0 +1,94 @@
+{
+  "datasets": {
+    "drug_mechanism_of_action": {
+      "name": "drug_mechanism_of_action",
+      "columns": {
+        "actionType": {
+          "name": "actionType",
+          "data_type": "Text",
+          "description": "Classification of how the drug interacts with its target (e.g., ACTIVATOR)",
+          "example": "ACTIVATOR"
+        },
+        "mechanismOfAction": {
+          "name": "mechanismOfAction",
+          "data_type": "Text",
+          "description": "Drug pharmacological action",
+          "example": "AMP-activated protein kinase, AMPK activator"
+        },
+        "chemblIds": {
+          "name": "chemblIds",
+          "data_type": "Array[Text]",
+          "description": "List of Open Targets molecule identifiers",
+          "example": [
+            "CHEMBL1551724"
+          ]
+        },
+        "targetName": {
+          "name": "targetName",
+          "data_type": "Text",
+          "description": "Specific biological entity on which the drug has an effect",
+          "example": "AMP-activated protein kinase, AMPK"
+        },
+        "targetType": {
+          "name": "targetType",
+          "data_type": "Text",
+          "description": "Classification of the target's biological category (e.g., protein complex)",
+          "example": "protein complex group"
+        },
+        "targets": {
+          "name": "targets",
+          "data_type": "Array[Text]",
+          "description": "List of Open Targets target identifiers",
+          "example": [
+            "ENSG00000162409",
+            "ENSG00000131791",
+            "ENSG00000181929",
+            "ENSG00000106617",
+            "ENSG00000111725",
+            "ENSG00000132356",
+            "ENSG00000115592"
+          ]
+        },
+        "references": {
+          "name": "references",
+          "data_type": "Array[Struct]",
+          "description": "List of sources documenting the mechanism information",
+          "example": [
+            {
+              "source": "PubMed",
+              "ids": [
+                "18671468"
+              ],
+              "urls": [
+                "https://pubmed.ncbi.nlm.nih.gov/18671468/"
+              ]
+            }
+          ]
+        },
+        "source": {
+          "name": "source",
+          "data_type": "Text",
+          "description": "List of source names documenting the mechanism information",
+          "example": "PubMed"
+        },
+        "ids": {
+          "name": "ids",
+          "data_type": "Array[Text]",
+          "description": "List of identification codes for the reference sources",
+          "example": [
+            "18671468"
+          ]
+        },
+        "urls": {
+          "name": "urls",
+          "data_type": "Array[Text]",
+          "description": "List of web addresses referencing the mechanism information",
+          "example": [
+            "https://pubmed.ncbi.nlm.nih.gov/18671468/"
+          ]
+        }
+      },
+      "description": "Open Targets dataset: drug_mechanism_of_action"
+    }
+  }
+}

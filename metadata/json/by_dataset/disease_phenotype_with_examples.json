@@ -1,0 +1,132 @@
+{
+  "datasets": {
+    "disease_phenotype": {
+      "name": "disease_phenotype",
+      "columns": {
+        "disease": {
+          "name": "disease",
+          "data_type": "Text",
+          "description": "Disease identifier",
+          "example": "MONDO_0010533"
+        },
+        "phenotype": {
+          "name": "phenotype",
+          "data_type": "Text",
+          "description": "The phenotype linked to the disease.",
+          "example": "HP_0001284"
+        },
+        "evidence": {
+          "name": "evidence",
+          "data_type": "Array[Struct]",
+          "description": "A container for all evidence-related attributes supporting the disease-phenotype association.",
+          "example": [
+            {
+              "aspect": "P",
+              "bioCuration": "HPO:iea[2009-02-17]",
+              "diseaseFromSourceId": "OMIM:301835",
+              "diseaseFromSource": "Arts syndrome",
+              "diseaseName": "Arts syndrome",
+              "evidenceType": "IEA",
+              "frequency": null,
+              "modifiers": [],
+              "onset": [],
+              "qualifier": null,
+              "qualifierNot": false,
+              "references": [
+                "OMIM:301835"
+              ],
+              "sex": null,
+              "resource": "HPO"
+            }
+          ]
+        },
+        "aspect": {
+          "name": "aspect",
+          "data_type": "Text",
+          "description": "The category of biological information being provided (e.g., clinical, genetic, etc.).",
+          "example": "P"
+        },
+        "bioCuration": {
+          "name": "bioCuration",
+          "data_type": "Text",
+          "description": "Indicates whether the evidence has been manually curated.",
+          "example": "HPO:iea[2009-02-17]"
+        },
+        "diseaseFromSourceId": {
+          "name": "diseaseFromSourceId",
+          "data_type": "Text",
+          "description": "Unique identifier for the disease from the original source.",
+          "example": "OMIM:301835"
+        },
+        "diseaseFromSource": {
+          "name": "diseaseFromSource",
+          "data_type": "Text",
+          "description": "The disease name as recorded in the original source.",
+          "example": "Arts syndrome"
+        },
+        "diseaseName": {
+          "name": "diseaseName",
+          "data_type": "Text",
+          "description": "Standardized disease name.",
+          "example": "Arts syndrome"
+        },
+        "evidenceType": {
+          "name": "evidenceType",
+          "data_type": "Text",
+          "description": "The type of evidence supporting the disease-phenotype relationship.",
+          "example": "IEA"
+        },
+        "frequency": {
+          "name": "frequency",
+          "data_type": "Text",
+          "description": "The observed frequency of the phenotype in individuals with the disease.",
+          "example": "1/1"
+        },
+        "modifiers": {
+          "name": "modifiers",
+          "data_type": "Array[Text]",
+          "description": "Additional characteristics or modifiers related to the phenotype.",
+          "example": []
+        },
+        "onset": {
+          "name": "onset",
+          "data_type": "Array[Text]",
+          "description": "Age or stage of disease onset for the phenotype.",
+          "example": []
+        },
+        "qualifier": {
+          "name": "qualifier",
+          "data_type": "Text",
+          "description": "Additional qualifiers specifying the phenotype-disease relationship."
+        },
+        "qualifierNot": {
+          "name": "qualifierNot",
+          "data_type": "Boolean",
+          "description": "Specifies if a phenotype is not observed in a given disease.",
+          "example": false
+        },
+        "references": {
+          "name": "references",
+          "data_type": "Array[Text]",
+          "description": "References or citations supporting the evidence. [bioregistry:pubmed]",
+          "example": [
+            "OMIM:301835"
+          ]
+        },
+        "sex": {
+          "name": "sex",
+          "data_type": "Text",
+          "description": "Indicates if the association is specific to a biological sex.",
+          "example": "MALE"
+        },
+        "resource": {
+          "name": "resource",
+          "data_type": "Text",
+          "description": "The data source from which the evidence was obtained.",
+          "example": "HPO"
+        }
+      },
+      "description": "Open Targets dataset: disease_phenotype"
+    }
+  }
+}

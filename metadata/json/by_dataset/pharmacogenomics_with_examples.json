@@ -1,0 +1,218 @@
+{
+  "datasets": {
+    "pharmacogenomics": {
+      "name": "pharmacogenomics",
+      "columns": {
+        "datasourceId": {
+          "name": "datasourceId",
+          "data_type": "Text",
+          "description": "Identifier for the data provider",
+          "example": "pharmgkb"
+        },
+        "datasourceVersion": {
+          "name": "datasourceVersion",
+          "data_type": "Text",
+          "description": "Data provider version number",
+          "example": "2025-05-05"
+        },
+        "datatypeId": {
+          "name": "datatypeId",
+          "data_type": "Text",
+          "description": "Classification of the type of pharmacogenomic data (e.g. clinical_annotation)",
+          "example": "clinical_annotation"
+        },
+        "directionality": {
+          "name": "directionality",
+          "data_type": "Text",
+          "description": "PLACEHOLDER for directionality description",
+          "example": "Normal function"
+        },
+        "evidenceLevel": {
+          "name": "evidenceLevel",
+          "data_type": "Text",
+          "description": "Strength of the scientific support for the variant/drug response",
+          "example": "3"
+        },
+        "genotype": {
+          "name": "genotype",
+          "data_type": "Text",
+          "description": "Genetic variant configuration",
+          "example": "AA"
+        },
+        "genotypeAnnotationText": {
+          "name": "genotypeAnnotationText",
+          "data_type": "Text",
+          "description": "Explanation of the genotype's clinical significance",
+          "example": "Alcohol-dependent patients with the AA genotype may have decreased stress-induced alcohol cravings as compared to patients with the TT genotype. Other genetic and clinical factors may also affect stress-induced alcohol craving in alcohol-dependent patients."
+        },
+        "genotypeId": {
+          "name": "genotypeId",
+          "data_type": "Text",
+          "description": "Identifier for the specific genetic variant combination (e.g. 1_1500_A_A,T)",
+          "example": "5_76968168_A_A,A"
+        },
+        "haplotypeFromSourceId": {
+          "name": "haplotypeFromSourceId",
+          "data_type": "Text",
+          "description": "Haplotype ID in the PharmKGB dataset",
+          "example": "PA165816542"
+        },
+        "haplotypeId": {
+          "name": "haplotypeId",
+          "data_type": "Text",
+          "description": "Combination of genetic variants that constitute a particular allele of a gene (e.g. CYP2C9*3)",
+          "example": "CYP2C9*1"
+        },
+        "literature": {
+          "name": "literature",
+          "data_type": "Text",
+          "description": "PLACEHOLDER for literature description",
+          "example": [
+            "21039637"
+          ]
+        },
+        "pgxCategory": {
+          "name": "pgxCategory",
+          "data_type": "Text",
+          "description": "Classification of the drug response type (e.g. Toxicity)",
+          "example": "toxicity"
+        },
+        "phenotypeFromSourceId": {
+          "name": "phenotypeFromSourceId",
+          "data_type": "Text",
+          "description": "Open Targets disease identifier result of mapping phenotypeText",
+          "example": "EFO_0000480"
+        },
+        "phenotypeText": {
+          "name": "phenotypeText",
+          "data_type": "Text",
+          "description": "Drug response influenced by the variation",
+          "example": "decreased stress-induced alcohol cravings"
+        },
+        "variantAnnotation": {
+          "name": "variantAnnotation",
+          "data_type": "Array[Struct]",
+          "description": "PLACEHOLDER for variantAnnotation description",
+          "example": [
+            {
+              "baseAlleleOrGenotype": "GG + GT",
+              "comparisonAlleleOrGenotype": "TT",
+              "directionality": "increased",
+              "effect": "dose of",
+              "effectDescription": "Genotypes GG + GT are associated with increased dose of methadone in people with Heroin Dependence as compared to genotype TT.",
+              "effectType": "drug",
+              "entity": "methadone",
+              "literature": "21790905"
+            },
+            {
+              "baseAlleleOrGenotype": "GG",
+              "comparisonAlleleOrGenotype": "GT + TT",
+              "directionality": "increased",
+              "effect": "dose of",
+              "effectDescription": "Genotype GG is associated with increased dose of methadone in people with Heroin Dependence as compared to genotypes GT + TT.",
+              "effectType": "drug",
+              "entity": "methadone",
+              "literature": "34380995"
+            }
+          ]
+        },
+        "baseAlleleOrGenotype": {
+          "name": "baseAlleleOrGenotype",
+          "data_type": "Text",
+          "description": "PLACEHOLDER for baseAlleleOrGenotype description",
+          "example": "GG + GT"
+        },
+        "comparisonAlleleOrGenotype": {
+          "name": "comparisonAlleleOrGenotype",
+          "data_type": "Text",
+          "description": "PLACEHOLDER for comparisonAlleleOrGenotype description",
+          "example": "TT"
+        },
+        "effect": {
+          "name": "effect",
+          "data_type": "Text",
+          "description": "PLACEHOLDER for effect description",
+          "example": "dose of"
+        },
+        "effectDescription": {
+          "name": "effectDescription",
+          "data_type": "Text",
+          "description": "PLACEHOLDER for effectDescription description",
+          "example": "Genotypes GG + GT are associated with increased dose of methadone in people with Heroin Dependence as compared to genotype TT."
+        },
+        "effectType": {
+          "name": "effectType",
+          "data_type": "Text",
+          "description": "PLACEHOLDER for effectType description",
+          "example": "drug"
+        },
+        "entity": {
+          "name": "entity",
+          "data_type": "Text",
+          "description": "PLACEHOLDER for entity description",
+          "example": "methadone"
+        },
+        "studyId": {
+          "name": "studyId",
+          "data_type": "Text",
+          "description": "Clinical Annotation ID in the PharmKGB dataset",
+          "example": "1450812912"
+        },
+        "targetFromSourceId": {
+          "name": "targetFromSourceId",
+          "data_type": "Text",
+          "description": "Open Targets target identifier as provided by the data source",
+          "example": "ENSG00000145708"
+        },
+        "variantFunctionalConsequenceId": {
+          "name": "variantFunctionalConsequenceId",
+          "data_type": "Text",
+          "description": "The sequence ontology identifier of the consequence of the variant based on Ensembl VEP in the context of the transcript [bioregistry:so]",
+          "example": "SO_0002073"
+        },
+        "variantRsId": {
+          "name": "variantRsId",
+          "data_type": "Text",
+          "description": "Variant reference SNP cluster ID (Rsid)",
+          "example": "rs10055255"
+        },
+        "variantId": {
+          "name": "variantId",
+          "data_type": "Text",
+          "description": "The unique identifier for the variant following schema: {chromosome}-{position}-{referenceAllele}-{alternateAllele}",
+          "example": "1_97450058_C_T"
+        },
+        "isDirectTarget": {
+          "name": "isDirectTarget",
+          "data_type": "Boolean",
+          "description": "Flag indicating whether the target overlapping the variation is directly targeted by the drug",
+          "example": false
+        },
+        "drugs": {
+          "name": "drugs",
+          "data_type": "Array[Struct]",
+          "description": "List of drugs affected by this genetic variation",
+          "example": [
+            {
+              "drugFromSource": "ethanol",
+              "drugId": null
+            }
+          ]
+        },
+        "drugFromSource": {
+          "name": "drugFromSource",
+          "data_type": "Text",
+          "description": "List of drug identifiers from the original data source",
+          "example": "ethanol"
+        },
+        "drugId": {
+          "name": "drugId",
+          "data_type": "Text",
+          "description": "List of Open Targets drug identifiers",
+          "example": "CHEMBL651"
+        }
+      },
+      "description": "Open Targets dataset: pharmacogenomics"
+    }
+  }
+}

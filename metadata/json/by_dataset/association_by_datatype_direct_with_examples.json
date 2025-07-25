@@ -1,0 +1,40 @@
+{
+  "datasets": {
+    "association_by_datatype_direct": {
+      "name": "association_by_datatype_direct",
+      "columns": {
+        "diseaseId": {
+          "name": "diseaseId",
+          "data_type": "Text",
+          "description": "Identifier for the disease in the association.",
+          "example": "MONDO_0012450"
+        },
+        "targetId": {
+          "name": "targetId",
+          "data_type": "Text",
+          "description": "Identifier for the target in the association.",
+          "example": "ENSG00000001617"
+        },
+        "datatypeId": {
+          "name": "datatypeId",
+          "data_type": "Text",
+          "description": "Identifier for the data type used to calculate the association score.",
+          "example": "animal_model"
+        },
+        "score": {
+          "name": "score",
+          "data_type": "Float",
+          "description": "Association score calculated independently for each data type without additional ontology propagation.",
+          "example": 0.2859098541167454
+        },
+        "evidenceCount": {
+          "name": "evidenceCount",
+          "data_type": "Float",
+          "description": "Number of evidence items supporting the association.",
+          "example": 1
+        }
+      },
+      "description": "Open Targets dataset: association_by_datatype_direct"
+    }
+  }
+}

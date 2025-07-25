@@ -1,0 +1,46 @@
+{
+  "datasets": {
+    "association_by_datasource_indirect": {
+      "name": "association_by_datasource_indirect",
+      "columns": {
+        "datatypeId": {
+          "name": "datatypeId",
+          "data_type": "Text",
+          "description": "Identifier for the data type used to calculate the association score (e.g. genetic_association)",
+          "example": "animal_model"
+        },
+        "datasourceId": {
+          "name": "datasourceId",
+          "data_type": "Text",
+          "description": "Identifier for the data source used to calculate the association score. (e.g. chembl)",
+          "example": "impc"
+        },
+        "diseaseId": {
+          "name": "diseaseId",
+          "data_type": "Text",
+          "description": "Identifier for the disease in the association.",
+          "example": "MONDO_0019011"
+        },
+        "targetId": {
+          "name": "targetId",
+          "data_type": "Text",
+          "description": "Identifier for the target in the association.",
+          "example": "ENSG00000006468"
+        },
+        "score": {
+          "name": "score",
+          "data_type": "Float",
+          "description": "Association score calculated independently for each data source considering ontology propagation of evidence",
+          "example": 0.5836322285623055
+        },
+        "evidenceCount": {
+          "name": "evidenceCount",
+          "data_type": "Float",
+          "description": "Number of evidence items supporting the association.",
+          "example": 7
+        }
+      },
+      "description": "Open Targets dataset: association_by_datasource_indirect"
+    }
+  }
+}

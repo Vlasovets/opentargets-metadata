@@ -1,0 +1,77 @@
+{
+  "datasets": {
+    "biosample": {
+      "name": "biosample",
+      "columns": {
+        "biosampleId": {
+          "name": "biosampleId",
+          "data_type": "Text",
+          "description": "Unique identifier for the biosample [bioregistry:uberon]",
+          "example": "BFO_0000017"
+        },
+        "biosampleName": {
+          "name": "biosampleName",
+          "data_type": "Text",
+          "description": "Name of the biosample",
+          "example": "realizable entity"
+        },
+        "description": {
+          "name": "description",
+          "data_type": "Text",
+          "description": "Description of the biosample",
+          "example": "a core relation that holds between a part and its whole"
+        },
+        "xrefs": {
+          "name": "xrefs",
+          "data_type": "Array[Text]",
+          "description": "Cross-reference IDs from other ontologies",
+          "example": []
+        },
+        "synonyms": {
+          "name": "synonyms",
+          "data_type": "Array[Text]",
+          "description": "List of synonymous names for the term",
+          "example": []
+        },
+        "parents": {
+          "name": "parents",
+          "data_type": "Array[Text]",
+          "description": "Direct parent biosample IDs in the ontology",
+          "example": [
+            "BFO_0000020"
+          ]
+        },
+        "ancestors": {
+          "name": "ancestors",
+          "data_type": "Array[Text]",
+          "description": "List of ancestor biosample IDs in the ontology",
+          "example": [
+            "BFO_0000001",
+            "BFO_0000020",
+            "BFO_0000002"
+          ]
+        },
+        "children": {
+          "name": "children",
+          "data_type": "Array[Text]",
+          "description": "Direct child biosample IDs in the ontology",
+          "example": [
+            "BFO_0000016",
+            "BFO_0000023"
+          ]
+        },
+        "descendants": {
+          "name": "descendants",
+          "data_type": "Array[Text]",
+          "description": "List of descendant biosample IDs in the ontology",
+          "example": [
+            "BFO_0000016",
+            "BFO_0000034",
+            "BFO_0000023"
+          ]
+        }
+      },
+      "description": "Open Targets dataset: biosample"
+    }
+  }
+}

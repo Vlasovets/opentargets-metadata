@@ -1,0 +1,22 @@
+{
+  "datasets": {
+    "so": {
+      "name": "so",
+      "columns": {
+        "id": {
+          "name": "id",
+          "data_type": "Text",
+          "description": "Sequence ontology term identifier [bioregistry:so]",
+          "example": "SO:0005854"
+        },
+        "label": {
+          "name": "label",
+          "data_type": "Text",
+          "description": "Sequence ontology term label",
+          "example": "gene_cassette_array"
+        }
+      },
+      "description": "Open Targets dataset: so"
+    }
+  }
+}

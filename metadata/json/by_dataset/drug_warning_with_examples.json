@@ -1,0 +1,128 @@
+{
+  "datasets": {
+    "drug_warning": {
+      "name": "drug_warning",
+      "columns": {
+        "chemblIds": {
+          "name": "chemblIds",
+          "data_type": "Array[Text]",
+          "description": "List of Open Targets molecule identifiers",
+          "example": [
+            "CHEMBL4303288",
+            "CHEMBL1380"
+          ]
+        },
+        "toxicityClass": {
+          "name": "toxicityClass",
+          "data_type": "Text",
+          "description": "Classification of toxicity type associated with the drug",
+          "example": "hepatotoxicity"
+        },
+        "country": {
+          "name": "country",
+          "data_type": "Text",
+          "description": "Country where the warning was issued",
+          "example": "United States"
+        },
+        "description": {
+          "name": "description",
+          "data_type": "Text",
+          "description": "Description of the drug adverse effect",
+          "example": "Nephropathy"
+        },
+        "id": {
+          "name": "id",
+          "data_type": "Float",
+          "description": "Internal identifier for the drug warning record",
+          "example": 1
+        },
+        "references": {
+          "name": "references",
+          "data_type": "Array[Struct]",
+          "description": "List of sources supporting the warning information",
+          "example": [
+            {
+              "ref_id": "de109a2b-e36c-40d0-85fc-a67a9e7f1ae8",
+              "ref_type": "DailyMed",
+              "ref_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de109a2b-e36c-40d0-85fc-a67a9e7f1ae8"
+            },
+            {
+              "ref_id": "73ce0bc5-43e2-c57f-0a6a-bdaf9fbaa3c2",
+              "ref_type": "DailyMed",
+              "ref_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=73ce0bc5-43e2-c57f-0a6a-bdaf9fbaa3c2"
+            },
+            {
+              "ref_id": "e5cbf204-c10d-444b-aba0-180a30645d55",
+              "ref_type": "DailyMed",
+              "ref_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e5cbf204-c10d-444b-aba0-180a30645d55"
+            },
+            {
+              "ref_id": "ca73b519-015a-436d-aa3c-af53492825a1",
+              "ref_type": "DailyMed",
+              "ref_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ca73b519-015a-436d-aa3c-af53492825a1"
+            },
+            {
+              "ref_id": "633f1ec9-53b1-4a9a-a738-8cae5b763f08",
+              "ref_type": "FDA",
+              "ref_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=633f1ec9-53b1-4a9a-a738-8cae5b763f08"
+            },
+            {
+              "ref_id": "816b11bf-e6e9-4438-a777-948090eabe82",
+              "ref_type": "FDA",
+              "ref_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=816b11bf-e6e9-4438-a777-948090eabe82"
+            }
+          ]
+        },
+        "ref_id": {
+          "name": "ref_id",
+          "data_type": "Text",
+          "description": "List of identifiers for the reference sources",
+          "example": "de109a2b-e36c-40d0-85fc-a67a9e7f1ae8"
+        },
+        "ref_type": {
+          "name": "ref_type",
+          "data_type": "Text",
+          "description": "List of bodies reporting the warning",
+          "example": "DailyMed"
+        },
+        "ref_url": {
+          "name": "ref_url",
+          "data_type": "Text",
+          "description": "List of web addresses referencing the information",
+          "example": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de109a2b-e36c-40d0-85fc-a67a9e7f1ae8"
+        },
+        "warningType": {
+          "name": "warningType",
+          "data_type": "Text",
+          "description": "Classification of action taken (drug is withdrawn or has a black box warning)",
+          "example": "Black Box Warning"
+        },
+        "year": {
+          "name": "year",
+          "data_type": "Float",
+          "description": "Year when the warning was issues",
+          "example": 1965
+        },
+        "efo_term": {
+          "name": "efo_term",
+          "data_type": "Text",
+          "description": "List of disease labels",
+          "example": "kidney disease"
+        },
+        "efo_id": {
+          "name": "efo_id",
+          "data_type": "Text",
+          "description": "List of disease identifiers",
+          "example": "EFO:0003086"
+        },
+        "efo_id_for_warning_class": {
+          "name": "efo_id_for_warning_class",
+          "data_type": "Text",
+          "description": "Disease identifier categorising the type of warning",
+          "example": "EFO:0011052"
+        }
+      },
+      "description": "Open Targets dataset: drug_warning"
+    }
+  }
+}

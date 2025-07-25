@@ -1,0 +1,198 @@
+{
+  "datasets": {
+    "drug_molecule": {
+      "name": "drug_molecule",
+      "columns": {
+        "id": {
+          "name": "id",
+          "data_type": "Text",
+          "description": "Open Targets molecule identifier",
+          "example": "CHEMBL1000"
+        },
+        "canonicalSmiles": {
+          "name": "canonicalSmiles",
+          "data_type": "Text",
+          "description": "Standardized chemical structure representation using SMILES notation",
+          "example": "O=C(O)COCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1"
+        },
+        "inchiKey": {
+          "name": "inchiKey",
+          "data_type": "Text",
+          "description": "Chemical identifier generated from the molecular structure",
+          "example": "ZKLPARSLTMPFCP-UHFFFAOYSA-N"
+        },
+        "drugType": {
+          "name": "drugType",
+          "data_type": "Text",
+          "description": "Classification of the molecule's therapeutic category or chemical class (e.g. Antibody)",
+          "example": "Small molecule"
+        },
+        "blackBoxWarning": {
+          "name": "blackBoxWarning",
+          "data_type": "Boolean",
+          "description": "Flag indicating whether the drug has safety warnings",
+          "example": false
+        },
+        "name": {
+          "name": "name",
+          "data_type": "Text",
+          "description": "Generic name of the drug molecule",
+          "example": "CETIRIZINE"
+        },
+        "yearOfFirstApproval": {
+          "name": "yearOfFirstApproval",
+          "data_type": "Float",
+          "description": "Year when the drug received regulatory approval",
+          "example": 1995
+        },
+        "maximumClinicalTrialPhase": {
+          "name": "maximumClinicalTrialPhase",
+          "data_type": "Float",
+          "description": "Highest clinical trial phase reached by the drug",
+          "example": 4.0
+        },
+        "parentId": {
+          "name": "parentId",
+          "data_type": "Text",
+          "description": "Open Targets molecule identifier of the parent molecule for derivative compounds",
+          "example": "CHEMBL777"
+        },
+        "hasBeenWithdrawn": {
+          "name": "hasBeenWithdrawn",
+          "data_type": "Boolean",
+          "description": "Flag indicating whether the drug was removed from market",
+          "example": false
+        },
+        "isApproved": {
+          "name": "isApproved",
+          "data_type": "Boolean",
+          "description": "Flag indicating whether the drug has received regulatory approval",
+          "example": true
+        },
+        "tradeNames": {
+          "name": "tradeNames",
+          "data_type": "Array[Text]",
+          "description": "List of brand names for the drug",
+          "example": []
+        },
+        "synonyms": {
+          "name": "synonyms",
+          "data_type": "Array[Text]",
+          "description": "List of alternative names for the drug",
+          "example": [
+            "AC-170",
+            "Cetiderm",
+            "Cetirizina",
+            "Cetirizine"
+          ]
+        },
+        "crossReferences": {
+          "name": "crossReferences",
+          "data_type": "Array[Struct]",
+          "description": "List of identifiers in other databases",
+          "example": [
+            {
+              "source": "drugbank",
+              "ids": [
+                "DB00341"
+              ]
+            },
+            {
+              "source": "chEBI",
+              "ids": [
+                "3561"
+              ]
+            }
+          ]
+        },
+        "source": {
+          "name": "source",
+          "data_type": "Text",
+          "description": "Database source name",
+          "example": "drugbank"
+        },
+        "ids": {
+          "name": "ids",
+          "data_type": "Array[Text]",
+          "description": "List of identifiers in other databases",
+          "example": [
+            "DB00341"
+          ]
+        },
+        "childChemblIds": {
+          "name": "childChemblIds",
+          "data_type": "Array[Text]",
+          "description": "List of Open Targets molecule identifiers of derivative compounds",
+          "example": [
+            "CHEMBL1201113",
+            "CHEMBL1607273"
+          ]
+        },
+        "linkedDiseases": {
+          "name": "linkedDiseases",
+          "data_type": "Struct",
+          "description": "List of Open Targets disease identifiers of conditions associated with the drug",
+          "example": {
+            "rows": [
+              "EFO_0008521",
+              "HP_0000989",
+              "EFO_0004256",
+              "EFO_1001417",
+              "MONDO_0005271",
+              "EFO_1001417",
+              "EFO_0005854",
+              "HP_0001742",
+              "MONDO_0005277",
+              "HP_0000989",
+              "EFO_1000749",
+              "EFO_0007141",
+              "EFO_0004191",
+              "MONDO_0005271",
+              "EFO_0007141",
+              "MONDO_0009291",
+              "EFO_0005751",
+              "MONDO_0005301",
+              "EFO_0003956",
+              "HP_0000964",
+              "MONDO_0002406",
+              "EFO_0005531",
+              "EFO_0000274",
+              "EFO_0005854",
+              "EFO_0003956",
+              "EFO_0003830"
+            ],
+            "count": 26
+          }
+        },
+        "rows": {
+          "name": "rows",
+          "data_type": "Array[Text]",
+          "description": "List of Open Targets target identifiers associated with the drug"
+        },
+        "count": {
+          "name": "count",
+          "data_type": "Integer",
+          "description": "Total number of Open Targets target identifiers associated with the drug"
+        },
+        "linkedTargets": {
+          "name": "linkedTargets",
+          "data_type": "Struct",
+          "description": "List of Open Targets target identifiers associated with the drug",
+          "example": {
+            "rows": [
+              "ENSG00000196639"
+            ],
+            "count": 1
+          }
+        },
+        "description": {
+          "name": "description",
+          "data_type": "Text",
+          "description": "Summary of the drug's clinical development",
+          "example": "Small molecule drug with a maximum clinical trial phase of IV (across all indications) that was first approved in 1995 and has 9 approved and 17 investigational indications."
+        }
+      },
+      "description": "Open Targets dataset: drug_molecule"
+    }
+  }
+}

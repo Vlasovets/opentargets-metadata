@@ -1,0 +1,99 @@
+{
+  "datasets": {
+    "interaction": {
+      "name": "interaction",
+      "columns": {
+        "sourceDatabase": {
+          "name": "sourceDatabase",
+          "data_type": "Text",
+          "description": "Source database reporting the molecular interaction.",
+          "example": "string"
+        },
+        "targetA": {
+          "name": "targetA",
+          "data_type": "Text",
+          "description": "Open Targets target identifier of the first molecule (target A) in the interaction. [bioregistry:ensembl]",
+          "example": "ENSG00000004059"
+        },
+        "intA": {
+          "name": "intA",
+          "data_type": "Text",
+          "description": "Identifier for target A in source",
+          "example": "ENSP00000000233"
+        },
+        "intABiologicalRole": {
+          "name": "intABiologicalRole",
+          "data_type": "Text",
+          "description": "Biological role of target A in the interaction.",
+          "example": "unspecified role"
+        },
+        "targetB": {
+          "name": "targetB",
+          "data_type": "Text",
+          "description": "Open Targets target identifier of the second molecule (target B) in the interaction. [bioregistry:ensembl]",
+          "example": "ENSG00000243910"
+        },
+        "intB": {
+          "name": "intB",
+          "data_type": "Text",
+          "description": "Identifier for target B in source",
+          "example": "ENSP00000487719"
+        },
+        "intBBiologicalRole": {
+          "name": "intBBiologicalRole",
+          "data_type": "Text",
+          "description": "Biological role of target B in the interaction",
+          "example": "unspecified role"
+        },
+        "speciesA": {
+          "name": "speciesA",
+          "data_type": "Struct",
+          "description": "Taxonomic annotation of target A",
+          "example": {
+            "mnemonic": "human",
+            "scientific_name": "Homo sapiens",
+            "taxon_id": 9606
+          }
+        },
+        "mnemonic": {
+          "name": "mnemonic",
+          "data_type": "Text",
+          "description": "Short mnemonic name of the species associated with target B"
+        },
+        "scientific_name": {
+          "name": "scientific_name",
+          "data_type": "Text",
+          "description": "Scientific name of the species associated with target B"
+        },
+        "taxon_id": {
+          "name": "taxon_id",
+          "data_type": "Float",
+          "description": "NCBI taxon ID of the species associated with target B"
+        },
+        "speciesB": {
+          "name": "speciesB",
+          "data_type": "Struct",
+          "description": "Taxonomic annotation of target B",
+          "example": {
+            "mnemonic": "human",
+            "scientific_name": "Homo sapiens",
+            "taxon_id": 9606
+          }
+        },
+        "count": {
+          "name": "count",
+          "data_type": "Float",
+          "description": "Number of interaction occurrences reported in the source databases.",
+          "example": 2
+        },
+        "scoring": {
+          "name": "scoring",
+          "data_type": "Float",
+          "description": "Scoring or confidence value assigned to the interaction.",
+          "example": 0.197
+        }
+      },
+      "description": "Open Targets dataset: interaction"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "datasets": {
+    "mouse_phenotype": {
+      "name": "mouse_phenotype",
+      "columns": {
+        "biologicalModels": {
+          "name": "biologicalModels",
+          "data_type": "Array[Struct]",
+          "description": "Container for all biological model-related attributes.",
+          "example": [
+            {
+              "allelicComposition": "1500009L16Rik<em1(IMPC)Mbp> hom early",
+              "geneticBackground": "C57BL/6NCrl",
+              "id": "MGI:6276858",
+              "literature": null
+            }
+          ]
+        },
+        "allelicComposition": {
+          "name": "allelicComposition",
+          "data_type": "Text",
+          "description": "The specific allelic composition of the mouse model.",
+          "example": "1500009L16Rik<em1(IMPC)Mbp> hom early"
+        },
+        "geneticBackground": {
+          "name": "geneticBackground",
+          "data_type": "Text",
+          "description": "The genetic background strain of the mouse model.",
+          "example": "C57BL/6NCrl"
+        },
+        "id": {
+          "name": "id",
+          "data_type": "Text",
+          "description": "Unique identifier for the phenotype class. [bioregistry:mp]",
+          "example": "MGI:6276858"
+        },
+        "literature": {
+          "name": "literature",
+          "data_type": "Array[Text]",
+          "description": "References related to the mouse model. [bioregistry:pubmed]",
+          "example": [
+            "30949703"
+          ]
+        },
+        "modelPhenotypeClasses": {
+          "name": "modelPhenotypeClasses",
+          "data_type": "Array[Struct]",
+          "description": "Container for phenotype class-related attributes.",
+          "example": [
+            {
+              "id": "MP:0005376",
+              "label": "homeostasis/metabolism phenotype"
+            }
+          ]
+        },
+        "label": {
+          "name": "label",
+          "data_type": "Text",
+          "description": "Descriptive label for the phenotype class.",
+          "example": "homeostasis/metabolism phenotype"
+        },
+        "modelPhenotypeId": {
+          "name": "modelPhenotypeId",
+          "data_type": "Text",
+          "description": "Identifier for the specific phenotype observed in the model. [bioregistry:mp]",
+          "example": "MP:0005343"
+        },
+        "modelPhenotypeLabel": {
+          "name": "modelPhenotypeLabel",
+          "data_type": "Text",
+          "description": "Human-readable label describing the observed phenotype.",
+          "example": "increased circulating aspartate transaminase level"
+        },
+        "targetFromSourceId": {
+          "name": "targetFromSourceId",
+          "data_type": "Text",
+          "description": "Identifier for the human target as provided by the data source.",
+          "example": "ENSG00000235162"
+        },
+        "targetInModel": {
+          "name": "targetInModel",
+          "data_type": "Text",
+          "description": "Name of the target gene as represented in the mouse model.",
+          "example": "1500009L16Rik"
+        },
+        "targetInModelEnsemblId": {
+          "name": "targetInModelEnsemblId",
+          "data_type": "Text",
+          "description": "Ensembl identifier for the target gene in the mouse model. [bioregistry:ensembl]",
+          "example": "ENSMUSG00000087651"
+        },
+        "targetInModelMgiId": {
+          "name": "targetInModelMgiId",
+          "data_type": "Text",
+          "description": "MGI (Mouse Genome Informatics) identifier for the target gene in the model. [bioregistry:mgi]",
+          "example": "MGI:1917034"
+        }
+      },
+      "description": "Open Targets dataset: mouse_phenotype"
+    }
+  }
+}

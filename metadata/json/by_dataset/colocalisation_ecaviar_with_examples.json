@@ -1,0 +1,58 @@
+{
+  "datasets": {
+    "colocalisation_ecaviar": {
+      "name": "colocalisation_ecaviar",
+      "columns": {
+        "leftStudyLocusId": {
+          "name": "leftStudyLocusId",
+          "data_type": "Text",
+          "description": "Study-locus identifier for left-side overlapping signal",
+          "example": "000039146db5c177e57f81c11d6bdcd8"
+        },
+        "rightStudyLocusId": {
+          "name": "rightStudyLocusId",
+          "data_type": "Text",
+          "description": "Study-locus identifier for right-side overlapping signal",
+          "example": "b0bfaafdd1731febeb69ba6826c4b107"
+        },
+        "chromosome": {
+          "name": "chromosome",
+          "data_type": "Text",
+          "description": "Chromosome where the colocalisation occurs.",
+          "example": "11"
+        },
+        "rightStudyType": {
+          "name": "rightStudyType",
+          "data_type": "Text",
+          "description": "Type of the right-side study (e.g., gwas, eqtl).",
+          "example": "eqtl"
+        },
+        "numberColocalisingVariants": {
+          "name": "numberColocalisingVariants",
+          "data_type": "Float",
+          "description": "Number of variants intersecting between two overlapping study-loci",
+          "example": 10
+        },
+        "clpp": {
+          "name": "clpp",
+          "data_type": "Float",
+          "description": "Colocalisation posterior probability (CLPP) score estimating the probability of shared causal variants.",
+          "example": 0.027020126461476474
+        },
+        "colocalisationMethod": {
+          "name": "colocalisationMethod",
+          "data_type": "Text",
+          "description": "Method used to estimate colocalisation (e.g., eCAVIAR).",
+          "example": "eCAVIAR"
+        },
+        "betaRatioSignAverage": {
+          "name": "betaRatioSignAverage",
+          "data_type": "Float",
+          "description": "Average sign of the beta ratio between colocalised variants.",
+          "example": -1.0
+        }
+      },
+      "description": "Open Targets dataset: colocalisation_ecaviar"
+    }
+  }
+}

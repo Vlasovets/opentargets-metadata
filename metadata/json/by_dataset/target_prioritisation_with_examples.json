@@ -1,0 +1,112 @@
+{
+  "datasets": {
+    "target_prioritisation": {
+      "name": "target_prioritisation",
+      "columns": {
+        "targetId": {
+          "name": "targetId",
+          "data_type": "Text",
+          "description": "Unique identifier for the target, typically an Ensembl gene ID.",
+          "example": "ENSG00000001630"
+        },
+        "isInMembrane": {
+          "name": "isInMembrane",
+          "data_type": "Integer",
+          "description": "Indicates if the target protein is located in the cell or plasma membrane.",
+          "example": 0
+        },
+        "isSecreted": {
+          "name": "isSecreted",
+          "data_type": "Integer",
+          "description": "Indicates if the target protein is secreted or predicted to be secreted.",
+          "example": 0
+        },
+        "hasSafetyEvent": {
+          "name": "hasSafetyEvent",
+          "data_type": "Integer",
+          "description": "Indicates if there are known safety events associated with the target.",
+          "example": -1
+        },
+        "hasPocket": {
+          "name": "hasPocket",
+          "data_type": "Integer",
+          "description": "Indicates if the target has predicted binding pockets suitable for small molecule binding.",
+          "example": 1
+        },
+        "hasLigand": {
+          "name": "hasLigand",
+          "data_type": "Integer",
+          "description": "Indicates if the target binds at least one high-quality ligand.",
+          "example": 1
+        },
+        "hasSmallMoleculeBinder": {
+          "name": "hasSmallMoleculeBinder",
+          "data_type": "Integer",
+          "description": "Indicates if the target has at least one small molecule binder.",
+          "example": 1
+        },
+        "geneticConstraint": {
+          "name": "geneticConstraint",
+          "data_type": "Float",
+          "description": "Represents the genetic constraint of the target, indicating how intolerant it is to genetic variation.",
+          "example": 0.12804750989789548
+        },
+        "paralogMaxIdentityPercentage": {
+          "name": "paralogMaxIdentityPercentage",
+          "data_type": "Float",
+          "description": "Maximum percentage identity among the target's paralogous genes.",
+          "example": 0.0
+        },
+        "mouseOrthologMaxIdentityPercentage": {
+          "name": "mouseOrthologMaxIdentityPercentage",
+          "data_type": "Float",
+          "description": "Maximum percentage identity between the target and its mouse ortholog.",
+          "example": 0.50884
+        },
+        "isCancerDriverGene": {
+          "name": "isCancerDriverGene",
+          "data_type": "Integer",
+          "description": "Indicates if the target is identified as a cancer driver gene.",
+          "example": -1
+        },
+        "hasTEP": {
+          "name": "hasTEP",
+          "data_type": "Integer",
+          "description": "Indicates if a Target Enabling Package (TEP) is available for the target.",
+          "example": 1
+        },
+        "mouseKOScore": {
+          "name": "mouseKOScore",
+          "data_type": "Float",
+          "description": "Represents the phenotypic score from mouse knockout models for the target.",
+          "example": -0.9087712384492919
+        },
+        "hasHighQualityChemicalProbes": {
+          "name": "hasHighQualityChemicalProbes",
+          "data_type": "Integer",
+          "description": "Indicates if there are high-quality chemical probes available for the target.",
+          "example": 1
+        },
+        "maxClinicalTrialPhase": {
+          "name": "maxClinicalTrialPhase",
+          "data_type": "Float",
+          "description": "Highest clinical trial phase that the target has reached for any indication.",
+          "example": 1.0
+        },
+        "tissueSpecificity": {
+          "name": "tissueSpecificity",
+          "data_type": "Float",
+          "description": "Describes the specificity of the target's expression across different tissues.",
+          "example": 0.5
+        },
+        "tissueDistribution": {
+          "name": "tissueDistribution",
+          "data_type": "Float",
+          "description": "Describes the distribution pattern of the target's expression in various tissues.",
+          "example": -1.0
+        }
+      },
+      "description": "Open Targets dataset: target_prioritisation"
+    }
+  }
+}

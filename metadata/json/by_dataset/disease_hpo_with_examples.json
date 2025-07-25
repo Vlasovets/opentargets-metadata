@@ -1,0 +1,53 @@
+{
+  "datasets": {
+    "disease_hpo": {
+      "name": "disease_hpo",
+      "columns": {
+        "id": {
+          "name": "id",
+          "data_type": "Text",
+          "description": "Unique identifier for the disease in the Human Phenotype Ontology (HPO)",
+          "example": "CHEBI_10545"
+        },
+        "name": {
+          "name": "name",
+          "data_type": "Text",
+          "description": "Name of the disease (in HPO)",
+          "example": "electron"
+        },
+        "description": {
+          "name": "description",
+          "data_type": "Text",
+          "description": "Description of the disease",
+          "example": "Elementary particle not affected by the strong force having a spin 1/2, a negative elementary charge and a rest mass of 0.000548579903(13) u, or 0.51099906(15) MeV."
+        },
+        "dbXRefs": {
+          "name": "dbXRefs",
+          "data_type": "Array[Text]",
+          "description": "Database cross-references for the HPO disease",
+          "example": [
+            "Wikipedia:Electron",
+            "KEGG:C05359"
+          ]
+        },
+        "parents": {
+          "name": "parents",
+          "data_type": "Array[Text]",
+          "description": "List of parent terms for the disease",
+          "example": [
+            "CHEBI_36338"
+          ]
+        },
+        "obsoleteTerms": {
+          "name": "obsoleteTerms",
+          "data_type": "Array[Text]",
+          "description": "List of obsolete terms for the disease",
+          "example": [
+            "CHEBI_22318"
+          ]
+        }
+      },
+      "description": "Open Targets dataset: disease_hpo"
+    }
+  }
+}

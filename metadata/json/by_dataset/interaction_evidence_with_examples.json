@@ -1,0 +1,238 @@
+{
+  "datasets": {
+    "interaction_evidence": {
+      "name": "interaction_evidence",
+      "columns": {
+        "participantDetectionMethodA": {
+          "name": "participantDetectionMethodA",
+          "data_type": "Array[Struct]",
+          "description": "Detection method used to identify participant A in the interaction",
+          "example": [
+            {
+              "miIdentifier": "MI:0102",
+              "shortName": "sequence tag"
+            }
+          ]
+        },
+        "miIdentifier": {
+          "name": "miIdentifier",
+          "data_type": "Text",
+          "description": "Molecular Interactions (MI) identifier for participant B\u2019s detection method [bioregistry:mi]",
+          "example": "MI:0102"
+        },
+        "shortName": {
+          "name": "shortName",
+          "data_type": "Text",
+          "description": "Short name of the tissue",
+          "example": "sequence tag"
+        },
+        "participantDetectionMethodB": {
+          "name": "participantDetectionMethodB",
+          "data_type": "Array[Struct]",
+          "description": "Detection method used to identify participant B in the interaction",
+          "example": [
+            {
+              "miIdentifier": "MI:0102",
+              "shortName": "sequence tag"
+            }
+          ]
+        },
+        "hostOrganismTaxId": {
+          "name": "hostOrganismTaxId",
+          "data_type": "Float",
+          "description": "NCBI taxon ID of the host organism",
+          "example": 9606
+        },
+        "targetB": {
+          "name": "targetB",
+          "data_type": "Text",
+          "description": "Open Targets target identifier of the second molecule (target B) in the interaction [bioregistry:ensembl]",
+          "example": "ENSG00000179218"
+        },
+        "evidenceScore": {
+          "name": "evidenceScore",
+          "data_type": "Float",
+          "description": "Score indicating the confidence or strength of the interaction evidence",
+          "example": 0.129
+        },
+        "expansionMethodShortName": {
+          "name": "expansionMethodShortName",
+          "data_type": "Text",
+          "description": "Short name of the method used to expand the interaction dataset",
+          "example": "spoke expansion"
+        },
+        "hostOrganismScientificName": {
+          "name": "hostOrganismScientificName",
+          "data_type": "Text",
+          "description": "Scientific name of the host organism in which the interaction was observed",
+          "example": "Homo sapiens HEK293T embryonic kidney cell"
+        },
+        "intBBiologicalRole": {
+          "name": "intBBiologicalRole",
+          "data_type": "Text",
+          "description": "Biological role of target B in the interaction",
+          "example": "unspecified role"
+        },
+        "interactionResources": {
+          "name": "interactionResources",
+          "data_type": "Struct",
+          "description": "Databases providing evidence for the interaction",
+          "example": {
+            "databaseVersion": "12",
+            "sourceDatabase": "string"
+          }
+        },
+        "databaseVersion": {
+          "name": "databaseVersion",
+          "data_type": "Text",
+          "description": "Version of the source database providing interaction evidence"
+        },
+        "sourceDatabase": {
+          "name": "sourceDatabase",
+          "data_type": "Text",
+          "description": "Name of the source database reporting the interaction evidence"
+        },
+        "interactionDetectionMethodShortName": {
+          "name": "interactionDetectionMethodShortName",
+          "data_type": "Text",
+          "description": "Short name of the method used to detect the interaction",
+          "example": "textmining"
+        },
+        "intA": {
+          "name": "intA",
+          "data_type": "Text",
+          "description": "Identifier for target A in source",
+          "example": "ENSP00000266674"
+        },
+        "intBSource": {
+          "name": "intBSource",
+          "data_type": "Text",
+          "description": "Source where interactor B is identified",
+          "example": "ensembl_protein"
+        },
+        "interactionTypeMiIdentifier": {
+          "name": "interactionTypeMiIdentifier",
+          "data_type": "Text",
+          "description": "Molecular Interactions (MI) identifier for the type of interaction [bioregistry:mi]",
+          "example": "MI:0914"
+        },
+        "speciesB": {
+          "name": "speciesB",
+          "data_type": "Struct",
+          "description": "Taxonomic annotation of target B",
+          "example": {
+            "mnemonic": "human",
+            "scientificName": "Homo sapiens",
+            "taxonId": 9606
+          }
+        },
+        "mnemonic": {
+          "name": "mnemonic",
+          "data_type": "Text",
+          "description": "Short mnemonic name of the species associated with target A"
+        },
+        "scientificName": {
+          "name": "scientificName",
+          "data_type": "Text",
+          "description": "Scientific name of the species associated with target A"
+        },
+        "taxonId": {
+          "name": "taxonId",
+          "data_type": "Float",
+          "description": "NCBI taxon ID of the species associated with target A"
+        },
+        "expansionMethodMiIdentifier": {
+          "name": "expansionMethodMiIdentifier",
+          "data_type": "Text",
+          "description": "Molecular Interactions (MI) identifier for the expansion method used [bioregistry:mi]",
+          "example": "MI:1060"
+        },
+        "interactionTypeShortName": {
+          "name": "interactionTypeShortName",
+          "data_type": "Text",
+          "description": "Short name of the interaction type",
+          "example": "association"
+        },
+        "interactionIdentifier": {
+          "name": "interactionIdentifier",
+          "data_type": "Text",
+          "description": "Unique identifier for the interaction evidence entry at the source",
+          "example": "EBI-25410401"
+        },
+        "hostOrganismTissue": {
+          "name": "hostOrganismTissue",
+          "data_type": "Struct",
+          "description": "Tissue of the host organism, where the interaction was identified",
+          "example": {
+            "fullName": null,
+            "shortName": null,
+            "xrefs": null
+          }
+        },
+        "fullName": {
+          "name": "fullName",
+          "data_type": "Text",
+          "description": "Full name of the tissue"
+        },
+        "xrefs": {
+          "name": "xrefs",
+          "data_type": "Array[Text]",
+          "description": "Cross-references to external databases for the host organism's tissue"
+        },
+        "speciesA": {
+          "name": "speciesA",
+          "data_type": "Struct",
+          "description": "Taxonomic annotation of target A",
+          "example": {
+            "mnemonic": "human",
+            "scientificName": "Homo sapiens",
+            "taxonId": 9606
+          }
+        },
+        "intASource": {
+          "name": "intASource",
+          "data_type": "Text",
+          "description": "Source where interactor B is identified",
+          "example": "ensembl_protein"
+        },
+        "intB": {
+          "name": "intB",
+          "data_type": "Text",
+          "description": "Identifier for target B in source",
+          "example": "ENSP00000320866"
+        },
+        "pubmedId": {
+          "name": "pubmedId",
+          "data_type": "Text",
+          "description": "PubMed ID of the publication supporting the interaction evidence",
+          "example": "32203420"
+        },
+        "intABiologicalRole": {
+          "name": "intABiologicalRole",
+          "data_type": "Text",
+          "description": "Biological role of target A in the interaction",
+          "example": "unspecified role"
+        },
+        "interactionScore": {
+          "name": "interactionScore",
+          "data_type": "Float",
+          "description": "Score assigned to the interaction based on supporting evidence",
+          "example": 0.24
+        },
+        "targetA": {
+          "name": "targetA",
+          "data_type": "Text",
+          "description": "Open Targets target identifier of the second molecule (target A) in the interaction [bioregistry:ensembl]",
+          "example": "ENSG00000139292"
+        },
+        "interactionDetectionMethodMiIdentifier": {
+          "name": "interactionDetectionMethodMiIdentifier",
+          "data_type": "Text",
+          "description": "Molecular Interactions (MI) identifier for the interaction detection method [bioregistry:mi]",
+          "example": "MI:0110"
+        }
+      },
+      "description": "Open Targets dataset: interaction_evidence"
+    }
+  }
+}

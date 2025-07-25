@@ -1,0 +1,1701 @@
+{
+  "datasets": {
+    "target": {
+      "name": "target",
+      "columns": {
+        "id": {
+          "name": "id",
+          "data_type": "Text",
+          "description": "Unique identifier for the tractability category",
+          "example": "ENSG00000000457"
+        },
+        "approvedSymbol": {
+          "name": "approvedSymbol",
+          "data_type": "Text",
+          "description": "Approved gene symbol of the target",
+          "example": "SCYL3"
+        },
+        "biotype": {
+          "name": "biotype",
+          "data_type": "Text",
+          "description": "Biotype classification of the target gene, indicating if the gene is protein coding",
+          "example": "protein_coding"
+        },
+        "transcriptIds": {
+          "name": "transcriptIds",
+          "data_type": "Array[Text]",
+          "description": "List of Ensembl transcript identifiers associated with the target",
+          "example": [
+            "ENST00000367772",
+            "ENST00000423670",
+            "ENST00000470238",
+            "ENST00000367771",
+            "ENST00000367770"
+          ]
+        },
+        "canonicalTranscript": {
+          "name": "canonicalTranscript",
+          "data_type": "Struct",
+          "description": "The Ensembl canonical transcript of the target gene",
+          "example": {
+            "id": "ENST00000367771",
+            "chromosome": "1",
+            "start": 169849631,
+            "end": 169893896,
+            "strand": "-"
+          }
+        },
+        "chromosome": {
+          "name": "chromosome",
+          "data_type": "Text",
+          "description": "Chromosome on which the target located"
+        },
+        "start": {
+          "name": "start",
+          "data_type": "Float",
+          "description": "Genomic start position of the target gene"
+        },
+        "end": {
+          "name": "end",
+          "data_type": "Float",
+          "description": "Genomic end position of the target gene"
+        },
+        "strand": {
+          "name": "strand",
+          "data_type": "Integer",
+          "description": "Strand orientation of the target gene"
+        },
+        "canonicalExons": {
+          "name": "canonicalExons",
+          "data_type": "Array[Text]",
+          "description": "List of canonical exons for the target gene",
+          "example": [
+            "169854270",
+            "169854964",
+            "169868928",
+            "169869039",
+            "169859041",
+            "169859212",
+            "169875978",
+            "169876091",
+            "169862613",
+            "169862797",
+            "169878634",
+            "169878819",
+            "169870255",
+            "169870357",
+            "169864369",
+            "169864508",
+            "169873696",
+            "169873752",
+            "169888676",
+            "169888890",
+            "169866896",
+            "169866973",
+            "169849631",
+            "169853772",
+            "169893788",
+            "169893896"
+          ]
+        },
+        "genomicLocation": {
+          "name": "genomicLocation",
+          "data_type": "Struct",
+          "description": "Genomic location information of the target gene",
+          "example": {
+            "chromosome": "1",
+            "start": 169849631,
+            "end": 169894267,
+            "strand": -1
+          }
+        },
+        "alternativeGenes": {
+          "name": "alternativeGenes",
+          "data_type": "Array[Text]",
+          "description": "List of alternative Ensembl gene identifiers mapped to non-canonical chromosomes",
+          "example": [
+            "ENSG00000262327"
+          ]
+        },
+        "approvedName": {
+          "name": "approvedName",
+          "data_type": "Text",
+          "description": "Approved full name of the target gene",
+          "example": "SCY1 like pseudokinase 3"
+        },
+        "go": {
+          "name": "go",
+          "data_type": "Array[Struct]",
+          "description": "List of Gene Ontology (GO) annotations related to the target",
+          "example": [
+            {
+              "id": "GO:0005737",
+              "source": "GO_REF:0000043",
+              "evidence": "IEA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0007322"
+            },
+            {
+              "id": "GO:0042802",
+              "source": "GO_REF:0000107",
+              "evidence": "IEA",
+              "aspect": "F",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000265"
+            },
+            {
+              "id": "GO:0016477",
+              "source": "PMID:12651155",
+              "evidence": "NAS",
+              "aspect": "P",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000303"
+            },
+            {
+              "id": "GO:0005515",
+              "source": "PMID:25416956",
+              "evidence": "IPI",
+              "aspect": "F",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000353"
+            },
+            {
+              "id": "GO:0005794",
+              "source": "GO_REF:0000043",
+              "evidence": "IEA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000265"
+            },
+            {
+              "id": "GO:0005794",
+              "source": "GO_REF:0000044",
+              "evidence": "IEA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0007322"
+            },
+            {
+              "id": "GO:0005794",
+              "source": "GO_REF:0000107",
+              "evidence": "IEA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000256"
+            },
+            {
+              "id": "GO:0005794",
+              "source": "GO_REF:0000117",
+              "evidence": "IEA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0007322"
+            },
+            {
+              "id": "GO:0005794",
+              "source": "GO_REF:0000043",
+              "evidence": "IEA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000256"
+            },
+            {
+              "id": "GO:0005737",
+              "source": "PMID:12651155",
+              "evidence": "IDA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000314"
+            },
+            {
+              "id": "GO:0005794",
+              "source": "GO_REF:0000044",
+              "evidence": "IEA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000256"
+            },
+            {
+              "id": "GO:0006954",
+              "source": "GO_REF:0000107",
+              "evidence": "IEA",
+              "aspect": "P",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000265"
+            },
+            {
+              "id": "GO:0030027",
+              "source": "PMID:12651155",
+              "evidence": "IDA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000314"
+            },
+            {
+              "id": "GO:0005794",
+              "source": "GO_REF:0000107",
+              "evidence": "IEA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0007322"
+            },
+            {
+              "id": "GO:0000139",
+              "source": "GO_REF:0000107",
+              "evidence": "IEA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000265"
+            },
+            {
+              "id": "GO:0005794",
+              "source": "GO_REF:0000117",
+              "evidence": "IEA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000265"
+            },
+            {
+              "id": "GO:0005515",
+              "source": "PMID:12651155",
+              "evidence": "IPI",
+              "aspect": "F",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000353"
+            },
+            {
+              "id": "GO:0005794",
+              "source": "GO_REF:0000044",
+              "evidence": "IEA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000265"
+            },
+            {
+              "id": "GO:0016301",
+              "source": "PMID:12651155",
+              "evidence": "IDA",
+              "aspect": "F",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000314"
+            },
+            {
+              "id": "GO:0005794",
+              "source": "GO_REF:0000052",
+              "evidence": "IDA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000314"
+            },
+            {
+              "id": "GO:0021522",
+              "source": "GO_REF:0000107",
+              "evidence": "IEA",
+              "aspect": "P",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000265"
+            },
+            {
+              "id": "GO:0005783",
+              "source": "GO_REF:0000052",
+              "evidence": "IDA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000314"
+            },
+            {
+              "id": "GO:0005794",
+              "source": "GO_REF:0000107",
+              "evidence": "IEA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000265"
+            },
+            {
+              "id": "GO:0005794",
+              "source": "PMID:12651155",
+              "evidence": "IDA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000314"
+            },
+            {
+              "id": "GO:0005515",
+              "source": "PMID:32707033",
+              "evidence": "IPI",
+              "aspect": "F",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000353"
+            },
+            {
+              "id": "GO:0005794",
+              "source": "GO_REF:0000043",
+              "evidence": "IEA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0007322"
+            },
+            {
+              "id": "GO:0008104",
+              "source": "GO_REF:0000107",
+              "evidence": "IEA",
+              "aspect": "P",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000265"
+            },
+            {
+              "id": "GO:0005515",
+              "source": "PMID:31515488",
+              "evidence": "IPI",
+              "aspect": "F",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000353"
+            },
+            {
+              "id": "GO:0048666",
+              "source": "GO_REF:0000107",
+              "evidence": "IEA",
+              "aspect": "P",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000265"
+            },
+            {
+              "id": "GO:0030027",
+              "source": "GO_REF:0000044",
+              "evidence": "IEA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0007322"
+            },
+            {
+              "id": "GO:0005524",
+              "source": "GO_REF:0000002",
+              "evidence": "IEA",
+              "aspect": "F",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000256"
+            },
+            {
+              "id": "GO:0042995",
+              "source": "GO_REF:0000043",
+              "evidence": "IEA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0007322"
+            },
+            {
+              "id": "GO:0005829",
+              "source": "GO_REF:0000052",
+              "evidence": "IDA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000314"
+            },
+            {
+              "id": "GO:0005794",
+              "source": "GO_REF:0000117",
+              "evidence": "IEA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0000256"
+            },
+            {
+              "id": "GO:0005737",
+              "source": "GO_REF:0000044",
+              "evidence": "IEA",
+              "aspect": "C",
+              "geneProduct": "Q8IZE3",
+              "ecoId": "ECO:0007322"
+            }
+          ]
+        },
+        "source": {
+          "name": "source",
+          "data_type": "Text",
+          "description": "Source database for the cross-reference",
+          "example": "GO_REF:0000043"
+        },
+        "evidence": {
+          "name": "evidence",
+          "data_type": "Text",
+          "description": "Evidence supporting the GO annotation",
+          "example": "IEA"
+        },
+        "aspect": {
+          "name": "aspect",
+          "data_type": "Text",
+          "description": "Type of the GO annotation: molecular function (F), biological process (P) and cellular localisation (C)",
+          "example": "C"
+        },
+        "geneProduct": {
+          "name": "geneProduct",
+          "data_type": "Text",
+          "description": "Gene product associated with the GO annotation [bioregistry:uniprot]",
+          "example": "Q8IZE3"
+        },
+        "ecoId": {
+          "name": "ecoId",
+          "data_type": "Text",
+          "description": "Evidence & Conclusion Ontology (ECO) identifier for the GO annotation [bioregistry:eco]",
+          "example": "ECO:0007322"
+        },
+        "hallmarks": {
+          "name": "hallmarks",
+          "data_type": "Struct",
+          "description": "Hallmarks related to the target gene sourced from COSMIC",
+          "example": {
+            "attributes": [
+              {
+                "pmid": 10706619,
+                "description": "fusion",
+                "attribute_name": "role in cancer"
+              },
+              {
+                "pmid": 10706619,
+                "description": "KMT2A",
+                "attribute_name": "fusion partner"
+              },
+              {
+                "pmid": 21452305,
+                "description": "mediates the differentiation of human bone marrow-derived mesenchymal stem cells into functional osteoblasts",
+                "attribute_name": "differentiation and development"
+              },
+              {
+                "pmid": 12957285,
+                "description": "in fusion protein it provides the coiled-coil oligomerisation domains to activate KMT2A ",
+                "attribute_name": "impact of mutation on function"
+              },
+              {
+                "pmid": 8643452,
+                "description": "alpha-receptor for PDGF, expressed preferentially in serum-deprived cells ",
+                "attribute_name": "function summary"
+              }
+            ],
+            "cancerHallmarks": [
+              {
+                "pmid": 26506240,
+                "description": "low GAS7C activity increases cancer cell motility by promoting N-WASP/FAK/F-actin cytoskeleton dynamics, as well as enhances beta-catenin stability via hnRNP U/beta-TrCP complex formation ",
+                "impact": "suppresses",
+                "label": "invasion and metastasis"
+              }
+            ]
+          }
+        },
+        "attributes": {
+          "name": "attributes",
+          "data_type": "Array[Struct]",
+          "description": "Attributes of the hallmark annotation"
+        },
+        "pmid": {
+          "name": "pmid",
+          "data_type": "Float",
+          "description": "PubMed ID of the supporting literature for the cancer hallmark [bioregistry:pubmed]"
+        },
+        "description": {
+          "name": "description",
+          "data_type": "Text",
+          "description": "Description of the TEP target"
+        },
+        "attribute_name": {
+          "name": "attribute_name",
+          "data_type": "Text",
+          "description": "Name of the hallmark attribute"
+        },
+        "cancerHallmarks": {
+          "name": "cancerHallmarks",
+          "data_type": "Array[Struct]",
+          "description": "Cancer hallmarks associated with the target gene"
+        },
+        "impact": {
+          "name": "impact",
+          "data_type": "Text",
+          "description": "Impact of the cancer hallmark on the target"
+        },
+        "label": {
+          "name": "label",
+          "data_type": "Text",
+          "description": "Obsolete name label",
+          "example": "Protein-associating with the carboxyl-terminal domain of ezrin"
+        },
+        "synonyms": {
+          "name": "synonyms",
+          "data_type": "Array[Struct]",
+          "description": "List of synonyms for the target gene",
+          "example": [
+            {
+              "label": "Protein-associating with the carboxyl-terminal domain of ezrin",
+              "source": "uniprot"
+            },
+            {
+              "label": "SCYL3",
+              "source": "uniprot"
+            },
+            {
+              "label": "PACE1",
+              "source": "uniprot"
+            },
+            {
+              "label": "PACE-1",
+              "source": "HGNC"
+            },
+            {
+              "label": "PACE1",
+              "source": "HGNC"
+            },
+            {
+              "label": "Ezrin-binding protein PACE-1",
+              "source": "uniprot"
+            },
+            {
+              "label": "SCY1-like protein 3",
+              "source": "uniprot"
+            },
+            {
+              "label": "ezrin-binding partner PACE-1",
+              "source": "HGNC"
+            },
+            {
+              "label": "PACE-1",
+              "source": "NCBI_entrez"
+            },
+            {
+              "label": "PACE1",
+              "source": "NCBI_entrez"
+            },
+            {
+              "label": "protein-associating with the carboxyl-terminal domain of ezrin",
+              "source": "NCBI_entrez"
+            },
+            {
+              "label": "SCY1-like 3",
+              "source": "NCBI_entrez"
+            },
+            {
+              "label": "SCY1-like protein 3",
+              "source": "NCBI_entrez"
+            },
+            {
+              "label": "SCY1-like, kinase-like 3",
+              "source": "NCBI_entrez"
+            },
+            {
+              "label": "ezrin-binding partner PACE-1 (PACE-1)",
+              "source": "NCBI_entrez"
+            },
+            {
+              "label": "ezrin-binding protein PACE-1",
+              "source": "NCBI_entrez"
+            },
+            {
+              "label": "SCYL3",
+              "source": "NCBI_entrez"
+            }
+          ]
+        },
+        "symbolSynonyms": {
+          "name": "symbolSynonyms",
+          "data_type": "Array[Struct]",
+          "description": "List of symbol-based synonyms for the target gene",
+          "example": [
+            {
+              "label": "SCYL3",
+              "source": "uniprot"
+            },
+            {
+              "label": "PACE1",
+              "source": "uniprot"
+            },
+            {
+              "label": "PACE-1",
+              "source": "HGNC"
+            },
+            {
+              "label": "PACE1",
+              "source": "HGNC"
+            },
+            {
+              "label": "PACE-1",
+              "source": "NCBI_entrez"
+            },
+            {
+              "label": "PACE1",
+              "source": "NCBI_entrez"
+            },
+            {
+              "label": "SCYL3",
+              "source": "NCBI_entrez"
+            }
+          ]
+        },
+        "nameSynonyms": {
+          "name": "nameSynonyms",
+          "data_type": "Array[Struct]",
+          "description": "List of name-based synonyms for the target gene",
+          "example": [
+            {
+              "label": "Protein-associating with the carboxyl-terminal domain of ezrin",
+              "source": "uniprot"
+            },
+            {
+              "label": "Ezrin-binding protein PACE-1",
+              "source": "uniprot"
+            },
+            {
+              "label": "SCY1-like protein 3",
+              "source": "uniprot"
+            },
+            {
+              "label": "ezrin-binding partner PACE-1",
+              "source": "HGNC"
+            },
+            {
+              "label": "protein-associating with the carboxyl-terminal domain of ezrin",
+              "source": "NCBI_entrez"
+            },
+            {
+              "label": "SCY1-like 3",
+              "source": "NCBI_entrez"
+            },
+            {
+              "label": "SCY1-like protein 3",
+              "source": "NCBI_entrez"
+            },
+            {
+              "label": "SCY1-like, kinase-like 3",
+              "source": "NCBI_entrez"
+            },
+            {
+              "label": "ezrin-binding partner PACE-1 (PACE-1)",
+              "source": "NCBI_entrez"
+            },
+            {
+              "label": "ezrin-binding protein PACE-1",
+              "source": "NCBI_entrez"
+            }
+          ]
+        },
+        "functionDescriptions": {
+          "name": "functionDescriptions",
+          "data_type": "Array[Text]",
+          "description": "Functional descriptions of the target gene sourced from UniProt",
+          "example": [
+            "May play a role in regulating cell adhesion/migration complexes in migrating cells. ."
+          ]
+        },
+        "subcellularLocations": {
+          "name": "subcellularLocations",
+          "data_type": "Array[Struct]",
+          "description": "List of subcellular locations where the target protein is found",
+          "example": [
+            {
+              "location": "Cytoplasm",
+              "source": "uniprot",
+              "termSL": "SL-0086",
+              "labelSL": "Cellular component"
+            },
+            {
+              "location": "Golgi apparatus",
+              "source": "uniprot",
+              "termSL": "SL-0132",
+              "labelSL": "Cellular component"
+            },
+            {
+              "location": "Cell projection",
+              "source": "uniprot",
+              "termSL": "SL-0280",
+              "labelSL": "Cellular component"
+            },
+            {
+              "location": "Cytosol",
+              "source": "HPA_main",
+              "termSL": "SL-0091",
+              "labelSL": "Cytosol"
+            },
+            {
+              "location": "Golgi apparatus",
+              "source": "HPA_main",
+              "termSL": "SL-0132",
+              "labelSL": "Golgi apparatus"
+            }
+          ]
+        },
+        "location": {
+          "name": "location",
+          "data_type": "Text",
+          "description": "Name of the subcellular compartment where the protein was found",
+          "example": "Cytoplasm"
+        },
+        "termSL": {
+          "name": "termSL",
+          "data_type": "Text",
+          "description": "Subcellular location term identifier from SwissProt [bioregistry:sl]",
+          "example": "SL-0086"
+        },
+        "labelSL": {
+          "name": "labelSL",
+          "data_type": "Text",
+          "description": "Subcellular location category from SwissProt",
+          "example": "Cellular component"
+        },
+        "targetClass": {
+          "name": "targetClass",
+          "data_type": "Array[Struct]",
+          "description": "Target classification categories from ChEMBL",
+          "example": [
+            {
+              "id": 10,
+              "label": "Enzyme",
+              "level": "l1"
+            },
+            {
+              "id": 10,
+              "label": "Oxidoreductase",
+              "level": "l2"
+            }
+          ]
+        },
+        "level": {
+          "name": "level",
+          "data_type": "Text",
+          "description": "Hierarchical level of the target class",
+          "example": "l1"
+        },
+        "obsoleteSymbols": {
+          "name": "obsoleteSymbols",
+          "data_type": "Array[Struct]",
+          "description": "List of obsolete symbols previously used for the target gene",
+          "example": []
+        },
+        "obsoleteNames": {
+          "name": "obsoleteNames",
+          "data_type": "Array[Struct]",
+          "description": "List of obsolete names previously used for the target gene",
+          "example": [
+            {
+              "label": "SCY1-like 3 (S. cerevisiae)",
+              "source": "HGNC"
+            },
+            {
+              "label": "SCY1-like, kinase-like 3",
+              "source": "HGNC"
+            }
+          ]
+        },
+        "constraint": {
+          "name": "constraint",
+          "data_type": "Array[Struct]",
+          "description": "Constraint scores for the target gene from GnomAD",
+          "example": [
+            {
+              "constraintType": "syn",
+              "score": 0.7081800103187561,
+              "exp": 146.9199981689453,
+              "obs": 136,
+              "oe": 0.9256700277328491,
+              "oeLower": 0.8040000200271606,
+              "oeUpper": 1.0670000314712524,
+              "upperRank": null,
+              "upperBin": null,
+              "upperBin6": null
+            },
+            {
+              "constraintType": "mis",
+              "score": 0.9849200248718262,
+              "exp": 386.489990234375,
+              "obs": 332,
+              "oe": 0.8590199947357178,
+              "oeLower": 0.7839999794960022,
+              "oeUpper": 0.9409999847412109,
+              "upperRank": null,
+              "upperBin": null,
+              "upperBin6": null
+            },
+            {
+              "constraintType": "lof",
+              "score": 0.28150999546051025,
+              "exp": 34.31999969482422,
+              "obs": 8,
+              "oe": 0.23309999704360962,
+              "oeLower": 0.13600000739097595,
+              "oeUpper": 0.42100000381469727,
+              "upperRank": 3857,
+              "upperBin": 2,
+              "upperBin6": 1
+            }
+          ]
+        },
+        "constraintType": {
+          "name": "constraintType",
+          "data_type": "Text",
+          "description": "Type of constraint applied to the target",
+          "example": "syn"
+        },
+        "score": {
+          "name": "score",
+          "data_type": "Float",
+          "description": "Constraint score indicating gene intolerance",
+          "example": 0.7081800103187561
+        },
+        "exp": {
+          "name": "exp",
+          "data_type": "Float",
+          "description": "Expected constraint score",
+          "example": 146.9199981689453
+        },
+        "obs": {
+          "name": "obs",
+          "data_type": "Integer",
+          "description": "Observed constraint score",
+          "example": 136
+        },
+        "oe": {
+          "name": "oe",
+          "data_type": "Float",
+          "description": "Observed/Expected (OE) constraint score",
+          "example": 0.9256700277328491
+        },
+        "oeLower": {
+          "name": "oeLower",
+          "data_type": "Float",
+          "description": "Lower bound of the OE constraint score",
+          "example": 0.8040000200271606
+        },
+        "oeUpper": {
+          "name": "oeUpper",
+          "data_type": "Float",
+          "description": "Upper bound of the OE constraint score",
+          "example": 1.0670000314712524
+        },
+        "upperRank": {
+          "name": "upperRank",
+          "data_type": "Integer",
+          "description": "Rank of the target gene in constraint analysis"
+        },
+        "upperBin": {
+          "name": "upperBin",
+          "data_type": "Integer",
+          "description": "Binned category for the constraint score"
+        },
+        "upperBin6": {
+          "name": "upperBin6",
+          "data_type": "Integer",
+          "description": "Six-bin classification of the constraint score"
+        },
+        "tep": {
+          "name": "tep",
+          "data_type": "Struct",
+          "description": "Target Enabling Package (TEP) information",
+          "example": {
+            "targetFromSourceId": "EPB41L3",
+            "description": "EPB41L3",
+            "therapeuticArea": "Neurodegeneration",
+            "url": "https://www.thesgc.org/tep/epb41l3"
+          }
+        },
+        "targetFromSourceId": {
+          "name": "targetFromSourceId",
+          "data_type": "Text",
+          "description": "Ensembl gene ID of the target for the chemical probe",
+          "example": "Q99594"
+        },
+        "therapeuticArea": {
+          "name": "therapeuticArea",
+          "data_type": "Text",
+          "description": "Therapeutic area associated with the TEP target"
+        },
+        "url": {
+          "name": "url",
+          "data_type": "Text",
+          "description": "URL providing details about the chemical probe",
+          "example": "https://www.epa.gov/chemical-research/exploring-toxcast-data-downloadable-data"
+        },
+        "proteinIds": {
+          "name": "proteinIds",
+          "data_type": "Array[Struct]",
+          "description": "Protein identifiers associated with the target",
+          "example": [
+            {
+              "id": "Q8IZE3",
+              "source": "uniprot_swissprot"
+            },
+            {
+              "id": "X6RHX1",
+              "source": "uniprot_trembl"
+            },
+            {
+              "id": "ENSP00000356744",
+              "source": "ensembl_PRO"
+            },
+            {
+              "id": "ENSP00000356745",
+              "source": "ensembl_PRO"
+            },
+            {
+              "id": "ENSP00000356746",
+              "source": "ensembl_PRO"
+            },
+            {
+              "id": "ENSP00000407993",
+              "source": "ensembl_PRO"
+            },
+            {
+              "id": "A8K8Z2",
+              "source": "uniprot_obsolete"
+            },
+            {
+              "id": "Q5THA6",
+              "source": "uniprot_obsolete"
+            },
+            {
+              "id": "Q5THA8",
+              "source": "uniprot_obsolete"
+            },
+            {
+              "id": "Q8IZN9",
+              "source": "uniprot_obsolete"
+            },
+            {
+              "id": "Q96C56",
+              "source": "uniprot_obsolete"
+            },
+            {
+              "id": "Q9UBK6",
+              "source": "uniprot_obsolete"
+            }
+          ]
+        },
+        "dbXrefs": {
+          "name": "dbXrefs",
+          "data_type": "Array[Struct]",
+          "description": "Database cross-references for the target",
+          "example": [
+            {
+              "id": "19285",
+              "source": "HGNC"
+            },
+            {
+              "id": "IPR011989",
+              "source": "InterPro"
+            },
+            {
+              "id": "IPR016024",
+              "source": "InterPro"
+            },
+            {
+              "id": "IPR051177",
+              "source": "InterPro"
+            },
+            {
+              "id": "IPR021133",
+              "source": "InterPro"
+            },
+            {
+              "id": "IPR011009",
+              "source": "InterPro"
+            },
+            {
+              "id": "IPR000719",
+              "source": "InterPro"
+            },
+            {
+              "id": "IPR001245",
+              "source": "InterPro"
+            },
+            {
+              "id": "SIDG33879",
+              "source": "ProjectScore"
+            }
+          ]
+        },
+        "chemicalProbes": {
+          "name": "chemicalProbes",
+          "data_type": "Array[Struct]",
+          "description": "Chemical probes related to the target",
+          "example": [
+            {
+              "control": null,
+              "drugId": "CHEMBL5191316",
+              "id": "GNE-7883",
+              "isHighQuality": true,
+              "mechanismOfAction": [
+                "inhibitor"
+              ],
+              "origin": [
+                "experimental"
+              ],
+              "probeMinerScore": null,
+              "probesDrugsScore": 20,
+              "scoreInCells": 75,
+              "scoreInOrganisms": 75,
+              "targetFromSourceId": "Q99594",
+              "urls": [
+                {
+                  "niceName": "Chemical Probes.org",
+                  "url": "http://www.chemicalprobes.org/"
+                }
+              ]
+            },
+            {
+              "control": null,
+              "drugId": "CHEMBL5198592",
+              "id": "VT104",
+              "isHighQuality": true,
+              "mechanismOfAction": [
+                "inhibitor"
+              ],
+              "origin": [
+                "experimental"
+              ],
+              "probeMinerScore": null,
+              "probesDrugsScore": 20,
+              "scoreInCells": 100,
+              "scoreInOrganisms": 100,
+              "targetFromSourceId": "Q99594",
+              "urls": [
+                {
+                  "niceName": "Chemical Probes.org",
+                  "url": "http://www.chemicalprobes.org/"
+                }
+              ]
+            }
+          ]
+        },
+        "control": {
+          "name": "control",
+          "data_type": "Text",
+          "description": "Whether the chemical probe serves as a control",
+          "example": "cisSGK3-PROTAC1"
+        },
+        "drugId": {
+          "name": "drugId",
+          "data_type": "Text",
+          "description": "Drug ID associated with the chemical probe",
+          "example": "CHEMBL5191316"
+        },
+        "isHighQuality": {
+          "name": "isHighQuality",
+          "data_type": "Boolean",
+          "description": "Indicates if the chemical probe is high quality",
+          "example": true
+        },
+        "mechanismOfAction": {
+          "name": "mechanismOfAction",
+          "data_type": "Array[Text]",
+          "description": "Mechanism of action of the chemical probe",
+          "example": [
+            "inhibitor"
+          ]
+        },
+        "origin": {
+          "name": "origin",
+          "data_type": "Array[Text]",
+          "description": "Origin of the chemical probe",
+          "example": [
+            "experimental"
+          ]
+        },
+        "probeMinerScore": {
+          "name": "probeMinerScore",
+          "data_type": "Float",
+          "description": "Score from ProbeMiner for chemical probe quality",
+          "example": 19
+        },
+        "probesDrugsScore": {
+          "name": "probesDrugsScore",
+          "data_type": "Float",
+          "description": "Score for chemical probes related to druggability",
+          "example": 20
+        },
+        "scoreInCells": {
+          "name": "scoreInCells",
+          "data_type": "Float",
+          "description": "Score indicating chemical probe activity in cells",
+          "example": 75
+        },
+        "scoreInOrganisms": {
+          "name": "scoreInOrganisms",
+          "data_type": "Float",
+          "description": "Score indicating chemical probe activity in organisms",
+          "example": 75
+        },
+        "urls": {
+          "name": "urls",
+          "data_type": "Array[Struct]",
+          "description": "URLs linking to more information about the chemical probe",
+          "example": [
+            {
+              "niceName": "Chemical Probes.org",
+              "url": "http://www.chemicalprobes.org/"
+            }
+          ]
+        },
+        "niceName": {
+          "name": "niceName",
+          "data_type": "Text",
+          "description": "Nice name for the linked URL"
+        },
+        "homologues": {
+          "name": "homologues",
+          "data_type": "Array[Struct]",
+          "description": "Homologues of the target gene in other species",
+          "example": [
+            {
+              "speciesId": "9606",
+              "speciesName": "Human",
+              "homologyType": "other_paralog",
+              "targetGeneId": "ENSG00000136021",
+              "isHighConfidence": "NULL",
+              "targetGeneSymbol": "SCYL2",
+              "queryPercentageIdentity": 17.7326,
+              "targetPercentageIdentity": 13.1324,
+              "priority": 0
+            },
+            {
+              "speciesId": "9606",
+              "speciesName": "Human",
+              "homologyType": "other_paralog",
+              "targetGeneId": "ENSG00000142186",
+              "isHighConfidence": "NULL",
+              "targetGeneSymbol": "SCYL1",
+              "queryPercentageIdentity": 21.5116,
+              "targetPercentageIdentity": 18.3168,
+              "priority": 0
+            },
+            {
+              "speciesId": "9598",
+              "speciesName": "Chimpanzee",
+              "homologyType": "ortholog_one2one",
+              "targetGeneId": "ENSPTRG00000001665",
+              "isHighConfidence": "1",
+              "targetGeneSymbol": "SCYL3",
+              "queryPercentageIdentity": 99.1279,
+              "targetPercentageIdentity": 91.9137,
+              "priority": 1
+            },
+            {
+              "speciesId": "9544",
+              "speciesName": "Macaque",
+              "homologyType": "ortholog_one2one",
+              "targetGeneId": "ENSMMUG00000016583",
+              "isHighConfidence": "1",
+              "targetGeneSymbol": "SCYL3",
+              "queryPercentageIdentity": 95.4942,
+              "targetPercentageIdentity": 89.2663,
+              "priority": 2
+            },
+            {
+              "speciesId": "10090",
+              "speciesName": "Mouse",
+              "homologyType": "ortholog_one2one",
+              "targetGeneId": "ENSMUSG00000026584",
+              "isHighConfidence": "1",
+              "targetGeneSymbol": "Scyl3",
+              "queryPercentageIdentity": 82.8488,
+              "targetPercentageIdentity": 77.551,
+              "priority": 3
+            },
+            {
+              "speciesId": "10116",
+              "speciesName": "Norway rat - BN/NHsdMcwi",
+              "homologyType": "ortholog_one2one",
+              "targetGeneId": "ENSRNOG00000025318",
+              "isHighConfidence": "1",
+              "targetGeneSymbol": "Scyl3",
+              "queryPercentageIdentity": 80.9593,
+              "targetPercentageIdentity": 77.4687,
+              "priority": 4
+            },
+            {
+              "speciesId": "9986",
+              "speciesName": "Rabbit",
+              "homologyType": "ortholog_one2one",
+              "targetGeneId": "ENSOCUG00000013811",
+              "isHighConfidence": "1",
+              "targetGeneSymbol": "SCYL3",
+              "queryPercentageIdentity": 87.6453,
+              "targetPercentageIdentity": 85.8974,
+              "priority": 5
+            },
+            {
+              "speciesId": "10141",
+              "speciesName": "Guinea Pig",
+              "homologyType": "ortholog_one2one",
+              "targetGeneId": "ENSCPOG00000026352",
+              "isHighConfidence": "1",
+              "targetGeneSymbol": "SCYL3",
+              "queryPercentageIdentity": 84.3023,
+              "targetPercentageIdentity": 78.9116,
+              "priority": 6
+            },
+            {
+              "speciesId": "9615",
+              "speciesName": "Dog",
+              "homologyType": "ortholog_one2one",
+              "targetGeneId": "ENSCAFG00845001874",
+              "isHighConfidence": "1",
+              "targetGeneSymbol": "SCYL3",
+              "queryPercentageIdentity": 86.6279,
+              "targetPercentageIdentity": 80.2153,
+              "priority": 7
+            },
+            {
+              "speciesId": "9823",
+              "speciesName": "Pig",
+              "homologyType": "ortholog_one2one",
+              "targetGeneId": "ENSSSCG00000006283",
+              "isHighConfidence": "1",
+              "targetGeneSymbol": "SCYL3",
+              "queryPercentageIdentity": 87.6453,
+              "targetPercentageIdentity": 82.1526,
+              "priority": 8
+            },
+            {
+              "speciesId": "8364",
+              "speciesName": "Tropical clawed frog",
+              "homologyType": "ortholog_one2one",
+              "targetGeneId": "ENSXETG00000004735",
+              "isHighConfidence": "1",
+              "targetGeneSymbol": "SCYL3",
+              "queryPercentageIdentity": 54.6512,
+              "targetPercentageIdentity": 52.514,
+              "priority": 9
+            },
+            {
+              "speciesId": "7955",
+              "speciesName": "Zebrafish",
+              "homologyType": "ortholog_one2one",
+              "targetGeneId": "ENSDARG00000027046",
+              "isHighConfidence": "1",
+              "targetGeneSymbol": "SCYL3",
+              "queryPercentageIdentity": 54.9419,
+              "targetPercentageIdentity": 49.2188,
+              "priority": 10
+            },
+            {
+              "speciesId": "7227",
+              "speciesName": "Drosophila melanogaster (Fruit fly) - GCA_000001215.4 [FlyBase annotation]",
+              "homologyType": "ortholog_one2one",
+              "targetGeneId": "FBgn0027507",
+              "isHighConfidence": "1",
+              "targetGeneSymbol": "CG1344",
+              "queryPercentageIdentity": 26.1628,
+              "targetPercentageIdentity": 26.3543,
+              "priority": 11
+            }
+          ]
+        },
+        "speciesId": {
+          "name": "speciesId",
+          "data_type": "Text",
+          "description": "Species ID for the homologue",
+          "example": "9606"
+        },
+        "speciesName": {
+          "name": "speciesName",
+          "data_type": "Text",
+          "description": "Species name for the homologue",
+          "example": "Human"
+        },
+        "homologyType": {
+          "name": "homologyType",
+          "data_type": "Text",
+          "description": "Type of homology relationship",
+          "example": "other_paralog"
+        },
+        "targetGeneId": {
+          "name": "targetGeneId",
+          "data_type": "Text",
+          "description": "Target gene ID of the homologue",
+          "example": "ENSG00000136021"
+        },
+        "isHighConfidence": {
+          "name": "isHighConfidence",
+          "data_type": "Text",
+          "description": "Indicates if the homology is high confidence",
+          "example": "NULL"
+        },
+        "targetGeneSymbol": {
+          "name": "targetGeneSymbol",
+          "data_type": "Text",
+          "description": "Gene symbol of the homologous target",
+          "example": "SCYL2"
+        },
+        "queryPercentageIdentity": {
+          "name": "queryPercentageIdentity",
+          "data_type": "Float",
+          "description": "Percentage identity of the query gene in the homologue",
+          "example": 17.7326
+        },
+        "targetPercentageIdentity": {
+          "name": "targetPercentageIdentity",
+          "data_type": "Float",
+          "description": "Percentage identity of the homologue in the query gene",
+          "example": 13.1324
+        },
+        "priority": {
+          "name": "priority",
+          "data_type": "Integer",
+          "description": "Priority score for the homologue",
+          "example": 0
+        },
+        "tractability": {
+          "name": "tractability",
+          "data_type": "Array[Struct]",
+          "description": "Tractability information for the target",
+          "example": [
+            {
+              "modality": "SM",
+              "id": "Approved Drug",
+              "value": false
+            },
+            {
+              "modality": "SM",
+              "id": "Advanced Clinical",
+              "value": false
+            },
+            {
+              "modality": "SM",
+              "id": "Phase 1 Clinical",
+              "value": false
+            },
+            {
+              "modality": "SM",
+              "id": "Structure with Ligand",
+              "value": false
+            },
+            {
+              "modality": "SM",
+              "id": "High-Quality Ligand",
+              "value": false
+            },
+            {
+              "modality": "SM",
+              "id": "High-Quality Pocket",
+              "value": false
+            },
+            {
+              "modality": "SM",
+              "id": "Med-Quality Pocket",
+              "value": false
+            },
+            {
+              "modality": "SM",
+              "id": "Druggable Family",
+              "value": false
+            },
+            {
+              "modality": "AB",
+              "id": "Approved Drug",
+              "value": false
+            },
+            {
+              "modality": "AB",
+              "id": "Advanced Clinical",
+              "value": false
+            },
+            {
+              "modality": "AB",
+              "id": "Phase 1 Clinical",
+              "value": false
+            },
+            {
+              "modality": "AB",
+              "id": "UniProt loc high conf",
+              "value": false
+            },
+            {
+              "modality": "AB",
+              "id": "GO CC high conf",
+              "value": false
+            },
+            {
+              "modality": "AB",
+              "id": "UniProt loc med conf",
+              "value": false
+            },
+            {
+              "modality": "AB",
+              "id": "UniProt SigP or TMHMM",
+              "value": false
+            },
+            {
+              "modality": "AB",
+              "id": "GO CC med conf",
+              "value": false
+            },
+            {
+              "modality": "AB",
+              "id": "Human Protein Atlas loc",
+              "value": false
+            },
+            {
+              "modality": "PR",
+              "id": "Approved Drug",
+              "value": false
+            },
+            {
+              "modality": "PR",
+              "id": "Advanced Clinical",
+              "value": false
+            },
+            {
+              "modality": "PR",
+              "id": "Phase 1 Clinical",
+              "value": false
+            },
+            {
+              "modality": "PR",
+              "id": "Literature",
+              "value": false
+            },
+            {
+              "modality": "PR",
+              "id": "UniProt Ubiquitination",
+              "value": false
+            },
+            {
+              "modality": "PR",
+              "id": "Database Ubiquitination",
+              "value": true
+            },
+            {
+              "modality": "PR",
+              "id": "Half-life Data",
+              "value": false
+            },
+            {
+              "modality": "PR",
+              "id": "Small Molecule Binder",
+              "value": false
+            },
+            {
+              "modality": "OC",
+              "id": "Approved Drug",
+              "value": false
+            },
+            {
+              "modality": "OC",
+              "id": "Advanced Clinical",
+              "value": false
+            },
+            {
+              "modality": "OC",
+              "id": "Phase 1 Clinical",
+              "value": false
+            }
+          ]
+        },
+        "modality": {
+          "name": "modality",
+          "data_type": "Text",
+          "description": "Modality of the tractability assessment",
+          "example": "SM"
+        },
+        "value": {
+          "name": "value",
+          "data_type": "Boolean",
+          "description": "Tractability value assigned to the target",
+          "example": false
+        },
+        "safetyLiabilities": {
+          "name": "safetyLiabilities",
+          "data_type": "Array[Struct]",
+          "description": "Safety liabilities associated with the target",
+          "example": [
+            {
+              "event": "regulation of catalytic activity",
+              "eventId": null,
+              "effects": null,
+              "biosamples": [
+                {
+                  "cellFormat": "cell-free",
+                  "cellLabel": null,
+                  "tissueId": null,
+                  "tissueLabel": null
+                }
+              ],
+              "datasource": "ToxCast",
+              "literature": null,
+              "url": "https://www.epa.gov/chemical-research/exploring-toxcast-data-downloadable-data",
+              "studies": [
+                {
+                  "description": "NVS_ENZ_hFyn, is one of one assay component(s) measured or calculated from the NVS_ENZ_hFyn assay. It is designed to make measurements of enzyme activity, a form of enzyme reporter, as detected with fluorescence intensity signals by Fluorescence and electrophoretic mobility shift technology.",
+                  "name": "NVS_ENZ_hFyn_Activator",
+                  "type": "biochemical"
+                },
+                {
+                  "description": "NVS_ENZ_hFyn, is one of one assay component(s) measured or calculated from the NVS_ENZ_hFyn assay. It is designed to make measurements of enzyme activity, a form of enzyme reporter, as detected with fluorescence intensity signals by Fluorescence and electrophoretic mobility shift technology.",
+                  "name": "NVS_ENZ_hFyn",
+                  "type": "biochemical"
+                }
+              ]
+            }
+          ]
+        },
+        "event": {
+          "name": "event",
+          "data_type": "Text",
+          "description": "Safety event associated with the target",
+          "example": "regulation of catalytic activity"
+        },
+        "eventId": {
+          "name": "eventId",
+          "data_type": "Text",
+          "description": "Unique identifier for the safety event",
+          "example": "MONDO_0004979"
+        },
+        "effects": {
+          "name": "effects",
+          "data_type": "Array[Struct]",
+          "description": "Effects reported for the safety event",
+          "example": [
+            {
+              "direction": "Inhibition/Decrease/Downregulation",
+              "dosing": null
+            }
+          ]
+        },
+        "direction": {
+          "name": "direction",
+          "data_type": "Text",
+          "description": "Direction of the reported effect (e.g., increase or decrease)"
+        },
+        "dosing": {
+          "name": "dosing",
+          "data_type": "Text",
+          "description": "Dosing conditions related to the reported effect"
+        },
+        "biosamples": {
+          "name": "biosamples",
+          "data_type": "Array[Struct]",
+          "description": "Biosamples used in safety assessments",
+          "example": [
+            {
+              "cellFormat": "cell-free",
+              "cellLabel": null,
+              "tissueId": null,
+              "tissueLabel": null
+            }
+          ]
+        },
+        "cellFormat": {
+          "name": "cellFormat",
+          "data_type": "Text",
+          "description": "Format of the biosample cells"
+        },
+        "cellLabel": {
+          "name": "cellLabel",
+          "data_type": "Text",
+          "description": "Label of the biosample cell"
+        },
+        "tissueId": {
+          "name": "tissueId",
+          "data_type": "Text",
+          "description": "Tissue ID for the biosample"
+        },
+        "tissueLabel": {
+          "name": "tissueLabel",
+          "data_type": "Text",
+          "description": "Label of the biosample tissue"
+        },
+        "datasource": {
+          "name": "datasource",
+          "data_type": "Text",
+          "description": "Data source reporting the safety liability",
+          "example": "ToxCast"
+        },
+        "literature": {
+          "name": "literature",
+          "data_type": "Text",
+          "description": "Literature references for the safety liability",
+          "example": "38773351"
+        },
+        "studies": {
+          "name": "studies",
+          "data_type": "Array[Struct]",
+          "description": "Studies related to safety assessments",
+          "example": [
+            {
+              "description": "NVS_ENZ_hFyn, is one of one assay component(s) measured or calculated from the NVS_ENZ_hFyn assay. It is designed to make measurements of enzyme activity, a form of enzyme reporter, as detected with fluorescence intensity signals by Fluorescence and electrophoretic mobility shift technology.",
+              "name": "NVS_ENZ_hFyn_Activator",
+              "type": "biochemical"
+            },
+            {
+              "description": "NVS_ENZ_hFyn, is one of one assay component(s) measured or calculated from the NVS_ENZ_hFyn assay. It is designed to make measurements of enzyme activity, a form of enzyme reporter, as detected with fluorescence intensity signals by Fluorescence and electrophoretic mobility shift technology.",
+              "name": "NVS_ENZ_hFyn",
+              "type": "biochemical"
+            }
+          ]
+        },
+        "name": {
+          "name": "name",
+          "data_type": "Text",
+          "description": "Name of the safety study"
+        },
+        "type": {
+          "name": "type",
+          "data_type": "Text",
+          "description": "Type of safety study"
+        },
+        "pathways": {
+          "name": "pathways",
+          "data_type": "Array[Struct]",
+          "description": "Pathway annotations for the target",
+          "example": [
+            {
+              "pathwayId": "R-HSA-9614657",
+              "pathway": "FOXO-mediated transcription of cell death genes",
+              "topLevelTerm": "Gene expression (Transcription)"
+            },
+            {
+              "pathwayId": "R-HSA-1989781",
+              "pathway": "PPARA activates gene expression",
+              "topLevelTerm": "Metabolism"
+            },
+            {
+              "pathwayId": "R-HSA-380994",
+              "pathway": "ATF4 activates genes in response to endoplasmic reticulum  stress",
+              "topLevelTerm": "Cellular responses to stimuli"
+            },
+            {
+              "pathwayId": "R-HSA-381183",
+              "pathway": "ATF6 (ATF6-alpha) activates chaperone genes",
+              "topLevelTerm": "Cellular responses to stimuli"
+            },
+            {
+              "pathwayId": "R-HSA-2426168",
+              "pathway": "Activation of gene expression by SREBF (SREBP)",
+              "topLevelTerm": "Metabolism"
+            }
+          ]
+        },
+        "pathwayId": {
+          "name": "pathwayId",
+          "data_type": "Text",
+          "description": "Unique identifier for the pathway",
+          "example": "R-HSA-9614657"
+        },
+        "pathway": {
+          "name": "pathway",
+          "data_type": "Text",
+          "description": "Name of the pathway",
+          "example": "FOXO-mediated transcription of cell death genes"
+        },
+        "topLevelTerm": {
+          "name": "topLevelTerm",
+          "data_type": "Text",
+          "description": "Top-level term categorizing the pathway",
+          "example": "Gene expression (Transcription)"
+        },
+        "tss": {
+          "name": "tss",
+          "data_type": "Float",
+          "description": "Transcription Start Site (TSS) information for the target",
+          "example": 169893896
+        }
+      },
+      "description": "Open Targets dataset: target"
+    }
+  }
+}

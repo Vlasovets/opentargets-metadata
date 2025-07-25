@@ -1,0 +1,22 @@
+{
+  "datasets": {
+    "literature": {
+      "name": "literature",
+      "columns": {
+        "pmid": {
+          "name": "pmid",
+          "data_type": "Text",
+          "description": "PubMed identifier (PMID) of the literature entry",
+          "example": "1000472"
+        },
+        "pmcid": {
+          "name": "pmcid",
+          "data_type": "Text",
+          "description": "PubMed Central ID (PMCID) of the literature entry",
+          "example": "PMC2362448"
+        },
+        "date": {
+          "name": "date",
+          "data_type": null,
+          "description": "Date Date of publication in YYYY-MM-DD format",
+          "example": 

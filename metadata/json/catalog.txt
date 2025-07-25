@@ -1,0 +1,2378 @@
+Dataset: association_by_datasource_direct
+Column	Data Type	Description
+│⎯datatypeId
+Text	
+Identifier for the data type used to calculate the association score (e.g. genetic_association)
+│⎯datasourceId
+Text	
+Identifier for the data source used to calculate the association score. (e.g. chembl)
+│⎯diseaseId
+Text	
+Identifier for the disease in the association.
+│⎯targetId
+Text	
+Identifier for the target in the association.
+│⎯score
+Float	
+Association score calculated independently for each data source without ontology propagation of evidence
+│⎯evidenceCount
+Float	
+Number of evidence items supporting the association.
+
+Dataset: association_by_datatype_direct
+Column	Data Type	Description
+│⎯diseaseId
+Text	
+Identifier for the disease in the association.
+│⎯targetId
+Text	
+Identifier for the target in the association.
+│⎯datatypeId
+Text	
+Identifier for the data type used to calculate the association score.
+│⎯score
+Float	
+Association score calculated independently for each data type without additional ontology propagation.
+│⎯evidenceCount
+Float	
+Number of evidence items supporting the association.
+
+
+Dataset: association_overall_direct
+Column	Data Type	Description
+│⎯diseaseId
+Text	
+Identifier for the disease in the association.
+│⎯targetId
+Text	
+Identifier for the target in the association.
+│⎯score
+Float	
+Association score calculated across all data sources without ontology propagation of evidence
+│⎯evidenceCount
+Float	
+Number of evidence items supporting the association.
+
+
+Dataset: association_by_datasource_indirect
+Column	Data Type	Description
+│⎯datatypeId
+Text	
+Identifier for the data type used to calculate the association score (e.g. genetic_association)
+│⎯datasourceId
+Text	
+Identifier for the data source used to calculate the association score. (e.g. chembl)
+│⎯diseaseId
+Text	
+Identifier for the disease in the association.
+│⎯targetId
+Text	
+Identifier for the target in the association.
+│⎯score
+Float	
+Association score calculated independently for each data source considering ontology propagation of evidence
+│⎯evidenceCount
+Float	
+Number of evidence items supporting the association.
+
+
+Dataset: association_by_datatype_indirect
+Column	Data Type	Description
+│⎯diseaseId
+Text	
+Identifier for the disease in the association.
+│⎯targetId
+Text	
+Identifier for the target in the association.
+│⎯datatypeId
+Text	
+Identifier for the data type used to calculate the association score.
+│⎯score
+Float	
+Association score calculated independently for each data type, considering ontology propagation of evidence
+│⎯evidenceCount
+Float	
+Number of evidence items supporting the association.
+
+
+Dataset: association_by_overall_indirect
+Column	Data Type	Description
+│⎯diseaseId
+Text	
+Identifier for the disease in the association.
+│⎯targetId
+Text	
+Identifier for the target in the association.
+│⎯score
+Float	
+Association score calculated across all data sources considering ontology propagation of evidence
+│⎯evidenceCount
+Float	
+Number of evidence items supporting the association.
+
+Dataset: expression
+Column	Data Type	Description
+│⎯id
+Text	
+Ensembl human gene identifier for the expressed gene [bioregistry:ensembl]
+│⎯tissues
+Array[Struct]	
+Array of structs containing expression data relevant to a particular gene
+│⎯│⎯efo_code
+Text	
+Ontology ID of the biosample the expression data is from [bioregistry:uberon]
+│⎯│⎯label
+Text	
+Name of the biosample the expression data is from
+│⎯│⎯organs
+Array[Text]	
+List of organs that the biosample can be found in
+│⎯│⎯anatomical_systems
+Array[Text]	
+List of anatomical systems that the biosample can be found in
+│⎯│⎯rna
+Struct	
+Struct containing relevant RNA expression values for a particular biosample and gene combination
+│⎯│⎯│⎯value
+Float	
+Expression value
+│⎯│⎯│⎯zscore
+Integer	
+Expression zscore
+│⎯│⎯│⎯level
+Integer	
+Level of RNA expression normalised to 0-5 or -1 if absent
+│⎯│⎯│⎯unit
+Text	
+Unit for the RNA expression
+│⎯│⎯protein
+Struct	
+Struct containing relevant protein expression values for a particular biosample and gene combination
+│⎯│⎯│⎯reliability
+Boolean	
+PLACEHOLDER for reliability description
+│⎯│⎯│⎯level
+Integer	
+Level of protein expression normalised to 0-5 or -1 if absent
+│⎯│⎯│⎯cell_type
+Array[Struct]	
+List of cell types were protein levels were measured
+│⎯│⎯│⎯│⎯name
+Text	
+Cell type name
+│⎯│⎯│⎯│⎯reliability
+Boolean	
+PLACEHOLDER for reliability description
+│⎯│⎯│⎯│⎯level
+Integer	
+PLACEHOLDER for level description
+
+Dataset: biosample
+Column	Data Type	Description
+│⎯biosampleId
+Text	
+Unique identifier for the biosample [bioregistry:uberon]
+│⎯biosampleName
+Text	
+Name of the biosample
+│⎯description
+Text	
+Description of the biosample
+│⎯xrefs
+Array[Text]	
+Cross-reference IDs from other ontologies
+│⎯synonyms
+Array[Text]	
+List of synonymous names for the term
+│⎯parents
+Array[Text]	
+Direct parent biosample IDs in the ontology
+│⎯ancestors
+Array[Text]	
+List of ancestor biosample IDs in the ontology
+│⎯children
+Array[Text]	
+Direct child biosample IDs in the ontology
+│⎯descendants
+Array[Text]	
+List of descendant biosample IDs in the ontology
+
+
+Dataset: colocalisation_coloc
+Column	Data Type	Description
+│⎯leftStudyLocusId
+Text	
+Study-locus identifier for left-side overlapping signal
+│⎯rightStudyLocusId
+Text	
+Study-locus identifier for right-side overlapping signal
+│⎯chromosome
+Text	
+Chromosome where the colocalisation occurs.
+│⎯rightStudyType
+Text	
+Type of the right-side study (e.g., gwas, eqtl).
+│⎯numberColocalisingVariants
+Float	
+Number of variants intersecting between two overlapping study-loci
+│⎯h0
+Float	
+Posterior probability that neither trait is associated with the region (H0).
+│⎯h1
+Float	
+Posterior probability that only the left study trait is associated (H1).
+│⎯h2
+Float	
+Posterior probability that only the right study trait is associated (H2).
+│⎯h3
+Float	
+Posterior probability that both traits are associated, but with different causal variants (H3).
+│⎯h4
+Float	
+Posterior probability that both traits are associated and share a causal variant (H4).
+│⎯colocalisationMethod
+Text	
+Method used to estimate colocalisation (e.g., coloc).
+│⎯betaRatioSignAverage
+Float	
+Average sign of the beta ratio between colocalised variants.
+
+
+Dataset: colocalisation_ecaviar
+Column	Data Type	Description
+│⎯leftStudyLocusId
+Text	
+Study-locus identifier for left-side overlapping signal
+│⎯rightStudyLocusId
+Text	
+Study-locus identifier for right-side overlapping signal
+│⎯chromosome
+Text	
+Chromosome where the colocalisation occurs.
+│⎯rightStudyType
+Text	
+Type of the right-side study (e.g., gwas, eqtl).
+│⎯numberColocalisingVariants
+Float	
+Number of variants intersecting between two overlapping study-loci
+│⎯clpp
+Float	
+Colocalisation posterior probability (CLPP) score estimating the probability of shared causal variants.
+│⎯colocalisationMethod
+Text	
+Method used to estimate colocalisation (e.g., eCAVIAR).
+│⎯betaRatioSignAverage
+Float	
+Average sign of the beta ratio between colocalised variants.
+
+Dataset: credible_set
+Column	Data Type	Description
+│⎯studyLocusId
+Text	
+Study-locus identifier for the credible set.
+│⎯studyId
+Text	
+Identifier for the study which the credible set is derived.
+│⎯variantId
+Text	
+The lead variant for the credible set, by posterior probability.
+│⎯chromosome
+Text	
+Chromosome which the credible set is located.
+│⎯position
+Integer	
+Position of the lead variant for the credible set (GRCh38).
+│⎯region
+Text	
+Start and end positions of the region used for fine-mapping.
+│⎯beta
+Float	
+Beta coefficient of the lead variant.
+│⎯zScore
+Float	
+Z-score of the lead variant from the GWAS.
+│⎯pValueMantissa
+Float	
+Mantissa value of the lead variant P-value.
+│⎯pValueExponent
+Integer	
+Exponent value of the lead variant P-value.
+│⎯effectAlleleFrequencyFromSource
+Float	
+Allele frequency of the lead variant from the GWAS.
+│⎯standardError
+Float	
+Standard error of the lead variant.
+│⎯subStudyDescription
+Text	
+[Deprecated]
+│⎯qualityControls
+Array[Text]	
+Quality control flags for this credible set.
+│⎯finemappingMethod
+Text	
+Method used for fine-mapping of credible set.
+│⎯credibleSetIndex
+Integer	
+Integer label for the order of credible sets from study-region.
+│⎯credibleSetlog10BF
+Float	
+Log10 Bayes factor for the entire credible set.
+│⎯purityMeanR2
+Float	
+Mean R-squared linkage disequilibrium for variants in the credible set.
+│⎯purityMinR2
+Float	
+Minimum R-squared linkage disequilibrium for variants in the credible set.
+│⎯locusStart
+Integer	
+Start position of the region that was fine-mapped for this credible set.
+│⎯locusEnd
+Integer	
+End position of the regino that was fine-mapped for this credible set.
+│⎯sampleSize
+Integer	
+Sample size of the study which this credible set is derived.
+│⎯ldSet
+Array[Struct]	
+Array of structs which denote the variants in LD with the credible set lead variant.
+│⎯│⎯tagVariantId
+Text	
+The variant ID for tag variants in LD with the credible set lead variant.
+│⎯│⎯r2Overall
+Float	
+The R-squared value for the tag variants with the credible set lead variant.
+│⎯locus
+Array[Struct]	
+Array of structs which denote the variants within the credible set.
+│⎯│⎯is95CredibleSet
+Boolean	
+Boolean for if the variant is part of the 95% credible set.
+│⎯│⎯is99CredibleSet
+Boolean	
+Boolean for if the variant is part of the 99% credible set.
+│⎯│⎯logBF
+Float	
+Log (natural) Bayes factor for the variant from fine-mapping.
+│⎯│⎯posteriorProbability
+Float	
+Posterior inclusion probability for the variant within this credible set.
+│⎯│⎯variantId
+Text	
+Variant ID for this variant in the credible set.
+│⎯│⎯pValueMantissa
+Float	
+Mantissa of the P-value for this variant in the credible set.
+│⎯│⎯pValueExponent
+Integer	
+Exponent of the P-value for this variant in the credible set.
+│⎯│⎯beta
+Float	
+Beta coefficient of this variant in the credible set.
+│⎯│⎯standardError
+Float	
+Standard error of this variant in the credible set.
+│⎯│⎯r2Overall
+Float	
+R-squared (LD) between this credible set variant and the lead variant.
+│⎯confidence
+Text	
+Description of how this credible set was derived in terms of data and fine-mapping method.
+│⎯studyType
+Text	
+Descriptor for whether the credible set is derived from GWAS or molecular QTL.
+│⎯isTransQtl
+Boolean	
+Boolean for whether this credible set is a trans-pQTL or not.
+
+Dataset: disease
+Column	Data Type	Description
+│⎯id
+Text	
+Open Targets disease identifier
+│⎯code
+Text	
+Disease reference URL
+│⎯name
+Text	
+Name of the disease
+│⎯description
+Text	
+Description of the disease
+│⎯dbXRefs
+Array[Text]	
+Cross-references in other disease ontologies
+│⎯parents
+Array[Text]	
+List of parent disease terms
+│⎯synonyms
+Struct	
+List of synonymous disease labels
+│⎯│⎯hasExactSynonym
+Array[Text]	
+List of exact synonyms
+│⎯│⎯hasRelatedSynonym
+Array[Text]	
+List of related synonyms
+│⎯│⎯hasNarrowSynonym
+Array[Text]	
+List of closely related sysnonyms
+│⎯│⎯hasBroadSynonym
+Array[Text]	
+List of broadly related sysnonyms
+│⎯obsoleteTerms
+Array[Text]	
+List of obsoleted terms
+│⎯obsoleteXRefs
+Array[Text]	
+List of obsoleted cross references
+│⎯children
+Array[Text]	
+List of children disease terms
+│⎯ancestors
+Array[Text]	
+List of all ancestral disease terms
+│⎯therapeuticAreas
+Array[Text]	
+List of major therapeutic areas the disease belongs to
+│⎯descendants
+Array[Text]	
+List of all descendant terms
+│⎯ontology
+Struct	
+Description of the disease's place in the ontology tree
+│⎯│⎯isTherapeuticArea
+Boolean	
+Boolean column indicating if a disease is root of the ontology tree, a therapeutic area
+│⎯│⎯leaf
+Boolean	
+Boolean column indicating if a disease is a leaf entity in the ontology tree
+│⎯│⎯sources
+Struct	
+Source of the
+│⎯│⎯│⎯url
+Text	
+Disease URL from source
+│⎯│⎯│⎯name
+Text	
+Lable of the term in the ontology
+
+Dataset: disease_phenotype
+Column	Data Type	Description
+│⎯disease
+Text	
+Disease identifier
+│⎯phenotype
+Text	
+The phenotype linked to the disease.
+│⎯evidence
+Array[Struct]	
+A container for all evidence-related attributes supporting the disease-phenotype association.
+│⎯│⎯aspect
+Text	
+The category of biological information being provided (e.g., clinical, genetic, etc.).
+│⎯│⎯bioCuration
+Text	
+Indicates whether the evidence has been manually curated.
+│⎯│⎯diseaseFromSourceId
+Text	
+Unique identifier for the disease from the original source.
+│⎯│⎯diseaseFromSource
+Text	
+The disease name as recorded in the original source.
+│⎯│⎯diseaseName
+Text	
+Standardized disease name.
+│⎯│⎯evidenceType
+Text	
+The type of evidence supporting the disease-phenotype relationship.
+│⎯│⎯frequency
+Text	
+The observed frequency of the phenotype in individuals with the disease.
+│⎯│⎯modifiers
+Array[Text]	
+Additional characteristics or modifiers related to the phenotype.
+│⎯│⎯onset
+Array[Text]	
+Age or stage of disease onset for the phenotype.
+│⎯│⎯qualifier
+Text	
+Additional qualifiers specifying the phenotype-disease relationship.
+│⎯│⎯qualifierNot
+Boolean	
+Specifies if a phenotype is not observed in a given disease.
+│⎯│⎯references
+Array[Text]	
+References or citations supporting the evidence. [bioregistry:pubmed]
+│⎯│⎯sex
+Text	
+Indicates if the association is specific to a biological sex.
+│⎯│⎯resource
+Text	
+The data source from which the evidence was obtained.
+
+Dataset: drug_indication
+Column	Data Type	Description
+│⎯id
+Text	
+Open Targets molecule identifier
+│⎯indications
+Array[Struct]	
+List of approved and investigational indications for which a drug can be used
+│⎯│⎯disease
+Text	
+List of disease identifiers
+│⎯│⎯efoName
+Text	
+List of disease labels
+│⎯│⎯references
+Array[Struct]	
+List of sources supporting the drug-indication relationship
+│⎯│⎯│⎯source
+Text	
+List of source names
+│⎯│⎯│⎯ids
+Array[Text]	
+List of identification codes for the reference sources
+│⎯│⎯maxPhaseForIndication
+Float	
+Highest clinical trial phase reached for a specific indication
+│⎯approvedIndications
+Array[Text]	
+List of disease identifiers for a drug approved indications
+│⎯indicationCount
+Integer	
+Total number of indications for a drug
+
+
+Dataset: drug_mechanism_of_action
+Column	Data Type	Description
+│⎯actionType
+Text	
+Classification of how the drug interacts with its target (e.g., ACTIVATOR)
+│⎯mechanismOfAction
+Text	
+Drug pharmacological action
+│⎯chemblIds
+Array[Text]	
+List of Open Targets molecule identifiers
+│⎯targetName
+Text	
+Specific biological entity on which the drug has an effect
+│⎯targetType
+Text	
+Classification of the target's biological category (e.g., protein complex)
+│⎯targets
+Array[Text]	
+List of Open Targets target identifiers
+│⎯references
+Array[Struct]	
+List of sources documenting the mechanism information
+│⎯│⎯source
+Text	
+List of source names documenting the mechanism information
+│⎯│⎯ids
+Array[Text]	
+List of identification codes for the reference sources
+│⎯│⎯urls
+Array[Text]	
+List of web addresses referencing the mechanism information
+
+Dataset: drug_warning
+Column	Data Type	Description
+│⎯chemblIds
+Array[Text]	
+List of Open Targets molecule identifiers
+│⎯toxicityClass
+Text	
+Classification of toxicity type associated with the drug
+│⎯country
+Text	
+Country where the warning was issued
+│⎯description
+Text	
+Description of the drug adverse effect
+│⎯id
+Float	
+Internal identifier for the drug warning record
+│⎯references
+Array[Struct]	
+List of sources supporting the warning information
+│⎯│⎯ref_id
+Text	
+List of identifiers for the reference sources
+│⎯│⎯ref_type
+Text	
+List of bodies reporting the warning
+│⎯│⎯ref_url
+Text	
+List of web addresses referencing the information
+│⎯warningType
+Text	
+Classification of action taken (drug is withdrawn or has a black box warning)
+│⎯year
+Float	
+Year when the warning was issues
+│⎯efo_term
+Text	
+List of disease labels
+│⎯efo_id
+Text	
+List of disease identifiers
+│⎯efo_id_for_warning_class
+Text	
+Disease identifier categorising the type of warning
+
+
+Dataset: drug_molecule
+Column	Data Type	Description
+│⎯id
+Text	
+Open Targets molecule identifier
+│⎯canonicalSmiles
+Text	
+Standardized chemical structure representation using SMILES notation
+│⎯inchiKey
+Text	
+Chemical identifier generated from the molecular structure
+│⎯drugType
+Text	
+Classification of the molecule's therapeutic category or chemical class (e.g. Antibody)
+│⎯blackBoxWarning
+Boolean	
+Flag indicating whether the drug has safety warnings
+│⎯name
+Text	
+Generic name of the drug molecule
+│⎯yearOfFirstApproval
+Float	
+Year when the drug received regulatory approval
+│⎯maximumClinicalTrialPhase
+Float	
+Highest clinical trial phase reached by the drug
+│⎯parentId
+Text	
+Open Targets molecule identifier of the parent molecule for derivative compounds
+│⎯hasBeenWithdrawn
+Boolean	
+Flag indicating whether the drug was removed from market
+│⎯isApproved
+Boolean	
+Flag indicating whether the drug has received regulatory approval
+│⎯tradeNames
+Array[Text]	
+List of brand names for the drug
+│⎯synonyms
+Array[Text]	
+List of alternative names for the drug
+│⎯crossReferences
+Array[Struct]	
+List of identifiers in other databases
+│⎯│⎯source
+Text	
+Database source name
+│⎯│⎯ids
+Array[Text]	
+List of identifiers in other databases
+│⎯childChemblIds
+Array[Text]	
+List of Open Targets molecule identifiers of derivative compounds
+│⎯linkedDiseases
+Struct	
+List of Open Targets disease identifiers of conditions associated with the drug
+│⎯│⎯rows
+Array[Text]	
+List of Open Targets disease identifiers of conditions associated with the drug
+│⎯│⎯count
+Integer	
+Total number of Open Targets disease identifiers associated with the drug
+│⎯linkedTargets
+Struct	
+List of Open Targets target identifiers associated with the drug
+│⎯│⎯rows
+Array[Text]	
+List of Open Targets target identifiers associated with the drug
+│⎯│⎯count
+Integer	
+Total number of Open Targets target identifiers associated with the drug
+│⎯description
+Text	
+Summary of the drug's clinical development
+
+Dataset: pharmacogenomics
+Column	Data Type	Description
+│⎯datasourceId
+Text	
+Identifier for the data provider
+│⎯datasourceVersion
+Text	
+Data provider version number
+│⎯datatypeId
+Text	
+Classification of the type of pharmacogenomic data (e.g. clinical_annotation)
+│⎯directionality
+Text	
+Indicates in which direction the genetic variant increases or decreases drug response
+│⎯evidenceLevel
+Text	
+Strength of the scientific support for the variant/drug response
+│⎯genotype
+Text	
+Genetic variant configuration
+│⎯genotypeAnnotationText
+Text	
+Explanation of the genotype's clinical significance
+│⎯genotypeId
+Text	
+Identifier for the specific genetic variant combination (e.g. 1_1500_A_A,T)
+│⎯haplotypeFromSourceId
+Text	
+Haplotype ID in the PharmKGB dataset
+│⎯haplotypeId
+Text	
+Combination of genetic variants that constitute a particular allele of a gene (e.g. CYP2C9*3)
+│⎯literature
+Array[Text]	
+PubMed identifier (PMID) of the literature entry
+│⎯pgxCategory
+Text	
+Classification of the drug response type (e.g. Toxicity)
+│⎯phenotypeFromSourceId
+Text	
+Open Targets disease identifier result of mapping phenotypeText
+│⎯phenotypeText
+Text	
+Drug response influenced by the variation
+│⎯variantAnnotation
+Array[Struct]	
+PLACEHOLDER for variantAnnotation description
+│⎯│⎯baseAlleleOrGenotype
+Text	
+PLACEHOLDER for baseAlleleOrGenotype description
+│⎯│⎯comparisonAlleleOrGenotype
+Text	
+PLACEHOLDER for comparisonAlleleOrGenotype description
+│⎯│⎯directionality
+Text	
+PLACEHOLDER for directionality description
+│⎯│⎯effect
+Text	
+PLACEHOLDER for effect description
+│⎯│⎯effectDescription
+Text	
+PLACEHOLDER for effectDescription description
+│⎯│⎯effectType
+Text	
+PLACEHOLDER for effectType description
+│⎯│⎯entity
+Text	
+PLACEHOLDER for entity description
+│⎯│⎯literature
+Text	
+PLACEHOLDER for literature description
+│⎯studyId
+Text	
+Clinical Annotation ID in the PharmKGB dataset
+│⎯targetFromSourceId
+Text	
+Open Targets target identifier as provided by the data source
+│⎯variantFunctionalConsequenceId
+Text	
+The sequence ontology identifier of the consequence of the variant based on Ensembl VEP in the context of the transcript [bioregistry:so]
+│⎯variantRsId
+Text	
+Variant reference SNP cluster ID (Rsid)
+│⎯variantId
+Text	
+The unique identifier for the variant following schema: {chromosome}-{position}-{referenceAllele}-{alternateAllele}
+│⎯isDirectTarget
+Boolean	
+Flag indicating whether the target overlapping the variation is directly targeted by the drug
+│⎯drugs
+Array[Struct]	
+List of drugs affected by this genetic variation
+│⎯│⎯drugFromSource
+Text	
+List of drug identifiers from the original data source
+│⎯│⎯drugId
+Text	
+List of Open Targets drug identifiers
+
+Dataset: study
+Column	Data Type	Description
+│⎯studyId
+Text	
+Unique identifier of the GWAS or molQTL study.
+│⎯geneId
+Text	
+Ensembl identifier of the gene representing a specific gene whose molecular is being analysed in molQTL study. [bioregistry:ensembl]
+│⎯projectId
+Text	
+Identifier of the source project collection that the study information is derived from.
+│⎯studyType
+Text	
+Field specifying if study contains phenotype/disease or molecular genetic associations.
+│⎯traitFromSource
+Text	
+Molecular or phenotypic trait, derived from source, analysed in the study.
+│⎯traitFromSourceMappedIds
+Array[Text]	
+Phenotypic trait ids that map to the analysed trait reported by study.
+│⎯biosampleFromSourceId
+Text	
+Identifier of the referenced biological material.
+│⎯pubmedId
+Text	
+PubMed identifier of the publication hat references the study. [bioregistry:pubmed]
+│⎯publicationTitle
+Text	
+Title of the publication that references the study.
+│⎯publicationFirstAuthor
+Text	
+Last name and initials of the author of the publication that references the study.
+│⎯publicationDate
+Text	
+Date of the publication that references study.
+│⎯publicationJournal
+Text	
+Abbreviated journal name where the publication referencing study was published.
+│⎯backgroundTraitFromSourceMappedIds
+Array[Text]	
+Any background trait(s) shared by all individuals in the study.
+│⎯initialSampleSize
+Text	
+Study initial sample size.
+│⎯nCases
+Integer	
+The number of cases in this broad ancestry group.
+│⎯nControls
+Integer	
+The number of controls in this broad ancestry group.
+│⎯nSamples
+Integer	
+The number of samples tested in GWAS analysis
+│⎯cohorts
+Array[Text]	
+List of cohort(s) represented in the discovery sample.
+│⎯ldPopulationStructure
+Array[Struct]	
+Collection of populations referenced by the study.
+│⎯│⎯ldPopulation
+Text	
+Population identifier.
+│⎯│⎯relativeSampleSize
+Float	
+Fraction of the total sample represented by the population.
+│⎯discoverySamples
+Array[Struct]	
+Collection of ancestries reported by the study discovery phase.
+│⎯│⎯sampleSize
+Integer	
+Discovery sample size.
+│⎯│⎯ancestry
+Text	
+Discovery sample ancestry name.
+│⎯replicationSamples
+Array[Struct]	
+Collection of ancestries reported by the study replication phase.
+│⎯│⎯sampleSize
+Integer	
+Replication sample size.
+│⎯│⎯ancestry
+Text	
+Replication sample ancestry name.
+│⎯qualityControls
+Array[Text]	
+Control metrics refining study validation.
+│⎯analysisFlags
+Array[Text]	
+Collection of flags indicating the type of the analysis conducted in the association study.
+│⎯summarystatsLocation
+Text	
+Path to the source study summary statistics (if exists at the source)
+│⎯hasSumstats
+Boolean	
+Indication whether the summary statistics exist in the source.
+│⎯condition
+Text	
+Reported sample conditions.
+│⎯sumstatQCValues
+Array[Struct]	
+Mapping of quality control flags.
+│⎯│⎯QCCheckName
+Text	
+Quality control metric identifier.
+│⎯│⎯QCCheckValue
+Float	
+Quality control metric value.
+│⎯diseaseIds
+Array[Text]	
+Disease identifier associated with a studied trait.
+│⎯backgroundDiseaseIds
+Array[Text]	
+Any background disease(s) shared by all individuals in the study.
+│⎯biosampleId
+Text	
+Biosample identifier that maps to the biosample reported by study. [bioregistry:uberon]
+
+
+Dataset: disease_hpo
+Column	Data Type	Description
+│⎯id
+Text	
+Unique identifier for the disease in the Human Phenotype Ontology (HPO)
+│⎯name
+Text	
+Name of the disease (in HPO)
+│⎯description
+Text	
+Description of the disease
+│⎯dbXRefs
+Array[Text]	
+Database cross-references for the HPO disease
+│⎯parents
+Array[Text]	
+List of parent terms for the disease
+│⎯obsoleteTerms
+Array[Text]	
+List of obsolete terms for the disease
+
+
+Dataset: known_drug
+Column	Data Type	Description
+│⎯drugId
+Text	
+Open Targets molecule identifier
+│⎯targetId
+Text	
+Open Targets target identifier
+│⎯diseaseId
+Text	
+Open Targets disease identifier
+│⎯phase
+Float	
+Clinical development stage of the drug
+│⎯status
+Text	
+Clinical trial status for the drug/indication pair
+│⎯urls
+Array[Struct]	
+List of web addresses that support the drug/indication pair
+│⎯│⎯niceName
+Text	
+List of human readable names for the reference source
+│⎯│⎯url
+Text	
+List of web addresses that support the drug/indication pair
+│⎯ancestors
+Array[Text]	
+List of parent disease terms of the condition being treated
+│⎯label
+Text	
+Disease label for the condition being treated
+│⎯approvedSymbol
+Text	
+Approved gene symbol of the target modulated by the drug
+│⎯approvedName
+Text	
+Approved full name of the gene or gene product modulated by the drug
+│⎯targetClass
+Array[Text]	
+Classification category of the drug's biological target (e.g. Enzyme)
+│⎯prefName
+Text	
+Commonly used name for the drug
+│⎯tradeNames
+Array[Text]	
+List of brand names for the drug
+│⎯synonyms
+Array[Text]	
+List of alternative names to refer to the drug
+│⎯drugType
+Text	
+Classification of the modality of the drug (e.g. Small molecule)
+│⎯mechanismOfAction
+Text	
+Drug pharmacological action
+│⎯targetName
+Text	
+Full name of the gene or gene product modulated by the drug, as referred by ChEMBL
+
+
+Dataset: literature
+Column	Data Type	Description
+│⎯pmid
+Text	
+PubMed identifier (PMID) of the literature entry
+│⎯pmcid
+Text	
+PubMed Central ID (PMCID) of the literature entry
+│⎯date
+Date	
+Date of publication in YYYY-MM-DD format
+│⎯year
+Integer	
+Year of publication
+│⎯month
+Integer	
+Month of publication
+│⎯day
+Integer	
+Day of publication
+│⎯keywordId
+Text	
+Unique identifier for the keyword associated with the literature entry
+│⎯relevance
+Float	
+Relevance score of the keyword within the literature entry
+│⎯keywordType
+Text	
+Type of keyword identified in the literature entry. Values: DS: disease/syndrome, GP: gene/protein, CD: chemical/drug
+
+
+Dataset: literature_vector
+Column	Data Type	Description
+│⎯category
+Text	
+Category of the entity match in the literature. Either target, drug or disease
+│⎯word
+Text	
+Normalised identifier of the matched entity
+│⎯norm
+Float	
+Normalized form of the extracted word
+│⎯vector
+Array[Float]	
+Vector representation of the word based on word embedding
+
+Dataset: l2g_prediction
+Column	Data Type	Description
+│⎯studyLocusId
+Text	
+Study-locus identifier for the credible set
+│⎯geneId
+Text	
+Identifier of the gene / target
+│⎯score
+Float	
+Locus-to-gene score prediction for the given studyLocusId-geneId pair
+│⎯features
+Array[Struct]	
+List of Locus to Gene feature values
+│⎯│⎯name
+Text	
+Name of the feature used in locus to gene prediction
+│⎯│⎯value
+Float	
+Value of the feature
+│⎯│⎯shapValue
+Float	
+SHAP value of the feature
+│⎯shapBaseValue
+Float	
+SHAP base value
+
+
+Dataset: interaction
+Column	Data Type	Description
+│⎯sourceDatabase
+Text	
+Source database reporting the molecular interaction.
+│⎯targetA
+Text	
+Open Targets target identifier of the first molecule (target A) in the interaction. [bioregistry:ensembl]
+│⎯intA
+Text	
+Identifier for target A in source
+│⎯intABiologicalRole
+Text	
+Biological role of target A in the interaction.
+│⎯targetB
+Text	
+Open Targets target identifier of the second molecule (target B) in the interaction. [bioregistry:ensembl]
+│⎯intB
+Text	
+Identifier for target B in source
+│⎯intBBiologicalRole
+Text	
+Biological role of target B in the interaction
+│⎯speciesA
+Struct	
+Taxonomic annotation of target A
+│⎯│⎯mnemonic
+Text	
+Short mnemonic name of the species associated with target A
+│⎯│⎯scientific_name
+Text	
+Scientific name of the species associated with target A
+│⎯│⎯taxon_id
+Float	
+NCBI taxon ID of the species associated with target A
+│⎯speciesB
+Struct	
+Taxonomic annotation of target B
+│⎯│⎯mnemonic
+Text	
+Short mnemonic name of the species associated with target B
+│⎯│⎯scientific_name
+Text	
+Scientific name of the species associated with target B
+│⎯│⎯taxon_id
+Float	
+NCBI taxon ID of the species associated with target B
+│⎯count
+Float	
+Number of interaction occurrences reported in the source databases.
+│⎯scoring
+Float	
+Scoring or confidence value assigned to the interaction.
+
+Dataset: interaction_evidence
+Column	Data Type	Description
+│⎯participantDetectionMethodA
+Array[Struct]	
+Detection method used to identify participant A in the interaction
+│⎯│⎯miIdentifier
+Text	
+Molecular Interactions (MI) identifier for participant A’s detection method [bioregistry:mi]
+│⎯│⎯shortName
+Text	
+Short name of participant A’s detection method
+│⎯participantDetectionMethodB
+Array[Struct]	
+Detection method used to identify participant B in the interaction
+│⎯│⎯miIdentifier
+Text	
+Molecular Interactions (MI) identifier for participant B’s detection method [bioregistry:mi]
+│⎯│⎯shortName
+Text	
+Short name of participant B’s detection method
+│⎯hostOrganismTaxId
+Float	
+NCBI taxon ID of the host organism
+│⎯targetB
+Text	
+Open Targets target identifier of the second molecule (target B) in the interaction [bioregistry:ensembl]
+│⎯evidenceScore
+Float	
+Score indicating the confidence or strength of the interaction evidence
+│⎯expansionMethodShortName
+Text	
+Short name of the method used to expand the interaction dataset
+│⎯hostOrganismScientificName
+Text	
+Scientific name of the host organism in which the interaction was observed
+│⎯intBBiologicalRole
+Text	
+Biological role of target B in the interaction
+│⎯interactionResources
+Struct	
+Databases providing evidence for the interaction
+│⎯│⎯databaseVersion
+Text	
+Version of the source database providing interaction evidence
+│⎯│⎯sourceDatabase
+Text	
+Name of the source database reporting the interaction evidence
+│⎯interactionDetectionMethodShortName
+Text	
+Short name of the method used to detect the interaction
+│⎯intA
+Text	
+Identifier for target A in source
+│⎯intBSource
+Text	
+Source where interactor B is identified
+│⎯interactionTypeMiIdentifier
+Text	
+Molecular Interactions (MI) identifier for the type of interaction [bioregistry:mi]
+│⎯speciesB
+Struct	
+Taxonomic annotation of target B
+│⎯│⎯mnemonic
+Text	
+Short mnemonic name of the species associated with target B
+│⎯│⎯scientificName
+Text	
+Scientific name of the species associated with target B
+│⎯│⎯taxonId
+Float	
+NCBI taxon ID of the species associated with target B
+│⎯expansionMethodMiIdentifier
+Text	
+Molecular Interactions (MI) identifier for the expansion method used [bioregistry:mi]
+│⎯interactionTypeShortName
+Text	
+Short name of the interaction type
+│⎯interactionIdentifier
+Text	
+Unique identifier for the interaction evidence entry at the source
+│⎯hostOrganismTissue
+Struct	
+Tissue of the host organism, where the interaction was identified
+│⎯│⎯fullName
+Text	
+Full name of the tissue
+│⎯│⎯shortName
+Text	
+Short name of the tissue
+│⎯│⎯xrefs
+Array[Text]	
+Cross-references to external databases for the host organism's tissue
+│⎯speciesA
+Struct	
+Taxonomic annotation of target A
+│⎯│⎯mnemonic
+Text	
+Short mnemonic name of the species associated with target A
+│⎯│⎯scientificName
+Text	
+Scientific name of the species associated with target A
+│⎯│⎯taxonId
+Float	
+NCBI taxon ID of the species associated with target A
+│⎯intASource
+Text	
+Source where interactor B is identified
+│⎯intB
+Text	
+Identifier for target B in source
+│⎯pubmedId
+Text	
+PubMed ID of the publication supporting the interaction evidence
+│⎯intABiologicalRole
+Text	
+Biological role of target A in the interaction
+│⎯interactionScore
+Float	
+Score assigned to the interaction based on supporting evidence
+│⎯targetA
+Text	
+Open Targets target identifier of the second molecule (target A) in the interaction [bioregistry:ensembl]
+│⎯interactionDetectionMethodMiIdentifier
+Text	
+Molecular Interactions (MI) identifier for the interaction detection method [bioregistry:mi]
+
+Dataset: mouse_phenotype
+Column	Data Type	Description
+│⎯biologicalModels
+Array[Struct]	
+Container for all biological model-related attributes.
+│⎯│⎯allelicComposition
+Text	
+The specific allelic composition of the mouse model.
+│⎯│⎯geneticBackground
+Text	
+The genetic background strain of the mouse model.
+│⎯│⎯id
+Text	
+Unique identifier for the biological model. [bioregistry:mgi]
+│⎯│⎯literature
+Array[Text]	
+References related to the mouse model. [bioregistry:pubmed]
+│⎯modelPhenotypeClasses
+Array[Struct]	
+Container for phenotype class-related attributes.
+│⎯│⎯id
+Text	
+Unique identifier for the phenotype class. [bioregistry:mp]
+│⎯│⎯label
+Text	
+Descriptive label for the phenotype class.
+│⎯modelPhenotypeId
+Text	
+Identifier for the specific phenotype observed in the model. [bioregistry:mp]
+│⎯modelPhenotypeLabel
+Text	
+Human-readable label describing the observed phenotype.
+│⎯targetFromSourceId
+Text	
+Identifier for the human target as provided by the data source.
+│⎯targetInModel
+Text	
+Name of the target gene as represented in the mouse model.
+│⎯targetInModelEnsemblId
+Text	
+Ensembl identifier for the target gene in the mouse model. [bioregistry:ensembl]
+│⎯targetInModelMgiId
+Text	
+MGI (Mouse Genome Informatics) identifier for the target gene in the model. [bioregistry:mgi]
+
+Dataset: openfda_significant_adverse_drug_reactions
+Column	Data Type	Description
+│⎯chembl_id
+Text	
+Unique identifier for the drug or clinical candidate
+│⎯event
+Text	
+Reported adverse drug reaction associated with the drug.
+│⎯count
+Float	
+Number of occurrences of the adverse event in the dataset.
+│⎯llr
+Float	
+Log-likelihood ratio (LLR) measuring the strength of the association between the drug and the adverse event.
+│⎯critval
+Float	
+Critical value used to determine statistical significance of the association.
+│⎯meddraCode
+Text	
+Medical Dictionary for Regulatory Activities (MedDRA) code for the adverse drug reaction.
+
+
+Dataset: openfda_significant_adverse_target_reactions
+Column	Data Type	Description
+│⎯targetId
+Text	
+Unique identifier for the drug target
+│⎯event
+Text	
+Reported adverse drug reactions associated with drugs targeting the molecule.
+│⎯count
+Float	
+Number of occurrences of adverse events in the dataset when looking at all drugs targeting the same molecule.
+│⎯llr
+Float	
+Log-likelihood ratio (LLR) measuring the strength of the association between all drugs targeting the same molecule and the adverse event.
+│⎯critval
+Float	
+Critical value used to determine statistical significance of the association.
+│⎯meddraCode
+Text	
+Medical Dictionary for Regulatory Activities (MedDRA) code for the adverse drug reaction.
+
+Dataset: so
+Column	Data Type	Description
+│⎯id
+Text	
+Sequence ontology term identifier [bioregistry:so]
+│⎯label
+Text	
+Sequence ontology term label
+
+Dataset: target
+Column	Data Type	Description
+│⎯id
+Text	
+Unique identifier for the target [bioregistry:ensembl]
+│⎯approvedSymbol
+Text	
+Approved gene symbol of the target
+│⎯biotype
+Text	
+Biotype classification of the target gene, indicating if the gene is protein coding
+│⎯transcriptIds
+Array[Text]	
+List of Ensembl transcript identifiers associated with the target
+│⎯canonicalTranscript
+Struct	
+The Ensembl canonical transcript of the target gene
+│⎯│⎯id
+Text	
+The Ensembl transcript identifier for the canonical transcript
+│⎯│⎯chromosome
+Text	
+Chromosome location of the canonical transcript
+│⎯│⎯start
+Float	
+Genomic start position of the canonical transcript
+│⎯│⎯end
+Float	
+Genomic end position of the canonical transcript
+│⎯│⎯strand
+Text	
+Strand orientation of the canonical transcript
+│⎯canonicalExons
+Array[Text]	
+List of canonical exons for the target gene
+│⎯genomicLocation
+Struct	
+Genomic location information of the target gene
+│⎯│⎯chromosome
+Text	
+Chromosome on which the target located
+│⎯│⎯start
+Float	
+Genomic start position of the target gene
+│⎯│⎯end
+Float	
+Genomic end position of the target gene
+│⎯│⎯strand
+Integer	
+Strand orientation of the target gene
+│⎯alternativeGenes
+Array[Text]	
+List of alternative Ensembl gene identifiers mapped to non-canonical chromosomes
+│⎯approvedName
+Text	
+Approved full name of the target gene
+│⎯go
+Array[Struct]	
+List of Gene Ontology (GO) annotations related to the target
+│⎯│⎯id
+Text	
+GO identifier for the annotation [bioregistry:go]
+│⎯│⎯source
+Text	
+Source database and identifer where the ontology term was sourced from
+│⎯│⎯evidence
+Text	
+Evidence supporting the GO annotation
+│⎯│⎯aspect
+Text	
+Type of the GO annotation: molecular function (F), biological process (P) and cellular localisation (C)
+│⎯│⎯geneProduct
+Text	
+Gene product associated with the GO annotation [bioregistry:uniprot]
+│⎯│⎯ecoId
+Text	
+Evidence & Conclusion Ontology (ECO) identifier for the GO annotation [bioregistry:eco]
+│⎯hallmarks
+Struct	
+Hallmarks related to the target gene sourced from COSMIC
+│⎯│⎯attributes
+Array[Struct]	
+Attributes of the hallmark annotation
+│⎯│⎯│⎯pmid
+Float	
+PubMed ID of the supporting literature for the hallmark attribute [bioregistry:pubmed]
+│⎯│⎯│⎯description
+Text	
+Description of the hallmark attribute
+│⎯│⎯│⎯attribute_name
+Text	
+Name of the hallmark attribute
+│⎯│⎯cancerHallmarks
+Array[Struct]	
+Cancer hallmarks associated with the target gene
+│⎯│⎯│⎯pmid
+Float	
+PubMed ID of the supporting literature for the cancer hallmark [bioregistry:pubmed]
+│⎯│⎯│⎯description
+Text	
+Description of the cancer hallmark
+│⎯│⎯│⎯impact
+Text	
+Impact of the cancer hallmark on the target
+│⎯│⎯│⎯label
+Text	
+Label associated with the cancer hallmark
+│⎯synonyms
+Array[Struct]	
+List of synonyms for the target gene
+│⎯│⎯label
+Text	
+Synonym label for the target
+│⎯│⎯source
+Text	
+Source database of the synonym
+│⎯symbolSynonyms
+Array[Struct]	
+List of symbol-based synonyms for the target gene
+│⎯│⎯label
+Text	
+Symbol synonym label for the target
+│⎯│⎯source
+Text	
+Source of the symbol synonym
+│⎯nameSynonyms
+Array[Struct]	
+List of name-based synonyms for the target gene
+│⎯│⎯label
+Text	
+Name synonym label for the target
+│⎯│⎯source
+Text	
+Source of the name synonym
+│⎯functionDescriptions
+Array[Text]	
+Functional descriptions of the target gene sourced from UniProt
+│⎯subcellularLocations
+Array[Struct]	
+List of subcellular locations where the target protein is found
+│⎯│⎯location
+Text	
+Name of the subcellular compartment where the protein was found
+│⎯│⎯source
+Text	
+Source database for the subcellular location
+│⎯│⎯termSL
+Text	
+Subcellular location term identifier from SwissProt [bioregistry:sl]
+│⎯│⎯labelSL
+Text	
+Subcellular location category from SwissProt
+│⎯targetClass
+Array[Struct]	
+Target classification categories from ChEMBL
+│⎯│⎯id
+Float	
+Unique identifier for the target class
+│⎯│⎯label
+Text	
+Label for the target class
+│⎯│⎯level
+Text	
+Hierarchical level of the target class
+│⎯obsoleteSymbols
+Array[Struct]	
+List of obsolete symbols previously used for the target gene
+│⎯│⎯label
+Text	
+Obsolete symbol label
+│⎯│⎯source
+Text	
+Source of the obsolete symbol
+│⎯obsoleteNames
+Array[Struct]	
+List of obsolete names previously used for the target gene
+│⎯│⎯label
+Text	
+Obsolete name label
+│⎯│⎯source
+Text	
+Source of the obsolete name
+│⎯constraint
+Array[Struct]	
+Constraint scores for the target gene from GnomAD
+│⎯│⎯constraintType
+Text	
+Type of constraint applied to the target
+│⎯│⎯score
+Float	
+Constraint score indicating gene intolerance
+│⎯│⎯exp
+Float	
+Expected constraint score
+│⎯│⎯obs
+Integer	
+Observed constraint score
+│⎯│⎯oe
+Float	
+Observed/Expected (OE) constraint score
+│⎯│⎯oeLower
+Float	
+Lower bound of the OE constraint score
+│⎯│⎯oeUpper
+Float	
+Upper bound of the OE constraint score
+│⎯│⎯upperRank
+Integer	
+Rank of the target gene in constraint analysis
+│⎯│⎯upperBin
+Integer	
+Binned category for the constraint score
+│⎯│⎯upperBin6
+Integer	
+Six-bin classification of the constraint score
+│⎯tep
+Struct	
+Target Enabling Package (TEP) information
+│⎯│⎯targetFromSourceId
+Text	
+Ensembl gene ID for the TEP target
+│⎯│⎯description
+Text	
+Description of the TEP target
+│⎯│⎯therapeuticArea
+Text	
+Therapeutic area associated with the TEP target
+│⎯│⎯url
+Text	
+URL linking to more information on the TEP target
+│⎯proteinIds
+Array[Struct]	
+Protein identifiers associated with the target
+│⎯│⎯id
+Text	
+Protein ID for the target
+│⎯│⎯source
+Text	
+Source database for the protein ID
+│⎯dbXrefs
+Array[Struct]	
+Database cross-references for the target
+│⎯│⎯id
+Text	
+Cross-reference ID for external databases
+│⎯│⎯source
+Text	
+Source database for the cross-reference
+│⎯chemicalProbes
+Array[Struct]	
+Chemical probes related to the target
+│⎯│⎯control
+Text	
+Whether the chemical probe serves as a control
+│⎯│⎯drugId
+Text	
+Drug ID associated with the chemical probe
+│⎯│⎯id
+Text	
+Unique identifier for the chemical probe
+│⎯│⎯isHighQuality
+Boolean	
+Indicates if the chemical probe is high quality
+│⎯│⎯mechanismOfAction
+Array[Text]	
+Mechanism of action of the chemical probe
+│⎯│⎯origin
+Array[Text]	
+Origin of the chemical probe
+│⎯│⎯probeMinerScore
+Float	
+Score from ProbeMiner for chemical probe quality
+│⎯│⎯probesDrugsScore
+Float	
+Score for chemical probes related to druggability
+│⎯│⎯scoreInCells
+Float	
+Score indicating chemical probe activity in cells
+│⎯│⎯scoreInOrganisms
+Float	
+Score indicating chemical probe activity in organisms
+│⎯│⎯targetFromSourceId
+Text	
+Ensembl gene ID of the target for the chemical probe
+│⎯│⎯urls
+Array[Struct]	
+URLs linking to more information about the chemical probe
+│⎯│⎯│⎯niceName
+Text	
+Nice name for the linked URL
+│⎯│⎯│⎯url
+Text	
+URL providing details about the chemical probe
+│⎯homologues
+Array[Struct]	
+Homologues of the target gene in other species
+│⎯│⎯speciesId
+Text	
+Species ID for the homologue
+│⎯│⎯speciesName
+Text	
+Species name for the homologue
+│⎯│⎯homologyType
+Text	
+Type of homology relationship
+│⎯│⎯targetGeneId
+Text	
+Target gene ID of the homologue
+│⎯│⎯isHighConfidence
+Text	
+Indicates if the homology is high confidence
+│⎯│⎯targetGeneSymbol
+Text	
+Gene symbol of the homologous target
+│⎯│⎯queryPercentageIdentity
+Float	
+Percentage identity of the query gene in the homologue
+│⎯│⎯targetPercentageIdentity
+Float	
+Percentage identity of the homologue in the query gene
+│⎯│⎯priority
+Integer	
+Priority score for the homologue
+│⎯tractability
+Array[Struct]	
+Tractability information for the target
+│⎯│⎯modality
+Text	
+Modality of the tractability assessment
+│⎯│⎯id
+Text	
+Unique identifier for the tractability category
+│⎯│⎯value
+Boolean	
+Tractability value assigned to the target
+│⎯safetyLiabilities
+Array[Struct]	
+Safety liabilities associated with the target
+│⎯│⎯event
+Text	
+Safety event associated with the target
+│⎯│⎯eventId
+Text	
+Unique identifier for the safety event
+│⎯│⎯effects
+Array[Struct]	
+Effects reported for the safety event
+│⎯│⎯│⎯direction
+Text	
+Direction of the reported effect (e.g., increase or decrease)
+│⎯│⎯│⎯dosing
+Text	
+Dosing conditions related to the reported effect
+│⎯│⎯biosamples
+Array[Struct]	
+Biosamples used in safety assessments
+│⎯│⎯│⎯cellFormat
+Text	
+Format of the biosample cells
+│⎯│⎯│⎯cellLabel
+Text	
+Label of the biosample cell
+│⎯│⎯│⎯tissueId
+Text	
+Tissue ID for the biosample
+│⎯│⎯│⎯tissueLabel
+Text	
+Label of the biosample tissue
+│⎯│⎯datasource
+Text	
+Data source reporting the safety liability
+│⎯│⎯literature
+Text	
+Literature references for the safety liability
+│⎯│⎯url
+Text	
+URL linking to more details on safety liabilities
+│⎯│⎯studies
+Array[Struct]	
+Studies related to safety assessments
+│⎯│⎯│⎯description
+Text	
+Description of the safety study
+│⎯│⎯│⎯name
+Text	
+Name of the safety study
+│⎯│⎯│⎯type
+Text	
+Type of safety study
+│⎯pathways
+Array[Struct]	
+Pathway annotations for the target
+│⎯│⎯pathwayId
+Text	
+Unique identifier for the pathway
+│⎯│⎯pathway
+Text	
+Name of the pathway
+│⎯│⎯topLevelTerm
+Text	
+Top-level term categorizing the pathway
+│⎯tss
+Float	
+Transcription Start Site (TSS) information for the target
+
+
+Dataset: target_essentiality
+Column	Data Type	Description
+│⎯id
+Text	
+Target identifier the essentiality was measured on [bioregistry:ensembl]
+│⎯geneEssentiality
+Array[Struct]	
+Essentiality measurements of the gene based on CRISPR screening data in different cellular models
+│⎯│⎯depMapEssentiality
+Array[Struct]	
+Essentiality measurements extraced from Depmap, stratified by tissue or anatomical units
+│⎯│⎯│⎯screens
+Array[Struct]	
+List of CRISPR screening experiments supporting the essentiality assessment
+│⎯│⎯│⎯│⎯cellLineName
+Text	
+Name of the cancer cell line in which the gene essentiality was assessed
+│⎯│⎯│⎯│⎯depmapId
+Text	
+Unique identifier of the assay in DepMap
+│⎯│⎯│⎯│⎯diseaseCellLineId
+Text	
+Cell modell passport identifier of a celline modelling a disease
+│⎯│⎯│⎯│⎯diseaseFromSource
+Text	
+Disease associated with the cell line as reported in the source data
+│⎯│⎯│⎯│⎯expression
+Float	
+Gene expression level in the corresponding cell line
+│⎯│⎯│⎯│⎯geneEffect
+Float	
+Gene effect score indicating the impact of gene knockout
+│⎯│⎯│⎯│⎯mutation
+Text	
+Background mutation the tested cell line have
+│⎯│⎯│⎯tissueId
+Text	
+Identifier of the tissue from where the cells were sample for assay [bioregistry:uberon]
+│⎯│⎯│⎯tissueName
+Text	
+Name of the tissue from where the cells were sample for assay
+│⎯│⎯isEssential
+Boolean	
+Boolean flag indicating whether the tested gene is considered essential in the given context
+
+
+Dataset: evidence
+Column	Data Type	Description
+│⎯datasourceId
+Text	
+Identifer of the evidence source
+│⎯targetId
+Text	
+Open Targets target identifier
+│⎯alleleOrigins
+Array[Text]	
+Origin of the variant allele
+│⎯allelicRequirements
+Array[Text]	
+Inheritance patterns
+│⎯ancestry
+Text	
+Genetic origin of a population
+│⎯ancestryId
+Text	
+Identifier of the ancestry in the HANCESTRO ontology [bioregistry:hancestro]
+│⎯beta
+Float	
+Effect size of numberic traits
+│⎯betaConfidenceIntervalLower
+Float	
+Lower value of the confidence interval
+│⎯betaConfidenceIntervalUpper
+Float	
+Upper value of the confidence interval
+│⎯biologicalModelAllelicComposition
+Text	
+Allelic composition of the model organism
+│⎯biologicalModelGeneticBackground
+Text	
+Genetic background of the model organism
+│⎯biologicalModelId
+Text	
+Identifier of the biological model (eg. in MGI)
+│⎯biomarkerName
+Text	
+Altered characteristics that influences the disease process
+│⎯biomarkers
+Struct	
+List of biomarkers
+│⎯│⎯geneExpression
+Array[Struct]	
+List of gene expression altering biomarkers
+│⎯│⎯│⎯id
+Text	
+Gene Ontology (GO) identifiers of regulation or background expression processes [bioregistry:go]
+│⎯│⎯│⎯name
+Text	
+Raw gene expression annotation from the source
+│⎯│⎯geneticVariation
+Array[Struct]	
+List of gene expression altering biomarkers
+│⎯│⎯│⎯functionalConsequenceId
+Text	
+Functional consequene identifier of the variant biomarker [bioregistry:so]
+│⎯│⎯│⎯id
+Text	
+Variant identifier
+│⎯│⎯│⎯name
+Text	
+Name of the variant biomarker
+│⎯biosamplesFromSource
+Array[Text]	
+Identifier of the referenced biological material
+│⎯cellType
+Text	
+The studied cell type. Preferably the cell line ontology label
+│⎯clinicalPhase
+Float	
+Phase of the clinical trial
+│⎯clinicalSignificances
+Array[Text]	
+Standard terms to define clinical significance
+│⎯clinicalStatus
+Text	
+Current stage of a clinical study
+│⎯cohortDescription
+Text	
+Description of the studied cohort
+│⎯cohortId
+Text	
+Identifier of the studied cohort
+│⎯cohortPhenotypes
+Array[Text]	
+Clinical features/phenotypes observed in studied individuals
+│⎯cohortShortName
+Text	
+Short name of the studied cohort
+│⎯confidence
+Text	
+Confidence qualifier on the reported evidence
+│⎯contrast
+Text	
+Experiment contrast
+│⎯crisprScreenLibrary
+Text	
+The applied screening library in the CRISPR/CAS9 project
+│⎯datatypeId
+Text	
+Type of the evidence
+│⎯diseaseCellLines
+Array[Struct]	
+Cancer cell lines used to generate evidence
+│⎯│⎯id
+Text	
+Cell type identifier in cell ontology or in cell model database
+│⎯│⎯name
+Text	
+Name of the cell model
+│⎯│⎯tissue
+Text	
+Name of the tissue from which the cells were sampled
+│⎯│⎯tissueId
+Text	
+Anatomical identifier of the sampled organ/tissue [bioregistry:uberon]
+│⎯diseaseFromSource
+Text	
+Disease label from the original source
+│⎯diseaseFromSourceId
+Text	
+Disease identifier from the original source
+│⎯diseaseFromSourceMappedId
+Text	
+Mapped Open Targets disease identifier
+│⎯diseaseModelAssociatedHumanPhenotypes
+Array[Struct]	
+Human phenotypes equivalent to those observed in animal models
+│⎯│⎯id
+Text	
+Human phenotype ontology identifier [bioregistry:hp]
+│⎯│⎯label
+Text	
+Human phenotype ontology label
+│⎯diseaseModelAssociatedModelPhenotypes
+Array[Struct]	
+Phenotypes observed in genetically-modified animal models
+│⎯│⎯id
+Text	
+Mouse phenotype ontology identifier [bioregistry:mp]
+│⎯│⎯label
+Text	
+Mouse phenotype ontology label
+│⎯drugFromSource
+Text	
+Drug name/family in resource of origin
+│⎯drugId
+Text	
+Open Targets drug identifier [bioregistry:chembl]
+│⎯drugResponse
+Text	
+Observed patterns of drug response
+│⎯geneticBackground
+Text	
+Additional genetic background of the applied cell line in the CRISPR screen
+│⎯literature
+Array[Text]	
+List of PubMed or preprint reference identifiers
+│⎯log2FoldChangePercentileRank
+Float	
+Percentile of top differentially regulated genes (transcripts) within experiment
+│⎯log2FoldChangeValue
+Float	
+Log2 fold expression change in contrast experiment
+│⎯mutatedSamples
+Array[Struct]	
+Samples with a given mutation tested
+│⎯│⎯functionalConsequenceId
+Text	
+Functional consequene identifier of the pooled mutations [bioregistry:so]
+│⎯│⎯numberMutatedSamples
+Float	
+Number of cohort samples in which target is mutated with a mutation of any type
+│⎯│⎯numberSamplesTested
+Float	
+Number of cohort samples tested
+│⎯│⎯numberSamplesWithMutationType
+Float	
+Number of cohort samples in which target is mutated with a specific mutation type
+│⎯oddsRatio
+Float	
+Size of effect captured as odds ratio
+│⎯oddsRatioConfidenceIntervalLower
+Float	
+Lower value of the confidence interval for odds ratio
+│⎯oddsRatioConfidenceIntervalUpper
+Float	
+Upper value of the confidence interval for odds ratio
+│⎯pValueExponent
+Float	
+Exponent of the p-value
+│⎯pValueMantissa
+Float	
+Mantissa of the p-value
+│⎯pathways
+Array[Struct]	
+List of pooled pathways
+│⎯│⎯id
+Text	
+Reactome pathway identifier [bioregistry:reactome]
+│⎯│⎯name
+Text	
+Pathway or gene set/pathway name
+│⎯projectId
+Text	
+The identifer of the project that generated the data
+│⎯reactionId
+Text	
+Pathway, gene set or reaction identifier in Reactome
+│⎯reactionName
+Text	
+Name of the reaction, patway or gene set in Reactome
+│⎯releaseDate
+Text	
+Date of the release of the data in a 'YYYY-MM-DD' format
+│⎯releaseVersion
+Text	
+Open Targets data release version
+│⎯resourceScore
+Float	
+Score provided by datasource indicating strength of target-disease association
+│⎯sex
+Array[Text]	
+Sex of the samples/population included in the analysis
+│⎯significantDriverMethods
+Array[Text]	
+Methods to detect cancer driver genes producing significant results
+│⎯statisticalMethod
+Text	
+The statistical method used to calculate the association
+│⎯statisticalMethodOverview
+Text	
+Overview of the statistical method used to calculate the association
+│⎯statisticalTestTail
+Text	
+End of the distribution the target was picked from
+│⎯studyCases
+Float	
+Number of cases in case-control study
+│⎯studyCasesWithQualifyingVariants
+Float	
+Number of cases in case-control study that carry at least one allele of the qualifying variant
+│⎯studyId
+Text	
+Identifier of the study generating the data
+│⎯studyOverview
+Text	
+Description of the study
+│⎯studySampleSize
+Float	
+Sample size of study
+│⎯studyStartDate
+Text	
+Start date of study in a YYYY-MM-DD format
+│⎯studyStopReason
+Text	
+Reason why a study has been stopped
+│⎯studyStopReasonCategories
+Array[Text]	
+Predicted reason(s) why the study has been stopped based on studyStopReason
+│⎯targetFromSource
+Text	
+Target name/synonym or non HGNC symbol in resource of origin
+│⎯targetFromSourceId
+Text	
+Target ID in resource of origin (accepted sources include Ensembl gene ID, Uniprot ID, gene symbol), only capital letters are accepted
+│⎯targetInModel
+Text	
+Target name/synonym in animal model
+│⎯targetInModelEnsemblId
+Text	
+Target Ensembl ID in animal model [bioregistry:ensembl]
+│⎯targetInModelMgiId
+Text	
+Target MGI ID in animal model [bioregistry:mgi]
+│⎯targetModulation
+Text	
+Description of target modulation event
+│⎯urls
+Array[Struct]	
+Reference to linked external resource (e.g. clinical trials, studies, package inserts, reports, etc.)
+│⎯│⎯niceName
+Text	
+Human readable label of the remote reference
+│⎯│⎯url
+Text	
+URL to remote resource
+│⎯variantAminoacidDescriptions
+Array[Text]	
+Descriptions of variant consequences at protein level
+│⎯variantFromSourceId
+Text	
+Identifier of the disease-causing variant at source
+│⎯variantFunctionalConsequenceId
+Text	
+Sequence ontology (SO) identifier of the functional consequence of the variant [bioregistry:so]
+│⎯variantHgvsId
+Text	
+Identifier in HGVS notation of the disease-causing variant
+│⎯variantId
+Text	
+Identifier in CHROM_POS_REF_ALT notation of the disease-causing variant
+│⎯variantRsId
+Text	
+Variant reference SNP cluster ID (Rsid)
+│⎯pmcIds
+Array[Text]	
+List of PubMed Central identifiers of full text publication
+│⎯publicationYear
+Float	
+Year of publication
+│⎯studyLocusId
+Text	
+Identifier of the Open Targets Study Locus
+│⎯textMiningSentences
+Array[Struct]	
+Sentences of a publication supporting the disease/target relationship
+│⎯│⎯dEnd
+Float	
+End position of the disease label in sentence
+│⎯│⎯dStart
+Float	
+Start position of the disease label in the sentence
+│⎯│⎯section
+Text	
+Section of the publication the sentence was extracted from
+│⎯│⎯tEnd
+Float	
+End position of the target label in the sentence
+│⎯│⎯tStart
+Float	
+Start position of the target label in the sentence
+│⎯│⎯text
+Text	
+Text of the sentence with the disease/target relationship
+│⎯diseaseId
+Text	
+Open Targets disease identifier
+│⎯id
+Text	
+Identifer of the disease/target evidence
+│⎯score
+Float	
+Score of the evidence reflecting the strength of the disease/target relationship
+│⎯variantEffect
+Text	
+Gain or loss of function annotation of the variant effect
+│⎯directionOnTrait
+Text	
+Predicted direction of effect on the trait
+│⎯sourceId
+Text	
+Identifer of the evidence source
+
+
+Dataset: reactome
+Column	Data Type	Description
+│⎯id
+Text	
+Unique identifier for the Reactome pathway [bioregistry:reactome]
+│⎯label
+Text	
+Name or label of the pathway
+│⎯ancestors
+Array[Text]	
+List of ancestor pathways in the ontology
+│⎯descendants
+Array[Text]	
+List of descendant pathways in the ontology
+│⎯children
+Array[Text]	
+Direct child pathways of the current pathway
+│⎯parents
+Array[Text]	
+Direct parent pathways of the current pathway
+│⎯path
+Array[Text]	
+Hierarchical path representing the position of the pathway in Reactome
+
+
+Dataset: go
+Column	Data Type	Description
+│⎯id
+Text	
+Gene ontology term identifier [bioregistry:go]
+│⎯name
+Text	
+Gene ontology term name
+
+Dataset: target_prioritisation
+Column	Data Type	Description
+│⎯targetId
+Text	
+Unique identifier for the target, typically an Ensembl gene ID.
+│⎯isInMembrane
+Integer	
+Indicates if the target protein is located in the cell or plasma membrane.
+│⎯isSecreted
+Integer	
+Indicates if the target protein is secreted or predicted to be secreted.
+│⎯hasSafetyEvent
+Integer	
+Indicates if there are known safety events associated with the target.
+│⎯hasPocket
+Integer	
+Indicates if the target has predicted binding pockets suitable for small molecule binding.
+│⎯hasLigand
+Integer	
+Indicates if the target binds at least one high-quality ligand.
+│⎯hasSmallMoleculeBinder
+Integer	
+Indicates if the target has at least one small molecule binder.
+│⎯geneticConstraint
+Float	
+Represents the genetic constraint of the target, indicating how intolerant it is to genetic variation.
+│⎯paralogMaxIdentityPercentage
+Float	
+Maximum percentage identity among the target's paralogous genes.
+│⎯mouseOrthologMaxIdentityPercentage
+Float	
+Maximum percentage identity between the target and its mouse ortholog.
+│⎯isCancerDriverGene
+Integer	
+Indicates if the target is identified as a cancer driver gene.
+│⎯hasTEP
+Integer	
+Indicates if a Target Enabling Package (TEP) is available for the target.
+│⎯mouseKOScore
+Float	
+Represents the phenotypic score from mouse knockout models for the target.
+│⎯hasHighQualityChemicalProbes
+Integer	
+Indicates if there are high-quality chemical probes available for the target.
+│⎯maxClinicalTrialPhase
+Float	
+Highest clinical trial phase that the target has reached for any indication.
+│⎯tissueSpecificity
+Float	
+Describes the specificity of the target's expression across different tissues.
+│⎯tissueDistribution
+Float	
+Describes the distribution pattern of the target's expression in various tissues.
+
+Dataset: variant
+Column	Data Type	Description
+│⎯variantId
+Text	
+The unique identifier for the variant following schema: {chromosome}-{position}-{referenceAllele}-{alternateAllele}
+│⎯chromosome
+Text	
+The chromosome on which the variant is located
+│⎯position
+Integer	
+The position on the chromosome of the variant
+│⎯referenceAllele
+Text	
+The reference allele for the variant
+│⎯alternateAllele
+Text	
+The alternate allele for the variant
+│⎯variantEffect
+Array[Struct]	
+List predicted or measured effect of the variant based on various methods
+│⎯│⎯method
+Text	
+The method name used to predict the effect of the variant
+│⎯│⎯assessment
+Text	
+Textual assessment of the variant effect
+│⎯│⎯score
+Float	
+The score of the variant effect
+│⎯│⎯assessmentFlag
+Text	
+Flagging if the variant effect is considered pathogenic
+│⎯│⎯targetId
+Text	
+The target identifier on which the variant effect is interpreted [bioregistry:ensembl]
+│⎯│⎯normalisedScore
+Float	
+Variant effect normalised between -1 and 1
+│⎯mostSevereConsequenceId
+Text	
+The sequence ontology identifier of the most severe consequence of the variant based on Ensembl VEP [bioregistry:so]
+│⎯transcriptConsequences
+Array[Struct]	
+Predicted consequences on transcript context
+│⎯│⎯variantFunctionalConsequenceIds
+Array[Text]	
+The sequence ontology identifier of the consequence of the variant based on Ensembl VEP in the context of the transcript [bioregistry:so]
+│⎯│⎯aminoAcidChange
+Text	
+The amino acide change caused by this variant on this gene
+│⎯│⎯uniprotAccessions
+Array[Text]	
+List of Uniprot identifiers of the gene product [bioregistry:uniprot]
+│⎯│⎯isEnsemblCanonical
+Boolean	
+Flagging if the transcript is the canonical transcript for the gene
+│⎯│⎯codons
+Text	
+The affected codon in the transcript
+│⎯│⎯distanceFromFootprint
+Float	
+The distance of the variant from the transcript
+│⎯│⎯distanceFromTss
+Float	
+The distance of the variant from the transcription start site
+│⎯│⎯appris
+Text	
+The appris annotation of the transcript
+│⎯│⎯maneSelect
+Text	
+MANE annotation of the transcript
+│⎯│⎯targetId
+Text	
+Open Target target identifier of the transcript [bioregistry:ensembl]
+│⎯│⎯impact
+Text	
+Ensembl VEP predicted impact of the variant on the transcript
+│⎯│⎯lofteePrediction
+Text	
+Loss of function prediction based on LOFTEE
+│⎯│⎯siftPrediction
+Float	
+SIFT prediction of the variant impact on the transcript
+│⎯│⎯polyphenPrediction
+Float	
+Polyphen prediction of the variant impact on the transcript
+│⎯│⎯consequenceScore
+Float	
+Score assigned to transcript based on Ensembl VEP consequence
+│⎯│⎯transcriptIndex
+Integer	
+The index of the transcript in the list of transcripts around the gene
+│⎯│⎯approvedSymbol
+Text	
+The HGNC gene symbol of the gene
+│⎯│⎯biotype
+Text	
+Biotype of the transcript
+│⎯│⎯transcriptId
+Text	
+The Ensembl transcript identifier [bioregistry:ensembl]
+│⎯rsIds
+Array[Text]	
+The list of rsIds for the variant
+│⎯hgvsId
+Text	
+HGVS identifier of the variant
+│⎯alleleFrequencies
+Array[Struct]	
+The allele frequencies of the variant in different populations
+│⎯│⎯populationName
+Text	
+Name of the population
+│⎯│⎯alleleFrequency
+Float	
+The frequency of the alternate allele in the population
+│⎯dbXrefs
+Array[Struct]	
+The list of cross-references for the variant in different databases
+│⎯│⎯id
+Text	
+Identifier of the variant in the given database
+│⎯│⎯source
+Text	
+Name of the database the variant is referenced in
+│⎯variantDescription
+Text	
+Short summary of the variant effect

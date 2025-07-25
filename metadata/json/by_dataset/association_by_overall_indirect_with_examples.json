@@ -1,0 +1,34 @@
+{
+  "datasets": {
+    "association_by_overall_indirect": {
+      "name": "association_by_overall_indirect",
+      "columns": {
+        "diseaseId": {
+          "name": "diseaseId",
+          "data_type": "Text",
+          "description": "Identifier for the disease in the association.",
+          "example": "MONDO_0002113"
+        },
+        "targetId": {
+          "name": "targetId",
+          "data_type": "Text",
+          "description": "Identifier for the target in the association.",
+          "example": "ENSG00000004779"
+        },
+        "score": {
+          "name": "score",
+          "data_type": "Float",
+          "description": "Association score calculated across all data sources considering ontology propagation of evidence",
+          "example": 0.07391597093694036
+        },
+        "evidenceCount": {
+          "name": "evidenceCount",
+          "data_type": "Float",
+          "description": "Number of evidence items supporting the association.",
+          "example": 1
+        }
+      },
+      "description": "Open Targets dataset: association_by_overall_indirect"
+    }
+  }
+}

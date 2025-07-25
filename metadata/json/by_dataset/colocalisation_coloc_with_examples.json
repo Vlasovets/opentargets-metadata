@@ -1,0 +1,82 @@
+{
+  "datasets": {
+    "colocalisation_coloc": {
+      "name": "colocalisation_coloc",
+      "columns": {
+        "leftStudyLocusId": {
+          "name": "leftStudyLocusId",
+          "data_type": "Text",
+          "description": "Study-locus identifier for left-side overlapping signal",
+          "example": "000476e60982cd216c06de02ceeb162d"
+        },
+        "rightStudyLocusId": {
+          "name": "rightStudyLocusId",
+          "data_type": "Text",
+          "description": "Study-locus identifier for right-side overlapping signal",
+          "example": "665249c22eec5e173292ef3a7af60a93"
+        },
+        "chromosome": {
+          "name": "chromosome",
+          "data_type": "Text",
+          "description": "Chromosome where the colocalisation occurs.",
+          "example": "17"
+        },
+        "rightStudyType": {
+          "name": "rightStudyType",
+          "data_type": "Text",
+          "description": "Type of the right-side study (e.g., gwas, eqtl).",
+          "example": "eqtl"
+        },
+        "numberColocalisingVariants": {
+          "name": "numberColocalisingVariants",
+          "data_type": "Float",
+          "description": "Number of variants intersecting between two overlapping study-loci",
+          "example": 1
+        },
+        "h0": {
+          "name": "h0",
+          "data_type": "Float",
+          "description": "Posterior probability that neither trait is associated with the region (H0).",
+          "example": 2.217499121651278e-49
+        },
+        "h1": {
+          "name": "h1",
+          "data_type": "Float",
+          "description": "Posterior probability that only the left study trait is associated (H1).",
+          "example": 1.2915990462496658e-12
+        },
+        "h2": {
+          "name": "h2",
+          "data_type": "Float",
+          "description": "Posterior probability that only the right study trait is associated (H2).",
+          "example": 8.155966239515893e-39
+        },
+        "h3": {
+          "name": "h3",
+          "data_type": "Float",
+          "description": "Posterior probability that both traits are associated, but with different causal variants (H3).",
+          "example": 0.04655159054794413
+        },
+        "h4": {
+          "name": "h4",
+          "data_type": "Float",
+          "description": "Posterior probability that both traits are associated and share a causal variant (H4).",
+          "example": 0.9534484094507623
+        },
+        "colocalisationMethod": {
+          "name": "colocalisationMethod",
+          "data_type": "Text",
+          "description": "Method used to estimate colocalisation (e.g., coloc).",
+          "example": "COLOC"
+        },
+        "betaRatioSignAverage": {
+          "name": "betaRatioSignAverage",
+          "data_type": "Float",
+          "description": "Average sign of the beta ratio between colocalised variants.",
+          "example": 1.0
+        }
+      },
+      "description": "Open Targets dataset: colocalisation_coloc"
+    }
+  }
+}

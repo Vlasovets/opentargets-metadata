@@ -1,0 +1,563 @@
+{
+  "datasets": {
+    "evidence": {
+      "name": "evidence",
+      "columns": {
+        "datasourceId": {
+          "name": "datasourceId",
+          "data_type": "Text",
+          "description": "Identifer of the evidence source",
+          "example": "progeny"
+        },
+        "targetId": {
+          "name": "targetId",
+          "data_type": "Text",
+          "description": "Open Targets target identifier",
+          "example": "ENSG00000171791"
+        },
+        "alleleOrigins": {
+          "name": "alleleOrigins",
+          "data_type": "Array[Text]",
+          "description": "Origin of the variant allele"
+        },
+        "allelicRequirements": {
+          "name": "allelicRequirements",
+          "data_type": "Array[Text]",
+          "description": "Inheritance patterns"
+        },
+        "ancestry": {
+          "name": "ancestry",
+          "data_type": "Text",
+          "description": "Genetic origin of a population"
+        },
+        "ancestryId": {
+          "name": "ancestryId",
+          "data_type": "Text",
+          "description": "Identifier of the ancestry in the HANCESTRO ontology [bioregistry:hancestro]"
+        },
+        "beta": {
+          "name": "beta",
+          "data_type": "Float",
+          "description": "Effect size of numberic traits"
+        },
+        "betaConfidenceIntervalLower": {
+          "name": "betaConfidenceIntervalLower",
+          "data_type": "Float",
+          "description": "Lower value of the confidence interval"
+        },
+        "betaConfidenceIntervalUpper": {
+          "name": "betaConfidenceIntervalUpper",
+          "data_type": "Float",
+          "description": "Upper value of the confidence interval"
+        },
+        "biologicalModelAllelicComposition": {
+          "name": "biologicalModelAllelicComposition",
+          "data_type": "Text",
+          "description": "Allelic composition of the model organism"
+        },
+        "biologicalModelGeneticBackground": {
+          "name": "biologicalModelGeneticBackground",
+          "data_type": "Text",
+          "description": "Genetic background of the model organism"
+        },
+        "biologicalModelId": {
+          "name": "biologicalModelId",
+          "data_type": "Text",
+          "description": "Identifier of the biological model (eg. in MGI)"
+        },
+        "biomarkerName": {
+          "name": "biomarkerName",
+          "data_type": "Text",
+          "description": "Altered characteristics that influences the disease process"
+        },
+        "biomarkers": {
+          "name": "biomarkers",
+          "data_type": "Struct",
+          "description": "List of biomarkers"
+        },
+        "geneExpression": {
+          "name": "geneExpression",
+          "data_type": "Array[Struct]",
+          "description": "List of gene expression altering biomarkers"
+        },
+        "id": {
+          "name": "id",
+          "data_type": "Text",
+          "description": "Identifer of the disease/target evidence",
+          "example": "4950394501d8e0b97b1992e080e1d428792304b2"
+        },
+        "name": {
+          "name": "name",
+          "data_type": "Text",
+          "description": "Pathway or gene set/pathway name",
+          "example": "TRAIL signalling"
+        },
+        "geneticVariation": {
+          "name": "geneticVariation",
+          "data_type": "Array[Struct]",
+          "description": "List of gene expression altering biomarkers"
+        },
+        "functionalConsequenceId": {
+          "name": "functionalConsequenceId",
+          "data_type": "Text",
+          "description": "Functional consequene identifier of the pooled mutations [bioregistry:so]"
+        },
+        "biosamplesFromSource": {
+          "name": "biosamplesFromSource",
+          "data_type": "Array[Text]",
+          "description": "Identifier of the referenced biological material"
+        },
+        "cellType": {
+          "name": "cellType",
+          "data_type": "Text",
+          "description": "The studied cell type. Preferably the cell line ontology label"
+        },
+        "clinicalPhase": {
+          "name": "clinicalPhase",
+          "data_type": "Float",
+          "description": "Phase of the clinical trial"
+        },
+        "clinicalSignificances": {
+          "name": "clinicalSignificances",
+          "data_type": "Array[Text]",
+          "description": "Standard terms to define clinical significance"
+        },
+        "clinicalStatus": {
+          "name": "clinicalStatus",
+          "data_type": "Text",
+          "description": "Current stage of a clinical study"
+        },
+        "cohortDescription": {
+          "name": "cohortDescription",
+          "data_type": "Text",
+          "description": "Description of the studied cohort"
+        },
+        "cohortId": {
+          "name": "cohortId",
+          "data_type": "Text",
+          "description": "Identifier of the studied cohort"
+        },
+        "cohortPhenotypes": {
+          "name": "cohortPhenotypes",
+          "data_type": "Array[Text]",
+          "description": "Clinical features/phenotypes observed in studied individuals"
+        },
+        "cohortShortName": {
+          "name": "cohortShortName",
+          "data_type": "Text",
+          "description": "Short name of the studied cohort"
+        },
+        "confidence": {
+          "name": "confidence",
+          "data_type": "Text",
+          "description": "Confidence qualifier on the reported evidence"
+        },
+        "contrast": {
+          "name": "contrast",
+          "data_type": "Text",
+          "description": "Experiment contrast"
+        },
+        "crisprScreenLibrary": {
+          "name": "crisprScreenLibrary",
+          "data_type": "Text",
+          "description": "The applied screening library in the CRISPR/CAS9 project"
+        },
+        "datatypeId": {
+          "name": "datatypeId",
+          "data_type": "Text",
+          "description": "Type of the evidence",
+          "example": "affected_pathway"
+        },
+        "diseaseCellLines": {
+          "name": "diseaseCellLines",
+          "data_type": "Array[Struct]",
+          "description": "Cancer cell lines used to generate evidence"
+        },
+        "tissue": {
+          "name": "tissue",
+          "data_type": "Text",
+          "description": "Name of the tissue from which the cells were sampled"
+        },
+        "tissueId": {
+          "name": "tissueId",
+          "data_type": "Text",
+          "description": "Anatomical identifier of the sampled organ/tissue [bioregistry:uberon]"
+        },
+        "diseaseFromSource": {
+          "name": "diseaseFromSource",
+          "data_type": "Text",
+          "description": "Disease label from the original source",
+          "example": "STAD"
+        },
+        "diseaseFromSourceId": {
+          "name": "diseaseFromSourceId",
+          "data_type": "Text",
+          "description": "Disease identifier from the original source"
+        },
+        "diseaseFromSourceMappedId": {
+          "name": "diseaseFromSourceMappedId",
+          "data_type": "Text",
+          "description": "Mapped Open Targets disease identifier",
+          "example": "EFO_0000503"
+        },
+        "diseaseModelAssociatedHumanPhenotypes": {
+          "name": "diseaseModelAssociatedHumanPhenotypes",
+          "data_type": "Array[Struct]",
+          "description": "Human phenotypes equivalent to those observed in animal models"
+        },
+        "label": {
+          "name": "label",
+          "data_type": "Text",
+          "description": "Mouse phenotype ontology label"
+        },
+        "diseaseModelAssociatedModelPhenotypes": {
+          "name": "diseaseModelAssociatedModelPhenotypes",
+          "data_type": "Array[Struct]",
+          "description": "Phenotypes observed in genetically-modified animal models"
+        },
+        "drugFromSource": {
+          "name": "drugFromSource",
+          "data_type": "Text",
+          "description": "Drug name/family in resource of origin"
+        },
+        "drugId": {
+          "name": "drugId",
+          "data_type": "Text",
+          "description": "Open Targets drug identifier [bioregistry:chembl]"
+        },
+        "drugResponse": {
+          "name": "drugResponse",
+          "data_type": "Text",
+          "description": "Observed patterns of drug response"
+        },
+        "geneticBackground": {
+          "name": "geneticBackground",
+          "data_type": "Text",
+          "description": "Additional genetic background of the applied cell line in the CRISPR screen"
+        },
+        "literature": {
+          "name": "literature",
+          "data_type": "Array[Text]",
+          "description": "List of PubMed or preprint reference identifiers"
+        },
+        "log2FoldChangePercentileRank": {
+          "name": "log2FoldChangePercentileRank",
+          "data_type": "Float",
+          "description": "Percentile of top differentially regulated genes (transcripts) within experiment"
+        },
+        "log2FoldChangeValue": {
+          "name": "log2FoldChangeValue",
+          "data_type": "Float",
+          "description": "Log2 fold expression change in contrast experiment"
+        },
+        "mutatedSamples": {
+          "name": "mutatedSamples",
+          "data_type": "Array[Struct]",
+          "description": "Samples with a given mutation tested"
+        },
+        "numberMutatedSamples": {
+          "name": "numberMutatedSamples",
+          "data_type": "Float",
+          "description": "Number of cohort samples in which target is mutated with a mutation of any type"
+        },
+        "numberSamplesTested": {
+          "name": "numberSamplesTested",
+          "data_type": "Float",
+          "description": "Number of cohort samples tested"
+        },
+        "numberSamplesWithMutationType": {
+          "name": "numberSamplesWithMutationType",
+          "data_type": "Float",
+          "description": "Number of cohort samples in which target is mutated with a specific mutation type"
+        },
+        "oddsRatio": {
+          "name": "oddsRatio",
+          "data_type": "Float",
+          "description": "Size of effect captured as odds ratio"
+        },
+        "oddsRatioConfidenceIntervalLower": {
+          "name": "oddsRatioConfidenceIntervalLower",
+          "data_type": "Float",
+          "description": "Lower value of the confidence interval for odds ratio"
+        },
+        "oddsRatioConfidenceIntervalUpper": {
+          "name": "oddsRatioConfidenceIntervalUpper",
+          "data_type": "Float",
+          "description": "Upper value of the confidence interval for odds ratio"
+        },
+        "pValueExponent": {
+          "name": "pValueExponent",
+          "data_type": "Float",
+          "description": "Exponent of the p-value"
+        },
+        "pValueMantissa": {
+          "name": "pValueMantissa",
+          "data_type": "Float",
+          "description": "Mantissa of the p-value"
+        },
+        "pathways": {
+          "name": "pathways",
+          "data_type": "Array[Struct]",
+          "description": "List of pooled pathways",
+          "example": [
+            {
+              "id": "R-HSA-75158",
+              "name": "TRAIL signalling"
+            }
+          ]
+        },
+        "projectId": {
+          "name": "projectId",
+          "data_type": "Text",
+          "description": "The identifer of the project that generated the data"
+        },
+        "reactionId": {
+          "name": "reactionId",
+          "data_type": "Text",
+          "description": "Pathway, gene set or reaction identifier in Reactome"
+        },
+        "reactionName": {
+          "name": "reactionName",
+          "data_type": "Text",
+          "description": "Name of the reaction, patway or gene set in Reactome"
+        },
+        "releaseDate": {
+          "name": "releaseDate",
+          "data_type": "Text",
+          "description": "Date of the release of the data in a 'YYYY-MM-DD' format"
+        },
+        "releaseVersion": {
+          "name": "releaseVersion",
+          "data_type": "Text",
+          "description": "Open Targets data release version"
+        },
+        "resourceScore": {
+          "name": "resourceScore",
+          "data_type": "Float",
+          "description": "Score provided by datasource indicating strength of target-disease association",
+          "example": 0.760546748134336
+        },
+        "sex": {
+          "name": "sex",
+          "data_type": "Array[Text]",
+          "description": "Sex of the samples/population included in the analysis"
+        },
+        "significantDriverMethods": {
+          "name": "significantDriverMethods",
+          "data_type": "Array[Text]",
+          "description": "Methods to detect cancer driver genes producing significant results"
+        },
+        "statisticalMethod": {
+          "name": "statisticalMethod",
+          "data_type": "Text",
+          "description": "The statistical method used to calculate the association"
+        },
+        "statisticalMethodOverview": {
+          "name": "statisticalMethodOverview",
+          "data_type": "Text",
+          "description": "Overview of the statistical method used to calculate the association"
+        },
+        "statisticalTestTail": {
+          "name": "statisticalTestTail",
+          "data_type": "Text",
+          "description": "End of the distribution the target was picked from"
+        },
+        "studyCases": {
+          "name": "studyCases",
+          "data_type": "Float",
+          "description": "Number of cases in case-control study"
+        },
+        "studyCasesWithQualifyingVariants": {
+          "name": "studyCasesWithQualifyingVariants",
+          "data_type": "Float",
+          "description": "Number of cases in case-control study that carry at least one allele of the qualifying variant"
+        },
+        "studyId": {
+          "name": "studyId",
+          "data_type": "Text",
+          "description": "Identifier of the study generating the data"
+        },
+        "studyOverview": {
+          "name": "studyOverview",
+          "data_type": "Text",
+          "description": "Description of the study"
+        },
+        "studySampleSize": {
+          "name": "studySampleSize",
+          "data_type": "Float",
+          "description": "Sample size of study"
+        },
+        "studyStartDate": {
+          "name": "studyStartDate",
+          "data_type": "Text",
+          "description": "Start date of study in a YYYY-MM-DD format"
+        },
+        "studyStopReason": {
+          "name": "studyStopReason",
+          "data_type": "Text",
+          "description": "Reason why a study has been stopped"
+        },
+        "studyStopReasonCategories": {
+          "name": "studyStopReasonCategories",
+          "data_type": "Array[Text]",
+          "description": "Predicted reason(s) why the study has been stopped based on studyStopReason"
+        },
+        "targetFromSource": {
+          "name": "targetFromSource",
+          "data_type": "Text",
+          "description": "Target name/synonym or non HGNC symbol in resource of origin"
+        },
+        "targetFromSourceId": {
+          "name": "targetFromSourceId",
+          "data_type": "Text",
+          "description": "Target ID in resource of origin (accepted sources include Ensembl gene ID, Uniprot ID, gene symbol), only capital letters are accepted",
+          "example": "BCL2"
+        },
+        "targetInModel": {
+          "name": "targetInModel",
+          "data_type": "Text",
+          "description": "Target name/synonym in animal model"
+        },
+        "targetInModelEnsemblId": {
+          "name": "targetInModelEnsemblId",
+          "data_type": "Text",
+          "description": "Target Ensembl ID in animal model [bioregistry:ensembl]"
+        },
+        "targetInModelMgiId": {
+          "name": "targetInModelMgiId",
+          "data_type": "Text",
+          "description": "Target MGI ID in animal model [bioregistry:mgi]"
+        },
+        "targetModulation": {
+          "name": "targetModulation",
+          "data_type": "Text",
+          "description": "Description of target modulation event"
+        },
+        "urls": {
+          "name": "urls",
+          "data_type": "Array[Struct]",
+          "description": "Reference to linked external resource (e.g. clinical trials, studies, package inserts, reports, etc.)"
+        },
+        "niceName": {
+          "name": "niceName",
+          "data_type": "Text",
+          "description": "Human readable label of the remote reference"
+        },
+        "url": {
+          "name": "url",
+          "data_type": "Text",
+          "description": "URL to remote resource"
+        },
+        "variantAminoacidDescriptions": {
+          "name": "variantAminoacidDescriptions",
+          "data_type": "Array[Text]",
+          "description": "Descriptions of variant consequences at protein level"
+        },
+        "variantFromSourceId": {
+          "name": "variantFromSourceId",
+          "data_type": "Text",
+          "description": "Identifier of the disease-causing variant at source"
+        },
+        "variantFunctionalConsequenceId": {
+          "name": "variantFunctionalConsequenceId",
+          "data_type": "Text",
+          "description": "Sequence ontology (SO) identifier of the functional consequence of the variant [bioregistry:so]"
+        },
+        "variantHgvsId": {
+          "name": "variantHgvsId",
+          "data_type": "Text",
+          "description": "Identifier in HGVS notation of the disease-causing variant"
+        },
+        "variantId": {
+          "name": "variantId",
+          "data_type": "Text",
+          "description": "Identifier in CHROM_POS_REF_ALT notation of the disease-causing variant"
+        },
+        "variantRsId": {
+          "name": "variantRsId",
+          "data_type": "Text",
+          "description": "Variant reference SNP cluster ID (Rsid)"
+        },
+        "pmcIds": {
+          "name": "pmcIds",
+          "data_type": "Array[Text]",
+          "description": "List of PubMed Central identifiers of full text publication"
+        },
+        "publicationYear": {
+          "name": "publicationYear",
+          "data_type": "Float",
+          "description": "Year of publication"
+        },
+        "studyLocusId": {
+          "name": "studyLocusId",
+          "data_type": "Text",
+          "description": "Identifier of the Open Targets Study Locus"
+        },
+        "textMiningSentences": {
+          "name": "textMiningSentences",
+          "data_type": "Array[Struct]",
+          "description": "Sentences of a publication supporting the disease/target relationship"
+        },
+        "dEnd": {
+          "name": "dEnd",
+          "data_type": "Float",
+          "description": "End position of the disease label in sentence"
+        },
+        "dStart": {
+          "name": "dStart",
+          "data_type": "Float",
+          "description": "Start position of the disease label in the sentence"
+        },
+        "section": {
+          "name": "section",
+          "data_type": "Text",
+          "description": "Section of the publication the sentence was extracted from"
+        },
+        "tEnd": {
+          "name": "tEnd",
+          "data_type": "Float",
+          "description": "End position of the target label in the sentence"
+        },
+        "tStart": {
+          "name": "tStart",
+          "data_type": "Float",
+          "description": "Start position of the target label in the sentence"
+        },
+        "text": {
+          "name": "text",
+          "data_type": "Text",
+          "description": "Text of the sentence with the disease/target relationship"
+        },
+        "diseaseId": {
+          "name": "diseaseId",
+          "data_type": "Text",
+          "description": "Open Targets disease identifier",
+          "example": "EFO_0000503"
+        },
+        "score": {
+          "name": "score",
+          "data_type": "Float",
+          "description": "Score of the evidence reflecting the strength of the disease/target relationship",
+          "example": 0.5
+        },
+        "variantEffect": {
+          "name": "variantEffect",
+          "data_type": "Text",
+          "description": "Gain or loss of function annotation of the variant effect"
+        },
+        "directionOnTrait": {
+          "name": "directionOnTrait",
+          "data_type": "Text",
+          "description": "Predicted direction of effect on the trait"
+        },
+        "sourceId": {
+          "name": "sourceId",
+          "data_type": "Text",
+          "description": "Identifer of the evidence source",
+          "example": "progeny"
+        }
+      },
+      "description": "Open Targets dataset: evidence"
+    }
+  }
+}

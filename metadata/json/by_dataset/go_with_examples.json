@@ -1,0 +1,22 @@
+{
+  "datasets": {
+    "go": {
+      "name": "go",
+      "columns": {
+        "id": {
+          "name": "id",
+          "data_type": "Text",
+          "description": "Gene ontology term identifier [bioregistry:go]",
+          "example": "GO:0046655"
+        },
+        "name": {
+          "name": "name",
+          "data_type": "Text",
+          "description": "Gene ontology term name",
+          "example": "folic acid metabolic process"
+        }
+      },
+      "description": "Open Targets dataset: go"
+    }
+  }
+}

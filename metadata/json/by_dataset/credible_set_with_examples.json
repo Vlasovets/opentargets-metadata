@@ -1,0 +1,441 @@
+{
+  "datasets": {
+    "credible_set": {
+      "name": "credible_set",
+      "columns": {
+        "studyLocusId": {
+          "name": "studyLocusId",
+          "data_type": "Text",
+          "description": "Study-locus identifier for the credible set.",
+          "example": "f1c275e43ff433d9eccef4aba408c046"
+        },
+        "studyId": {
+          "name": "studyId",
+          "data_type": "Text",
+          "description": "Identifier for the study which the credible set is derived.",
+          "example": "gtex_ge_thyroid_ensg00000286782"
+        },
+        "variantId": {
+          "name": "variantId",
+          "data_type": "Text",
+          "description": "Variant ID for this variant in the credible set.",
+          "example": "9_35061506_T_C"
+        },
+        "chromosome": {
+          "name": "chromosome",
+          "data_type": "Text",
+          "description": "Chromosome which the credible set is located.",
+          "example": "9"
+        },
+        "position": {
+          "name": "position",
+          "data_type": "Integer",
+          "description": "Position of the lead variant for the credible set (GRCh38).",
+          "example": 35061506
+        },
+        "region": {
+          "name": "region",
+          "data_type": "Text",
+          "description": "Start and end positions of the region used for fine-mapping.",
+          "example": "chr9:34016076-36016076"
+        },
+        "beta": {
+          "name": "beta",
+          "data_type": "Float",
+          "description": "Beta coefficient of this variant in the credible set.",
+          "example": -0.609957
+        },
+        "zScore": {
+          "name": "zScore",
+          "data_type": "Float",
+          "description": "Z-score of the lead variant from the GWAS.",
+          "example": 7.733765755779464
+        },
+        "pValueMantissa": {
+          "name": "pValueMantissa",
+          "data_type": "Float",
+          "description": "Mantissa of the P-value for this variant in the credible set.",
+          "example": 7.708000183105469
+        },
+        "pValueExponent": {
+          "name": "pValueExponent",
+          "data_type": "Integer",
+          "description": "Exponent of the P-value for this variant in the credible set.",
+          "example": -10
+        },
+        "effectAlleleFrequencyFromSource": {
+          "name": "effectAlleleFrequencyFromSource",
+          "data_type": "Float",
+          "description": "Allele frequency of the lead variant from the GWAS.",
+          "example": 2.099999983329326e-05
+        },
+        "standardError": {
+          "name": "standardError",
+          "data_type": "Float",
+          "description": "Standard error of this variant in the credible set.",
+          "example": 0.0974488
+        },
+        "subStudyDescription": {
+          "name": "subStudyDescription",
+          "data_type": "Text",
+          "description": "[Deprecated]"
+        },
+        "qualityControls": {
+          "name": "qualityControls",
+          "data_type": "Array[Text]",
+          "description": "Quality control flags for this credible set.",
+          "example": []
+        },
+        "finemappingMethod": {
+          "name": "finemappingMethod",
+          "data_type": "Text",
+          "description": "Method used for fine-mapping of credible set.",
+          "example": "SuSie"
+        },
+        "credibleSetIndex": {
+          "name": "credibleSetIndex",
+          "data_type": "Integer",
+          "description": "Integer label for the order of credible sets from study-region.",
+          "example": 2
+        },
+        "credibleSetlog10BF": {
+          "name": "credibleSetlog10BF",
+          "data_type": "Float",
+          "description": "Log10 Bayes factor for the entire credible set.",
+          "example": 5.756894588470459
+        },
+        "purityMeanR2": {
+          "name": "purityMeanR2",
+          "data_type": "Float",
+          "description": "Mean R-squared linkage disequilibrium for variants in the credible set.",
+          "example": 0.9941454135303344
+        },
+        "purityMinR2": {
+          "name": "purityMinR2",
+          "data_type": "Float",
+          "description": "Minimum R-squared linkage disequilibrium for variants in the credible set.",
+          "example": 0.9858426437986958
+        },
+        "locusStart": {
+          "name": "locusStart",
+          "data_type": "Integer",
+          "description": "Start position of the region that was fine-mapped for this credible set.",
+          "example": 34626207
+        },
+        "locusEnd": {
+          "name": "locusEnd",
+          "data_type": "Integer",
+          "description": "End position of the regino that was fine-mapped for this credible set.",
+          "example": 35212409
+        },
+        "sampleSize": {
+          "name": "sampleSize",
+          "data_type": "Integer",
+          "description": "Sample size of the study which this credible set is derived.",
+          "example": 406601
+        },
+        "ldSet": {
+          "name": "ldSet",
+          "data_type": "Array[Struct]",
+          "description": "Array of structs which denote the variants in LD with the credible set lead variant.",
+          "example": [
+            {
+              "tagVariantId": "9_35072721_T_A",
+              "r2Overall": 1.0
+            }
+          ]
+        },
+        "tagVariantId": {
+          "name": "tagVariantId",
+          "data_type": "Text",
+          "description": "The variant ID for tag variants in LD with the credible set lead variant.",
+          "example": "9_35072721_T_A"
+        },
+        "r2Overall": {
+          "name": "r2Overall",
+          "data_type": "Float",
+          "description": "R-squared (LD) between this credible set variant and the lead variant.",
+          "example": 1.0
+        },
+        "locus": {
+          "name": "locus",
+          "data_type": "Array[Struct]",
+          "description": "Array of structs which denote the variants within the credible set.",
+          "example": [
+            {
+              "is95CredibleSet": true,
+              "is99CredibleSet": true,
+              "logBF": 10.4633083905075,
+              "posteriorProbability": 0.058208470518066775,
+              "variantId": "9_35061506_T_C",
+              "pValueMantissa": 7.708000183105469,
+              "pValueExponent": -10,
+              "beta": -0.609957,
+              "standardError": 0.0974488,
+              "r2Overall": null
+            },
+            {
+              "is95CredibleSet": true,
+              "is99CredibleSet": true,
+              "logBF": 10.3568029505918,
+              "posteriorProbability": 0.05232767792842341,
+              "variantId": "9_35004643_G_A",
+              "pValueMantissa": 1.2070000171661377,
+              "pValueExponent": -9,
+              "beta": -0.606743,
+              "standardError": 0.0981147,
+              "r2Overall": null
+            },
+            {
+              "is95CredibleSet": true,
+              "is99CredibleSet": true,
+              "logBF": 10.3568029505918,
+              "posteriorProbability": 0.05232767792842341,
+              "variantId": "9_35071776_G_A",
+              "pValueMantissa": 1.2070000171661377,
+              "pValueExponent": -9,
+              "beta": -0.606743,
+              "standardError": 0.0981147,
+              "r2Overall": null
+            },
+            {
+              "is95CredibleSet": true,
+              "is99CredibleSet": true,
+              "logBF": 10.3568029505918,
+              "posteriorProbability": 0.05232767792842341,
+              "variantId": "9_35001056_A_G",
+              "pValueMantissa": 1.2070000171661377,
+              "pValueExponent": -9,
+              "beta": -0.606743,
+              "standardError": 0.0981147,
+              "r2Overall": null
+            },
+            {
+              "is95CredibleSet": true,
+              "is99CredibleSet": true,
+              "logBF": 10.3568029505918,
+              "posteriorProbability": 0.05232767792842341,
+              "variantId": "9_34999239_T_TG",
+              "pValueMantissa": 1.2070000171661377,
+              "pValueExponent": -9,
+              "beta": -0.606743,
+              "standardError": 0.0981147,
+              "r2Overall": null
+            },
+            {
+              "is95CredibleSet": true,
+              "is99CredibleSet": true,
+              "logBF": 10.3568029505918,
+              "posteriorProbability": 0.05232767792842341,
+              "variantId": "9_35080014_C_A",
+              "pValueMantissa": 1.2070000171661377,
+              "pValueExponent": -9,
+              "beta": -0.606743,
+              "standardError": 0.0981147,
+              "r2Overall": null
+            },
+            {
+              "is95CredibleSet": true,
+              "is99CredibleSet": true,
+              "logBF": 10.3568029505918,
+              "posteriorProbability": 0.05232767792842341,
+              "variantId": "9_35071777_C_A",
+              "pValueMantissa": 1.2070000171661377,
+              "pValueExponent": -9,
+              "beta": -0.606743,
+              "standardError": 0.0981147,
+              "r2Overall": null
+            },
+            {
+              "is95CredibleSet": true,
+              "is99CredibleSet": true,
+              "logBF": 10.3568029505918,
+              "posteriorProbability": 0.05232767792842341,
+              "variantId": "9_35079916_T_C",
+              "pValueMantissa": 1.2070000171661377,
+              "pValueExponent": -9,
+              "beta": -0.606743,
+              "standardError": 0.0981147,
+              "r2Overall": null
+            },
+            {
+              "is95CredibleSet": true,
+              "is99CredibleSet": true,
+              "logBF": 10.3568029505918,
+              "posteriorProbability": 0.05232767792842341,
+              "variantId": "9_35039239_G_A",
+              "pValueMantissa": 1.2070000171661377,
+              "pValueExponent": -9,
+              "beta": -0.606743,
+              "standardError": 0.0981147,
+              "r2Overall": null
+            },
+            {
+              "is95CredibleSet": true,
+              "is99CredibleSet": true,
+              "logBF": 10.3568029505918,
+              "posteriorProbability": 0.05232767792842341,
+              "variantId": "9_35033053_A_T",
+              "pValueMantissa": 1.2070000171661377,
+              "pValueExponent": -9,
+              "beta": -0.606743,
+              "standardError": 0.0981147,
+              "r2Overall": null
+            },
+            {
+              "is95CredibleSet": true,
+              "is99CredibleSet": true,
+              "logBF": 10.310386174065,
+              "posteriorProbability": 0.049954304085093396,
+              "variantId": "9_35044496_T_A",
+              "pValueMantissa": 1.4479999542236328,
+              "pValueExponent": -9,
+              "beta": -0.606843,
+              "standardError": 0.0986205,
+              "r2Overall": null
+            },
+            {
+              "is95CredibleSet": true,
+              "is99CredibleSet": true,
+              "logBF": 10.310386174065,
+              "posteriorProbability": 0.049954304085093396,
+              "variantId": "9_35016748_C_T",
+              "pValueMantissa": 1.4479999542236328,
+              "pValueExponent": -9,
+              "beta": -0.606843,
+              "standardError": 0.0986205,
+              "r2Overall": null
+            },
+            {
+              "is95CredibleSet": true,
+              "is99CredibleSet": true,
+              "logBF": 10.310386174065,
+              "posteriorProbability": 0.049954304085093396,
+              "variantId": "9_35068643_A_T",
+              "pValueMantissa": 1.4479999542236328,
+              "pValueExponent": -9,
+              "beta": -0.606843,
+              "standardError": 0.0986205,
+              "r2Overall": null
+            },
+            {
+              "is95CredibleSet": true,
+              "is99CredibleSet": true,
+              "logBF": 10.310386174065,
+              "posteriorProbability": 0.049954304085093396,
+              "variantId": "9_35080213_C_T",
+              "pValueMantissa": 1.4479999542236328,
+              "pValueExponent": -9,
+              "beta": -0.606843,
+              "standardError": 0.0986205,
+              "r2Overall": null
+            },
+            {
+              "is95CredibleSet": true,
+              "is99CredibleSet": true,
+              "logBF": 10.310386174065,
+              "posteriorProbability": 0.049954304085093396,
+              "variantId": "9_35083082_C_T",
+              "pValueMantissa": 1.4479999542236328,
+              "pValueExponent": -9,
+              "beta": -0.606843,
+              "standardError": 0.0986205,
+              "r2Overall": null
+            },
+            {
+              "is95CredibleSet": true,
+              "is99CredibleSet": true,
+              "logBF": 10.310386174065,
+              "posteriorProbability": 0.049954304085093396,
+              "variantId": "9_35034180_C_T",
+              "pValueMantissa": 1.4479999542236328,
+              "pValueExponent": -9,
+              "beta": -0.606843,
+              "standardError": 0.0986205,
+              "r2Overall": null
+            },
+            {
+              "is95CredibleSet": true,
+              "is99CredibleSet": true,
+              "logBF": 10.310386174065,
+              "posteriorProbability": 0.049954304085093396,
+              "variantId": "9_35035036_G_A",
+              "pValueMantissa": 1.4479999542236328,
+              "pValueExponent": -9,
+              "beta": -0.606843,
+              "standardError": 0.0986205,
+              "r2Overall": null
+            },
+            {
+              "is95CredibleSet": true,
+              "is99CredibleSet": true,
+              "logBF": 10.0404764623647,
+              "posteriorProbability": 0.038137534610150084,
+              "variantId": "9_35089501_G_A",
+              "pValueMantissa": 4.699999809265137,
+              "pValueExponent": -9,
+              "beta": -0.575903,
+              "standardError": 0.0967707,
+              "r2Overall": null
+            },
+            {
+              "is95CredibleSet": true,
+              "is99CredibleSet": true,
+              "logBF": 9.89653553975873,
+              "posteriorProbability": 0.03302477492031846,
+              "variantId": "9_35094376_G_A",
+              "pValueMantissa": 2.7639999389648438,
+              "pValueExponent": -9,
+              "beta": -0.626382,
+              "standardError": 0.103654,
+              "r2Overall": null
+            }
+          ]
+        },
+        "is95CredibleSet": {
+          "name": "is95CredibleSet",
+          "data_type": "Boolean",
+          "description": "Boolean for if the variant is part of the 95% credible set.",
+          "example": true
+        },
+        "is99CredibleSet": {
+          "name": "is99CredibleSet",
+          "data_type": "Boolean",
+          "description": "Boolean for if the variant is part of the 99% credible set.",
+          "example": true
+        },
+        "logBF": {
+          "name": "logBF",
+          "data_type": "Float",
+          "description": "Log (natural) Bayes factor for the variant from fine-mapping.",
+          "example": 10.4633083905075
+        },
+        "posteriorProbability": {
+          "name": "posteriorProbability",
+          "data_type": "Float",
+          "description": "Posterior inclusion probability for the variant within this credible set.",
+          "example": 0.058208470518066775
+        },
+        "confidence": {
+          "name": "confidence",
+          "data_type": "Text",
+          "description": "Description of how this credible set was derived in terms of data and fine-mapping method.",
+          "example": "SuSiE fine-mapped credible set with in-sample LD"
+        },
+        "studyType": {
+          "name": "studyType",
+          "data_type": "Text",
+          "description": "Descriptor for whether the credible set is derived from GWAS or molecular QTL.",
+          "example": "eqtl"
+        },
+        "isTransQtl": {
+          "name": "isTransQtl",
+          "data_type": "Boolean",
+          "description": "Boolean for whether this credible set is a trans-pQTL or not.",
+          "example": false
+        }
+      },
+      "description": "Open Targets dataset: credible_set"
+    }
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "datasets": {
+    "study": {
+      "name": "study",
+      "columns": {
+        "studyId": {
+          "name": "studyId",
+          "data_type": "Text",
+          "description": "Unique identifier of the GWAS or molQTL study.",
+          "example": "FINNGEN_R12_AUTOIMMUNE_HYPERTHYROIDISM"
+        },
+        "geneId": {
+          "name": "geneId",
+          "data_type": "Text",
+          "description": "Ensembl identifier of the gene representing a specific gene whose molecular is being analysed in molQTL study. [bioregistry:ensembl]",
+          "example": "ENSG00000133393"
+        },
+        "projectId": {
+          "name": "projectId",
+          "data_type": "Text",
+          "description": "Identifier of the source project collection that the study information is derived from.",
+          "example": "FINNGEN_R12"
+        },
+        "studyType": {
+          "name": "studyType",
+          "data_type": "Text",
+          "description": "Field specifying if study contains phenotype/disease or molecular genetic associations.",
+          "example": "gwas"
+        },
+        "traitFromSource": {
+          "name": "traitFromSource",
+          "data_type": "Text",
+          "description": "Molecular or phenotypic trait, derived from source, analysed in the study.",
+          "example": "Autoimmune hyperthyroidism"
+        },
+        "traitFromSourceMappedIds": {
+          "name": "traitFromSourceMappedIds",
+          "data_type": "Array[Text]",
+          "description": "Phenotypic trait ids that map to the analysed trait reported by study.",
+          "example": [
+            "EFO_0004237"
+          ]
+        },
+        "biosampleFromSourceId": {
+          "name": "biosampleFromSourceId",
+          "data_type": "Text",
+          "description": "Identifier of the referenced biological material.",
+          "example": "UBERON_0001969"
+        },
+        "pubmedId": {
+          "name": "pubmedId",
+          "data_type": "Text",
+          "description": "PubMed identifier of the publication hat references the study. [bioregistry:pubmed]",
+          "example": "19197348"
+        },
+        "publicationTitle": {
+          "name": "publicationTitle",
+          "data_type": "Text",
+          "description": "Title of the publication that references the study.",
+          "example": "Genome-wide association studies in an isolated founder population from the Pacific Island of Kosrae."
+        },
+        "publicationFirstAuthor": {
+          "name": "publicationFirstAuthor",
+          "data_type": "Text",
+          "description": "Last name and initials of the author of the publication that references the study.",
+          "example": "Lowe JK"
+        },
+        "publicationDate": {
+          "name": "publicationDate",
+          "data_type": "Text",
+          "description": "Date of the publication that references study.",
+          "example": "2009-02-06"
+        },
+        "publicationJournal": {
+          "name": "publicationJournal",
+          "data_type": "Text",
+          "description": "Abbreviated journal name where the publication referencing study was published.",
+          "example": "PLoS Genet"
+        },
+        "backgroundTraitFromSourceMappedIds": {
+          "name": "backgroundTraitFromSourceMappedIds",
+          "data_type": "Array[Text]",
+          "description": "Any background trait(s) shared by all individuals in the study.",
+          "example": [
+            "MONDO_0004979"
+          ]
+        },
+        "initialSampleSize": {
+          "name": "initialSampleSize",
+          "data_type": "Text",
+          "description": "Study initial sample size.",
+          "example": "500,348 (282,064 females and 218,284 males)"
+        },
+        "nCases": {
+          "name": "nCases",
+          "data_type": "Integer",
+          "description": "The number of cases in this broad ancestry group.",
+          "example": 2469
+        },
+        "nControls": {
+          "name": "nControls",
+          "data_type": "Integer",
+          "description": "The number of controls in this broad ancestry group.",
+          "example": 370637
+        },
+        "nSamples": {
+          "name": "nSamples",
+          "data_type": "Integer",
+          "description": "The number of samples tested in GWAS analysis",
+          "example": 373106
+        },
+        "cohorts": {
+          "name": "cohorts",
+          "data_type": "Array[Text]",
+          "description": "List of cohort(s) represented in the discovery sample.",
+          "example": [
+            "FinnGen"
+          ]
+        },
+        "ldPopulationStructure": {
+          "name": "ldPopulationStructure",
+          "data_type": "Array[Struct]",
+          "description": "Collection of populations referenced by the study.",
+          "example": [
+            {
+              "ldPopulation": "fin",
+              "relativeSampleSize": 1.0
+            }
+          ]
+        },
+        "ldPopulation": {
+          "name": "ldPopulation",
+          "data_type": "Text",
+          "description": "Population identifier.",
+          "example": "fin"
+        },
+        "relativeSampleSize": {
+          "name": "relativeSampleSize",
+          "data_type": "Float",
+          "description": "Fraction of the total sample represented by the population.",
+          "example": 1.0
+        },
+        "discoverySamples": {
+          "name": "discoverySamples",
+          "data_type": "Array[Struct]",
+          "description": "Collection of ancestries reported by the study discovery phase.",
+          "example": [
+            {
+              "sampleSize": 500348,
+              "ancestry": "Finnish"
+            }
+          ]
+        },
+        "sampleSize": {
+          "name": "sampleSize",
+          "data_type": "Integer",
+          "description": "Replication sample size.",
+          "example": 500348
+        },
+        "ancestry": {
+          "name": "ancestry",
+          "data_type": "Text",
+          "description": "Replication sample ancestry name.",
+          "example": "Finnish"
+        },
+        "replicationSamples": {
+          "name": "replicationSamples",
+          "data_type": "Array[Struct]",
+          "description": "Collection of ancestries reported by the study replication phase.",
+          "example": []
+        },
+        "qualityControls": {
+          "name": "qualityControls",
+          "data_type": "Array[Text]",
+          "description": "Control metrics refining study validation.",
+          "example": []
+        },
+        "analysisFlags": {
+          "name": "analysisFlags",
+          "data_type": "Array[Text]",
+          "description": "Collection of flags indicating the type of the analysis conducted in the association study.",
+          "example": []
+        },
+        "summarystatsLocation": {
+          "name": "summarystatsLocation",
+          "data_type": "Text",
+          "description": "Path to the source study summary statistics (if exists at the source)",
+          "example": "gs://finngen-public-data-r12/summary_stats/finngen_R12_AUTOIMMUNE_HYPERTHYROIDISM.gz"
+        },
+        "hasSumstats": {
+          "name": "hasSumstats",
+          "data_type": "Boolean",
+          "description": "Indication whether the summary statistics exist in the source.",
+          "example": true
+        },
+        "condition": {
+          "name": "condition",
+          "data_type": "Text",
+          "description": "Reported sample conditions.",
+          "example": "IFNg_18h"
+        },
+        "sumstatQCValues": {
+          "name": "sumstatQCValues",
+          "data_type": "Array[Struct]",
+          "description": "Mapping of quality control flags.",
+          "example": [
+            {
+              "QCCheckName": "mean_beta",
+              "QCCheckValue": -6.002305235597305e-05
+            },
+            {
+              "QCCheckName": "mean_diff_pz",
+              "QCCheckValue": -2.6837798941414803e-05
+            },
+            {
+              "QCCheckName": "se_diff_pz",
+              "QCCheckValue": 8.019406959647313e-05
+            },
+            {
+              "QCCheckName": "gc_lambda",
+              "QCCheckValue": 1.0143288373947144
+            },
+            {
+              "QCCheckName": "n_variants",
+              "QCCheckValue": 16277383.0
+            },
+            {
+              "QCCheckName": "n_variants_sig",
+              "QCCheckValue": 0.0
+            }
+          ]
+        },
+        "QCCheckName": {
+          "name": "QCCheckName",
+          "data_type": "Text",
+          "description": "Quality control metric identifier.",
+          "example": "mean_beta"
+        },
+        "QCCheckValue": {
+          "name": "QCCheckValue",
+          "data_type": "Float",
+          "description": "Quality control metric value.",
+          "example": -6.002305235597305e-05
+        },
+        "diseaseIds": {
+          "name": "diseaseIds",
+          "data_type": "Array[Text]",
+          "description": "Disease identifier associated with a studied trait.",
+          "example": [
+            "EFO_0004237"
+          ]
+        },
+        "backgroundDiseaseIds": {
+          "name": "backgroundDiseaseIds",
+          "data_type": "Array[Text]",
+          "description": "Any background disease(s) shared by all individuals in the study.",
+          "example": []
+        },
+        "biosampleId": {
+          "name": "biosampleId",
+          "data_type": "Text",
+          "description": "Biosample identifier that maps to the biosample reported by study. [bioregistry:uberon]",
+          "example": "UBERON_0001969"
+        }
+      },
+      "description": "Open Targets dataset: study"
+    }
+  }
+}

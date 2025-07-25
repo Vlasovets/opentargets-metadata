@@ -1,0 +1,6 @@
+{
+  "colocalisation_coloc": ["leftStudyLocusId", "rightStudyLocusId", "chromosome", "h4"],
+  "credible_set": ["studyLocusId", "studyId"],
+  "known_drug": ["targetId", "diseaseId", "drugId"],
+  "disease": ["id", "name", "description"]
+}

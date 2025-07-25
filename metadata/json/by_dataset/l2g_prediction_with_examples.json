@@ -1,0 +1,194 @@
+{
+  "datasets": {
+    "l2g_prediction": {
+      "name": "l2g_prediction",
+      "columns": {
+        "studyLocusId": {
+          "name": "studyLocusId",
+          "data_type": "Text",
+          "description": "Study-locus identifier for the credible set",
+          "example": "cd99a57da1e45dde519b53828efcc838"
+        },
+        "geneId": {
+          "name": "geneId",
+          "data_type": "Text",
+          "description": "Identifier of the gene / target",
+          "example": "ENSG00000113578"
+        },
+        "score": {
+          "name": "score",
+          "data_type": "Float",
+          "description": "Locus-to-gene score prediction for the given studyLocusId-geneId pair",
+          "example": 0.7130253915379569
+        },
+        "features": {
+          "name": "features",
+          "data_type": "Array[Struct]",
+          "description": "List of Locus to Gene feature values",
+          "example": [
+            {
+              "name": "eQtlColocClppMaximum",
+              "value": 0.0,
+              "shapValue": -0.0032778377644717693
+            },
+            {
+              "name": "pQtlColocClppMaximum",
+              "value": 0.0,
+              "shapValue": 0.0
+            },
+            {
+              "name": "sQtlColocClppMaximum",
+              "value": 0.0,
+              "shapValue": -0.0028522799257189035
+            },
+            {
+              "name": "eQtlColocH4Maximum",
+              "value": 0.0,
+              "shapValue": -0.0008776874165050685
+            },
+            {
+              "name": "pQtlColocH4Maximum",
+              "value": 0.0,
+              "shapValue": 0.0
+            },
+            {
+              "name": "sQtlColocH4Maximum",
+              "value": 0.0,
+              "shapValue": 0.00013842999760527164
+            },
+            {
+              "name": "eQtlColocClppMaximumNeighbourhood",
+              "value": 0.0,
+              "shapValue": -0.004274663515388966
+            },
+            {
+              "name": "pQtlColocClppMaximumNeighbourhood",
+              "value": 0.0,
+              "shapValue": -0.003611755557358265
+            },
+            {
+              "name": "sQtlColocClppMaximumNeighbourhood",
+              "value": 0.0,
+              "shapValue": -0.0023899462539702654
+            },
+            {
+              "name": "eQtlColocH4MaximumNeighbourhood",
+              "value": 0.0,
+              "shapValue": -0.0005065343575552106
+            },
+            {
+              "name": "pQtlColocH4MaximumNeighbourhood",
+              "value": 0.0,
+              "shapValue": -0.0004523978568613529
+            },
+            {
+              "name": "sQtlColocH4MaximumNeighbourhood",
+              "value": 0.0,
+              "shapValue": 0.0002786850091069937
+            },
+            {
+              "name": "distanceSentinelFootprint",
+              "value": 0.993664562702179,
+              "shapValue": -0.008190666325390339
+            },
+            {
+              "name": "distanceSentinelFootprintNeighbourhood",
+              "value": 1.0,
+              "shapValue": 0.1773706078529358
+            },
+            {
+              "name": "distanceFootprintMean",
+              "value": 0.993664562702179,
+              "shapValue": -0.07799972593784332
+            },
+            {
+              "name": "distanceFootprintMeanNeighbourhood",
+              "value": 1.0,
+              "shapValue": -0.03294749557971954
+            },
+            {
+              "name": "distanceTssMean",
+              "value": 0.9762676358222961,
+              "shapValue": 0.0984153151512146
+            },
+            {
+              "name": "distanceTssMeanNeighbourhood",
+              "value": 1.0,
+              "shapValue": 0.2643035352230072
+            },
+            {
+              "name": "distanceSentinelTss",
+              "value": 0.9762676358222961,
+              "shapValue": 0.00027963294996879995
+            },
+            {
+              "name": "distanceSentinelTssNeighbourhood",
+              "value": 1.0,
+              "shapValue": 0.1248190850019455
+            },
+            {
+              "name": "vepMaximum",
+              "value": 0.0,
+              "shapValue": -0.0025481029879301786
+            },
+            {
+              "name": "vepMaximumNeighbourhood",
+              "value": 0.0,
+              "shapValue": -0.0053255693055689335
+            },
+            {
+              "name": "vepMean",
+              "value": 0.0,
+              "shapValue": -0.004194602835923433
+            },
+            {
+              "name": "vepMeanNeighbourhood",
+              "value": 0.0,
+              "shapValue": 0.001263106125406921
+            },
+            {
+              "name": "geneCount500kb",
+              "value": 8.0,
+              "shapValue": 0.0305593591183424
+            },
+            {
+              "name": "proteinGeneCount500kb",
+              "value": 3.0,
+              "shapValue": 0.1096663773059845
+            },
+            {
+              "name": "credibleSetConfidence",
+              "value": 0.5,
+              "shapValue": -0.0006804658332839608
+            }
+          ]
+        },
+        "name": {
+          "name": "name",
+          "data_type": "Text",
+          "description": "Name of the feature used in locus to gene prediction",
+          "example": "eQtlColocClppMaximum"
+        },
+        "value": {
+          "name": "value",
+          "data_type": "Float",
+          "description": "Value of the feature",
+          "example": 0.0
+        },
+        "shapValue": {
+          "name": "shapValue",
+          "data_type": "Float",
+          "description": "SHAP value of the feature",
+          "example": -0.0032778377644717693
+        },
+        "shapBaseValue": {
+          "name": "shapBaseValue",
+          "data_type": "Float",
+          "description": "SHAP base value",
+          "example": 0.05606098845601082
+        }
+      },
+      "description": "Open Targets dataset: l2g_prediction"
+    }
+  }
+}

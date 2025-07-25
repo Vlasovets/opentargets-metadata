@@ -1,0 +1,489 @@
+{
+  "datasets": {
+    "drug_indication": {
+      "name": "drug_indication",
+      "columns": {
+        "id": {
+          "name": "id",
+          "data_type": "Text",
+          "description": "Open Targets molecule identifier",
+          "example": "CHEMBL1000"
+        },
+        "indications": {
+          "name": "indications",
+          "data_type": "Array[Struct]",
+          "description": "List of approved and investigational indications for which a drug can be used",
+          "example": [
+            {
+              "disease": "EFO_0008521",
+              "efoName": "rhinitis",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT00291642"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 2.0
+            },
+            {
+              "disease": "HP_0000989",
+              "efoName": "pruritus",
+              "references": [
+                {
+                  "source": "DailyMed",
+                  "ids": [
+                    "3e6fecc1-df71-4c01-a654-f55635617a7f",
+                    "0a219672-fbf7-42cb-a89c-cb28d868b8c3",
+                    "365cbabe-535b-4c34-852b-6cd63782e3e5"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 4.0
+            },
+            {
+              "disease": "EFO_0004256",
+              "efoName": "neuromyelitis optica",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT02865018"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 1.0
+            },
+            {
+              "disease": "EFO_1001417",
+              "efoName": "rhinitis, allergic, perennial",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT00253058",
+                    "NCT00257595",
+                    "NCT00490204",
+                    "NCT00639587",
+                    "NCT00974571",
+                    "NCT01127620",
+                    "NCT01622283"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 3.0
+            },
+            {
+              "disease": "MONDO_0005271",
+              "efoName": "allergic disease",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT00881127",
+                    "NCT00881634",
+                    "NCT04071821"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 1.0
+            },
+            {
+              "disease": "EFO_1001417",
+              "efoName": "rhinitis, allergic, perennial",
+              "references": [
+                {
+                  "source": "DailyMed",
+                  "ids": [
+                    "365cbabe-535b-4c34-852b-6cd63782e3e5"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 4.0
+            },
+            {
+              "disease": "EFO_0005854",
+              "efoName": "allergic rhinitis",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT00794378",
+                    "NCT00794794",
+                    "NCT01103050"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 3.0
+            },
+            {
+              "disease": "HP_0001742",
+              "efoName": "nasal congestion",
+              "references": [
+                {
+                  "source": "DailyMed",
+                  "ids": [
+                    "0f5de86d-1c87-4664-83f6-4c17f78f7d35"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 4.0
+            },
+            {
+              "disease": "MONDO_0005277",
+              "efoName": "migraine disorder",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT01981499"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 1.0
+            },
+            {
+              "disease": "HP_0000989",
+              "efoName": "pruritus",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT00257582"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 3.0
+            },
+            {
+              "disease": "EFO_1000749",
+              "efoName": "pemphigus",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT02613910"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 3.0
+            },
+            {
+              "disease": "EFO_0007141",
+              "efoName": "allergic conjunctivitis",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT01332188",
+                    "NCT01551056",
+                    "NCT01685242",
+                    "NCT01881113"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 3.0
+            },
+            {
+              "disease": "EFO_0004191",
+              "efoName": "androgenetic alopecia",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT04481412"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 2.0
+            },
+            {
+              "disease": "MONDO_0005271",
+              "efoName": "allergic disease",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT00881127",
+                    "NCT00881634",
+                    "NCT01322282",
+                    "NCT03772158"
+                  ]
+                },
+                {
+                  "source": "ATC",
+                  "ids": [
+                    "R06AE07"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 4.0
+            },
+            {
+              "disease": "EFO_0007141",
+              "efoName": "allergic conjunctivitis",
+              "references": [
+                {
+                  "source": "DailyMed",
+                  "ids": [
+                    "3e6fecc1-df71-4c01-a654-f55635617a7f"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 4.0
+            },
+            {
+              "disease": "MONDO_0009291",
+              "efoName": "glycogen storage disease iii",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT04990388"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 1.0
+            },
+            {
+              "disease": "EFO_0005751",
+              "efoName": "eye allergy",
+              "references": [
+                {
+                  "source": "ATC",
+                  "ids": [
+                    "S01GX12"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 4.0
+            },
+            {
+              "disease": "MONDO_0005301",
+              "efoName": "multiple sclerosis",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT02583594",
+                    "NCT03368664"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 3.0
+            },
+            {
+              "disease": "EFO_0003956",
+              "efoName": "seasonal allergic rhinitis",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT00420082",
+                    "NCT00504933",
+                    "NCT00851344",
+                    "NCT00972504",
+                    "NCT01241214",
+                    "NCT01484119",
+                    "NCT01622283",
+                    "NCT01748344"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 3.0
+            },
+            {
+              "disease": "HP_0000964",
+              "efoName": "eczematoid dermatitis",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT00375713"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 3.0
+            },
+            {
+              "disease": "MONDO_0002406",
+              "efoName": "dermatitis",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT00375713",
+                    "NCT02447393"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 3.0
+            },
+            {
+              "disease": "EFO_0005531",
+              "efoName": "urticaria",
+              "references": [
+                {
+                  "source": "DailyMed",
+                  "ids": [
+                    "3a412d83-bc2c-45c6-bb1b-c1e02c2e3e18",
+                    "a28ff91a-34d7-4aac-ad3a-fa82e9ffeb46",
+                    "cd989627-71ff-479d-a103-c1a22aa9e5e2",
+                    "67da315b-ad29-4778-a990-9f837657f60b",
+                    "0a219672-fbf7-42cb-a89c-cb28d868b8c3",
+                    "b90e5ee7-85ce-4975-8696-5117375010ac",
+                    "2f47dbc5-dfb4-425c-9fe4-777fa3c4e72e",
+                    "f33e859d-ebc9-4d4f-a57d-204c48760d20",
+                    "365cbabe-535b-4c34-852b-6cd63782e3e5"
+                  ]
+                },
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT02024152"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 4.0
+            },
+            {
+              "disease": "EFO_0000274",
+              "efoName": "atopic eczema",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT00257569"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 3.0
+            },
+            {
+              "disease": "EFO_0005854",
+              "efoName": "allergic rhinitis",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT00533637"
+                  ]
+                },
+                {
+                  "source": "DailyMed",
+                  "ids": [
+                    "a28ff91a-34d7-4aac-ad3a-fa82e9ffeb46",
+                    "67da315b-ad29-4778-a990-9f837657f60b",
+                    "b90e5ee7-85ce-4975-8696-5117375010ac",
+                    "2f47dbc5-dfb4-425c-9fe4-777fa3c4e72e",
+                    "365cbabe-535b-4c34-852b-6cd63782e3e5"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 4.0
+            },
+            {
+              "disease": "EFO_0003956",
+              "efoName": "seasonal allergic rhinitis",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT01651871"
+                  ]
+                },
+                {
+                  "source": "DailyMed",
+                  "ids": [
+                    "9e8e7f3f-fa1d-24bf-e053-2a95a90a679b",
+                    "b82af836-fd04-4cfe-9fae-84b1ee152663",
+                    "0f5de86d-1c87-4664-83f6-4c17f78f7d35"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 4.0
+            },
+            {
+              "disease": "EFO_0003830",
+              "efoName": "prostatitis",
+              "references": [
+                {
+                  "source": "ClinicalTrials",
+                  "ids": [
+                    "NCT03167216"
+                  ]
+                }
+              ],
+              "maxPhaseForIndication": 0.5
+            }
+          ]
+        },
+        "disease": {
+          "name": "disease",
+          "data_type": "Text",
+          "description": "List of disease identifiers",
+          "example": "EFO_0008521"
+        },
+        "efoName": {
+          "name": "efoName",
+          "data_type": "Text",
+          "description": "List of disease labels",
+          "example": "rhinitis"
+        },
+        "references": {
+          "name": "references",
+          "data_type": "Array[Struct]",
+          "description": "List of sources supporting the drug-indication relationship",
+          "example": [
+            {
+              "source": "ClinicalTrials",
+              "ids": [
+                "NCT00291642"
+              ]
+            }
+          ]
+        },
+        "source": {
+          "name": "source",
+          "data_type": "Text",
+          "description": "List of source names"
+        },
+        "ids": {
+          "name": "ids",
+          "data_type": "Array[Text]",
+          "description": "List of identification codes for the reference sources"
+        },
+        "maxPhaseForIndication": {
+          "name": "maxPhaseForIndication",
+          "data_type": "Float",
+          "description": "Highest clinical trial phase reached for a specific indication",
+          "example": 2.0
+        },
+        "approvedIndications": {
+          "name": "approvedIndications",
+          "data_type": "Array[Text]",
+          "description": "List of disease identifiers for a drug approved indications",
+          "example": [
+            "EFO_0005854",
+            "EFO_0005531",
+            "HP_0000989",
+            "MONDO_0005271",
+            "EFO_0007141",
+            "EFO_0005751",
+            "EFO_1001417",
+            "HP_0001742",
+            "EFO_0003956"
+          ]
+        },
+        "indicationCount": {
+          "name": "indicationCount",
+          "data_type": "Integer",
+          "description": "Total number of indications for a drug",
+          "example": 26
+        }
+      },
+      "description": "Open Targets dataset: drug_indication"
+    }
+  }
+}

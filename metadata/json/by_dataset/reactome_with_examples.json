@@ -1,0 +1,73 @@
+{
+  "datasets": {
+    "reactome": {
+      "name": "reactome",
+      "columns": {
+        "id": {
+          "name": "id",
+          "data_type": "Text",
+          "description": "Unique identifier for the Reactome pathway [bioregistry:reactome]",
+          "example": "R-HSA-164843"
+        },
+        "label": {
+          "name": "label",
+          "data_type": "Text",
+          "description": "Name or label of the pathway",
+          "example": "2-LTR circle formation"
+        },
+        "ancestors": {
+          "name": "ancestors",
+          "data_type": "Array[Text]",
+          "description": "List of ancestor pathways in the ontology",
+          "example": [
+            "R-HSA-162594",
+            "R-HSA-162906",
+            "R-HSA-162592",
+            "R-HSA-9824446",
+            "R-HSA-1643685",
+            "R-HSA-162587",
+            "R-HSA-5663205"
+          ]
+        },
+        "descendants": {
+          "name": "descendants",
+          "data_type": "Array[Text]",
+          "description": "List of descendant pathways in the ontology",
+          "example": []
+        },
+        "children": {
+          "name": "children",
+          "data_type": "Array[Text]",
+          "description": "Direct child pathways of the current pathway",
+          "example": []
+        },
+        "parents": {
+          "name": "parents",
+          "data_type": "Array[Text]",
+          "description": "Direct parent pathways of the current pathway",
+          "example": [
+            "R-HSA-162592"
+          ]
+        },
+        "path": {
+          "name": "path",
+          "data_type": "Array[Text]",
+          "description": "Hierarchical path representing the position of the pathway in Reactome",
+          "example": [
+            [
+              "R-HSA-1643685",
+              "R-HSA-5663205",
+              "R-HSA-9824446",
+              "R-HSA-162906",
+              "R-HSA-162587",
+              "R-HSA-162594",
+              "R-HSA-162592",
+              "R-HSA-164843"
+            ]
+          ]
+        }
+      },
+      "description": "Open Targets dataset: reactome"
+    }
+  }
+}
