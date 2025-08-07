@@ -10,7 +10,7 @@ This repository contains metadata and analysis results for studies using [OpenTa
 
 #### `/metadata/json/`
 - **`structured_catalog.json`**: Comprehensive catalog of all OpenTargets datasets with detailed schema information, column descriptions, and data types
-- **`columns_manifest.json`**: Manifest of all column definitions across datasets
+- **`columns_manifest.json`**: Manifest of column definitions across datasets of choice
 - **`catalog.txt`**: Simple text listing of available datasets
 - **`by_dataset/`**: Individual JSON files containing dataset-specific metadata with example values
 
