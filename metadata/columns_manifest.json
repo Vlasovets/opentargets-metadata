@@ -1,0 +1,12 @@
+{
+  "colocalisation_coloc": ["leftStudyLocusId", "rightStudyLocusId", "chromosome", "h4", "rightStudyType", "numberColocalisingVariants", "h0", "h1", "h2", "h3"],
+  "credible_set": ["studyLocusId", "studyId", "variantId", "isTransQtl"],
+  "l2g_prediction": ["studyLocusId", "geneId", "score"],
+  "evidence": ["studyId", "targetId", "diseaseId"],
+  "known_drug": ["targetId", "diseaseId", "drugId"],
+  "disease": ["id", "name", "description"],
+  "study": ["studyId", "studyType", "traitFromSource", "projectId", "pubmedId", "geneId", "biosampleFromSourceId", "biosampleId"],
+  "target": ["id", "approvedSymbol", "biotype", "targetGeneId"],
+  "drug_indication": ["id", "indications", "approvedIndications", "maxPhaseForIndication", "disease", "efoName"],
+  "biosample_core": ["biosampleId", "biosampleName"]
+}
