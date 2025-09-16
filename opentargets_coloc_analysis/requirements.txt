@@ -1,0 +1,8 @@
+DuckDB
+pyarrow
+pandas
+numpy
+argparse
+scikit-learn
+matplotlib
+seaborn
